@@ -1,0 +1,42 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule.tex}
+\chead{}
+\lhead{2\up{nde}10, 2011-2012}
+\rhead{Géométrie non reprérée}
+\rfoot{\tiny{Lycée Julie-Victoire Daubié, Argenteuil}}
+\lfoot{}
+\cfoot{}
+
+\begin{document}
+\section{Pythagore, Thalès}
+\subsection{Pythagore}
+\begin{theoreme}
+ Un triangle est rectangle en l'angle opposé à son plus grand côté si et seulement si le carré de son plus grand côté
+égale la somme des carrés des deux autres côtés.
+\end{theoreme}
+
+Application : calculer la distance entre deux points d'un quadriallage orthonormal.
+
+\begin{exercice}
+ 23 p. 254.
+\end{exercice}
+
+
+\subsection{Thalès}
+\begin{theoreme}
+ Deux triangles ont leurs côtés proportionnels deux à deux ssi ils ont leurs angles égaux deux à deux.
+\end{theoreme}
+
+\begin{exemple}
+ Une petite application dans chaque sens.
+\end{exemple}
+
+
+\section{Translation et vecteurs}
+
+
+\section{Opérations sur les vecteurs}
+
+
+\end{document}
+

@@ -1,0 +1,78 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage[colorlinks=true]{hyperref}
+\rhead{Fonctions de référence, contrôle.}
+\chead{}
+\lhead{2 mai 2011}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{2\up{de}4, Lycée Romain Rolland, Argenteuil}}
+\begin{document}
+
+\begin{exercice}
+ Associer\baremeexo{3} chacune des trois représentations graphiques suivantes :
+\[
+\begin{array}{ccc}
+\textbf{1) }\includegraphics[width=0.3\textwidth]{x2}&\textbf{2) }\includegraphics[width=0.3\textwidth]{moinsx2sur2plus1}&\textbf{3) }\includegraphics[width=0.3\textwidth]{x2moins1}\\
+\end{array}
+\]
+à l'une de ces six fonctions :
+\[
+\begin{array}{llllll}
+ \textbf{a) }x\donne-\frac{x^2}{2}+1& \textbf{b) }x\donne-2x^2+1&\textbf{c) } x\donne0,5x^2&
+\textbf{d) }x\donne x^2-1& \textbf{e) }x\donne x^2+1&\textbf{f) } x\donne x^2
+\end{array}
+\]
+\end{exercice}
+
+
+\begin{exercice}
+ Lorsqu'on\baremeexo{3} laisse tomber un caillou au fond d'un puit, le temps de sa chute dépend la profondeur.
+On a la relation :
+\[
+p(t)=4,9t^2,
+\]
+o\`u $t$ est le temps de la chute en secondes, et $p(t)$ la profondeur du puit en mètres.
+\begin{enumerate}
+ \item Si la chute dure 2 secondes, quelle est la profondeur du puit ?
+ \item Si un puit a une profondeur de 20 mètres, quelle sera la durée de la chute ? On donnera une valeur approchée arrondie au
+centième de seconde. 
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+ La\baremeexo{7} fonction $f$ est définie sur $\R$ par :
+\[
+ f(x)=5x^2+5x-10.
+\]
+\begin{enumerate}
+ \item Donner en justifiant le tableau de variations de $f$.
+ \item Prouver\baremeque{1} que pour tout nombre réel $x$ :
+\[
+ f(x)=5(x-1)(x+2).
+\]
+  \item Prouver\baremeque{1} que pour tout nombre réel $x$ :
+\[
+ f(x)=5[(x+\frac12)^2-\frac54].
+\]
+  \item Quelle est l'image de\baremeque{1} 0 par $f$?
+  \item Quels sont\baremeque{1} les antécédents de 0?
+  \item Résoudre\baremeque{1} $f(x)=10$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+ Démontrer\baremeexo{4} que la fonction 
+\[
+ f(x)=5-\frac{x+1}{2x-5}
+\]
+est une fonction homographique. Pour quelle valeurs de $x$ le nombre $f(x)$ est-il défini ?
+\end{exercice}
+
+\begin{exercice}
+ Démontrer\baremeexo{3} qu'il y a exactement deux nombres qui sont égaux à leur carré.
+Combien y a-t-il de nombres égaux à leur cube ? Justifier.
+\end{exercice}
+
+
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{hyperref}
+\usepackage{multicol}
+\rhead{mercredi 6 décembre 2017}
+\chead{}
+\lhead{Vecteurs, interro. n°1}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Lycée Émile Loubet, Valence, 2\up{nde} 3}}
+\begin{document}
+\newcommand{\vv}[1]{\vect{#1}}
+\noindent\textbf{NOM Prénom : }
+
+\begin{exercice}Sur\baremeexo{2} le dessin ci-dessous, placer les points $M$ et $N$ tels que  $\vv{AM} =\vv{AB}+\vv{AC}$ et $\vv{MN} =\vv{AB}+\vv{CA}$.
+	\begin{center}
+\psset{unit=1cm}
+\begin{pspicture*}(-.05,-.05)(13.05,7.05)
+\psgrid[gridwidth=0.1pt,gridcolor=darkgray,subgriddiv=2,subgridwidth=0.1pt,subgridcolor=darkgray,gridlabels=0](0,0)(13,7)
+\newrgbcolor{bleu}{0.1 0.2 .5}
+\psdots[linewidth=2.5pt, linecolor=bleu,dotstyle=x](1.5,2.5)(6,2)(3,5.5)
+\uput[dl](1.5,2.5){\bleu {\footnotesize{\textsf{\textbf{A}}}}}
+\uput[d](6,2){\bleu {\footnotesize{\textsf{\textbf{B}}}}}
+\uput[u](3,5.5){\bleu {\footnotesize{\textsf{\textbf{C}}}}}
+\end{pspicture*}
+\end{center}
+
+\end{exercice}
+\vfill
+\begin{exercice}
+Placer\baremeexo{2} les points $M$ et $N$ tels que $\vv{AM}=\vv{u}+\vv{v}$  et $\vv{AN}=\vv{w}-\vv{v}$
+\begin{center}
+\psset{unit=.5cm}
+\begin{pspicture}(0,0)(32,10)
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\newrgbcolor{vertf}{0 .35 .05}
+\def \u#1#2{
+\pcline[linewidth=#1,linecolor=#2]{->}(0,0)(8,2)
+}
+\def \v#1#2{
+\pcline[linewidth=#1,linecolor=#2]{->}(0,0)(4,-3)
+}
+\def \w#1#2{
+\pcline[linewidth=#1,linecolor=#2]{->}(0,0)(-2,-5)
+}
+\psgrid[gridwidth=0.1pt,gridcolor=darkgray,subgriddiv=0,gridlabels=0](0,0)(32,10)
+\rput(2,6){\u{1.5pt}{bleu}\aput{:U}{\bleu{$\vv{u}$}}}
+\rput(1,5){\v{1.5pt}{prune}\aput{:U}{\prune{$\vv{v}$}}}
+\rput(9,6){\w{1.5pt}{vertf}\aput{:D}{\vertf{$\vv{w}$}}}
+\psdot[dotstyle=x,linewidth=3pt](18,6)
+\uput[ul](18,6){$A$}
+  \end{pspicture}
+\end{center}
+\end{exercice}
+\vfill
+
+\begin{exercice}
+Compléter\baremeexo{1} les égalités suivantes en utilisant la relation de Chasles :
+\begin{enumerate}
+  \item $\vv{E\dots} + \vv{B\dots} = \vv{EF}.$
+  \item $\vv{\dots C}-\vv{BC}+\vv{BE}=\vv{0}.$
+\end{enumerate}
+\end{exercice}
+
+
+
+
+\end{document}

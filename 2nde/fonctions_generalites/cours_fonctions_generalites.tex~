@@ -1,0 +1,152 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule.tex}
+\chead{}
+\lhead{2\up{nde}7, 2012-2013}
+\rhead{Généralités sur les fonctions}
+\rfoot{\tiny{Lycée Julie-Victoire Daubié, Argenteuil}}
+\lfoot{}
+\cfoot{}
+
+\begin{document}
+\section{Notion de fonction}
+Une fonction est une correspondance \og un $\longrightarrow$ au plus un\fg{}
+entre deux ensembles : à chaque élément de l'ensemble de départ, elle fait correspondre 
+au plus un élément de l'ensemble d'arrivée.
+
+Exemple : relevé des notes sur 10 obtenues par 8 élèves d'une même classe (A, B, C, D, E, F, G, H) :
+\[
+\begin{array}{c|c|c|c|c|c|c|c}
+ A&B&C&D&E&F&G&H\\\hline
+ 3&7&5&Absent&6&8&8&4
+\end{array}
+\]
+\vfill\begin{center}
+< Diagramme avec le vocabulaire : Ensemble de départ, ensemble de définition, ensemble d'arrivée,
+\textbf{un} antécédent de , \textbf{l}'image de.>
+\end{center}
+\vfill
+Remarque : ce qui est important, c'est qu'un élément de l'ensemble de départ ne puisse jamais correspondre 
+à deux éléments différents de l'ensemble d'arrivée. Dans ce cas, la correspondance n'est pas une fonction.
+\exercices{27, 25,  26 page 44.}
+
+
+\pagebreak
+\section{Fonctions numériques, nombres réels}
+Les fonctions du lycée sont des fonctions numériques, cela veut dire que l'ensemble de départ est un ensemble de nombres
+et que l'ensemble d'arrivée est un ensemble de nombres.
+
+\subsection{Synthèse sur les nombres réels et leur écriture}
+
+CP : Entiers naturels.
+
+CM2 : Fractions.
+
+6\up{e} : Décimaux.
+
+5\up{e} : Relatifs.
+
+4\up{e} : Radicaux.
+
+3\up{e} : $\cos$, $\sin$.
+
+Malheureusement, il est impossible d'écrire les valeurs exactes de tous ces nombres d'une seule même
+manière. Par exemple $2+3\sqrt{7}$ ne peut pas s'écrire plus simplement.
+
+Tous les nombres réels ont cependant un développement décimal. Il y a trois possibilités :
+\begin{enumerate}
+ \item Un développement décimal peut être fini. Exemples : ...
+ \item Un développement décimal peut être illimité et périodique. Exemple : ...
+ \item Un développement décimal peut être illimité et non périodique. Exemple : ...
+\end{enumerate}
+
+Si le développement décimal est fini et court, la calculatrice le donne. S'il est illimité, elle
+donne le début, en arrondissant éventuellement pour le dernier chiffre. Elle ne dit pas
+si le développement est périodique. 
+
+\subsection{L'ensemble $\R$}
+L'\og ensemble de tous les nombres\fg connus en seconde est noté $\R$ et appelé l'ensemble des nombres réels. Il peut être représenté par une droite
+
+\place{droite réelle}.
+
+\exercices{page 348}
+
+
+\pagebreak
+\section{Différentes manières de donner la correspondance entre $x$ et $f(x)$}
+On peut définir une fonction par un tableau ou un diagramme, comme dans la première partie.
+On définit également parfois des fonctions par leur représentation graphique, mais la manière la plus importante 
+de définir une fonction
+en mathématiques au lycée est de la définir par une formule.
+
+\subsection{Fonction définie par une formule (ou un algorithme)}
+Il s'agit de décrire une succession de calculs à effectuer avec l'antécédent 
+pour obtenir l'image.
+\begin{exemple}
+ Soit $f$ la fonction définie sur $\R$ par :
+\[
+ f(x)=2x+3.
+\]
+\begin{enumerate}
+ \item Déterminer l'image de 5 par $f$.
+ \item Calculer $f(10)$.
+ \item Quels sont les antécédents de 11 par $f$ ?
+ \item Résoudre $f(x)=15$.
+\end{enumerate}
+\end{exemple}
+Notation : on peut aussi définir la même fonction $f$ en écrivant simplement : 
+\[
+ \begin{array}{cccc}
+  f:&\R&\rightarrow&\R\\
+    &x&\donne&2x+3
+ \end{array}
+\]
+\exercices{33, 34, 35, \textbf{36} p 44, TP 1 p  37}
+
+\subsection{Fonction \og définie\fg{} par un problème}
+Beaucoup de situations concrètes peuvent être modélisées par des fonctions.
+Dans ce cas, la question sera souvent de la forme : \og Exprimer <nom de la grandeur à l'arrivée>
+en fonction de <nom de la grandeur au départ>\fg.
+
+Exemples :
+
+\begin{itemize}
+ \item Exprimer l'angle au sommet $s$ d'un triangle isocèle en fonction de son angle à la base $x$.
+ \item Un magasin fait une réduction de 10\% sur tous ses articles. Exprimer le nouveau prix $n$ en fonction de l'ancien prix $x$.
+ \item D'après la loi d'Ohm, $U=RI$. Exprimer l'intensité en fonction de la tension aux bornes d'un resistance de $10~\Omega$.
+\end{itemize}
+
+
+\subsection{Représentation graphique}
+\begin{exemple}
+Le graphique ci-dessous définit (à la précision de la lecture graphique près) la fonction $f$ (température) en fonction
+de l'heure de la journée $x$.
+ \[
+\includegraphics[width=0.8\textwidth]{fonction_temperature}
+\]
+L'ensemble de définition est l'intervalle $[0,24]$.
+\begin{enumerate}
+ \item Déterminer par lecture graphique l'image de 20 par $f$.
+ \item Déterminer $f(13)$ par lecture graphique.
+ \item Par lecture graphique, déterminer l'ensemble des antécédents de 2 par $f$.
+ \item Le nombre 16 a-t-il des antécédents par $f$ ?
+\end{enumerate}
+\exercices{46, 47     p  46,  TP 5 p 41}
+\end{exemple}
+
+\begin{definition}
+ Soit $f$ une fonction définie sur un intervalle $I$ de $\R$. La représentation graphique
+de $f$ dans un repère est l'ensemble des points $M(x,y)$ dont les coordonnées vérifient
+\[
+ y=f(x).
+\]
+\end{definition}
+
+\section{Variations d'une fonction}
+\subsection{Définitions}
+\subsection{Tableaux de variation}
+
+
+
+
+\end{document}
+

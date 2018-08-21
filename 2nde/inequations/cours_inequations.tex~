@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule.tex}
+\chead{}
+\lhead{2\up{nde}10, Mars 2012}
+\rhead{Inéquations}
+\rfoot{\tiny{Lycée Julie-Victoire Daubié, Argenteuil}}
+\lfoot{}
+\cfoot{}
+
+\begin{document}
+\section{Notion d'inéquation}
+Résoudre l'équation $x^2-3>1$ signifie donner l'ensemble des valeurs de $x$ pour lesquelles
+l'inégalité $x^2-3>1$ est vraie.
+
+\begin{exercice}
+ 32 p. 143.
+\end{exercice}
+
+
+On sait déjà résoudre algébriquement les inéquations du 1\up{er} degré.
+
+\begin{exemple}
+ Résoudre :
+\begin{enumerate}
+ \item $5x-4>11$.
+  \item $2x+1\leq3x-7$.
+\end{enumerate}
+\end{exemple}
+
+\begin{exercice}
+ 34 et 33 (maison) p. 143, 42p. 143, 5 à 12 p. 141.
+\end{exercice}
+
+
+\section{Résolution graphique}
+\begin{exemple}
+ \place{dessin pour $x^2-3>1$}
+\end{exemple}
+
+\begin{exemple}
+ \place{autre dessin avec deux courbes}
+\end{exemple}
+
+\begin{exercice}
+ 13, 14, 15 p. 141, 16 et 17 p. 141 (courbes à projeter).
+\end{exercice}
+
+
+\section{Résolution algébrique avec les tableaux de signe}
+\subsection{Tableau de signe d'une fonction affine}
+\begin{exemple}
+ Étudier le signe de la fonction affine $f$ définie sur $\R$ par $f(x)=-2x+3$.
+
+Méthode 1 : on résout $f(x)>0$ et $f(x)=0$.
+
+Méthode 2 : on résout $f(x)=0$ et on utilise le tableau de variations de $f$. 
+\end{exemple}
+
+\begin{exercice}
+ 19 à 22 p. 142.
+\end{exercice}
+
+
+\subsection{Résolution algébrique d'inéquations de degré 2 ou plus}
+\subsection{Résolution algébrique d'inéquations avec des quotients}
+
+
+\end{document}
+

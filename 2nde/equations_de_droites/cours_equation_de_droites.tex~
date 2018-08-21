@@ -1,0 +1,67 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule.tex}
+\chead{}
+\lhead{2\up{nde}10, avril 2012}
+\rhead{\'Equations de droites}
+\rfoot{}
+\lfoot{}
+\cfoot{}
+
+\begin{document}
+\section{Premiers exemples}
+\begin{enumerate}
+ \item Représenter $\mathcal{E}_1$ l'ensemble des points M$(x,y)$ tels que $y=3$.
+ \item Représenter l'ensemble $\mathcal{E}_2$ d'équation $x=-2$.
+ \item Représenter l'ensemble $\mathcal{E}_3:y=-x+4$
+ \item Représenter l'ensemble $\mathcal{E}_4:x+y=4$
+ \item Représenter $\mathcal{E}_5:x^2+y^2=4$
+\end{enumerate}
+
+\section{Forme générale d'une équation de droite}
+\begin{theoreme}[Admis]
+ Le plan est muni d'un repère. Les droites verticales sont les ensembles de
+points d'équation $x=\text{constante}$. Les droites non verticales sont les ensembles
+de points d'équations de la forme $y=ax+b$. Le nombre $a$ est appelé le coefficient directeur de 
+la droite d'équation $y=ax+b$, et le nombre $b$ est appelé son ordonnée à l'origine.
+\end{theoreme}
+
+\place{Figure avec le vocabulaire}
+
+\section{Applications}
+
+\subsection{Tracer une droite d'équation donnée}
+\begin{exercice}
+21, 23 et 24 p. 302.
+\end{exercice}
+
+\subsection{Déterminer l'équation d'un droite connaissant deux points de la droite}
+\begin{exemple}[Lecture graphique]
+Lecture graphique de $a$ et de $b$.
+ \begin{exercice}
+ 18 et 19 p. 301. (déjà faits).
+\end{exercice}
+\end{exemple}
+
+
+
+\begin{exemple}[Calcul]
+ \place{Exemple avec deux point, méthode 1\up{re}S}
+\begin{exercice}
+ 28, 29, 30 p. 302.
+\end{exercice}
+\end{exemple}
+
+
+
+\subsection{Déterminer la position relative de deux droites}
+\begin{theoreme}
+ Deux droites sont parallèles ssi elles sont toutes deux  verticale ou qu'elles sont le même
+coefficient directeur.
+\end{theoreme}
+\subsection{Intersection de droites}
+\begin{exemple}
+ \place{Exemple avec résolution de système}
+\end{exemple}
+
+\end{document}
+

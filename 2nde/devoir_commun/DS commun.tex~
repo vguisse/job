@@ -1,0 +1,180 @@
+\documentclass[10pt]{article}
+\usepackage[latin1]{inputenc}
+% Fourier for math | Utopia (scaled) for rm | Helvetica for ss | Latin Modern for tt
+\usepackage{fourier} % math & rm
+\usepackage[scaled=0.875]{helvet} % ss
+\renewcommand{\ttdefault}{lmtt} %tt
+%\usepackage{amsmath,amssymb,makeidx} % J'ai été obligé de modifier
+\usepackage{amsmath,amssymb}          % ces deux lignes pour que cela compile sans erreur chez moi (je dois retirer la package makeidx).
+\usepackage[normalem]{ulem}
+\usepackage{fancybox}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{dcolumn}
+\usepackage{textcomp}
+\newcommand{\euro}{\texteuro{}}
+\usepackage{pstricks,pst-plot,pst-text,pst-tree}
+\setlength\paperheight{297mm}%10
+\setlength\paperwidth{210mm}
+\setlength{\textheight}{23,5cm}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\vect}[1]{\mathchoice%
+{\overrightarrow{\displaystyle\mathstrut#1\,\,}}%
+{\overrightarrow{\textstyle\mathstrut#1\,\,}}%
+{\overrightarrow{\scriptstyle\mathstrut#1\,\,}}%
+{\overrightarrow{\scriptscriptstyle\mathstrut#1\,\,}}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\def\Oij{$\left(\text{O},~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O},~\vect{\imath},~ \vect{\jmath},~ \vect{k}\right)$}
+\def\Ouv{$\left(\text{O},~\vect{u},~\vect{v}\right)$}
+\setlength{\voffset}{-1,5cm}
+\usepackage{fancyhdr}
+ %\pagestyle{fancy}
+\usepackage[frenchb]{babel}
+\newcommand{\suggestion}[1]{\textcolor{black}{#1}}
+\begin{document}
+% ent?te et bas de page
+\rfoot{\small Contrôle commun}%tapez un titre
+\lhead{\small{201 et 205}}
+\rhead{\small{9 février 2010}}
+\renewcommand \footrulewidth{.2pt}%
+\pagestyle{fancy}
+
+
+\begin{center}
+\Large{\emph{\textbf{Contrôle commun}}}
+\end{center}
+
+
+Toutes les réponses doivent être justifiées sauf contre-indication. Le soin et la qualité de rédaction seront bien sûr pris en compte. Les résultats doivent être encadrés en couleur. N'oubliez pas la marge à gauche !
+
+
+\vspace{0,5cm}
+
+\underline{\textbf{\textsc{Exercice 1 :}}} Fonctions
+
+\vspace{0,2cm}
+
+\underline{\textsc{Partie 1 :}} Graphiquement
+
+\vspace{0,2cm}
+
+En annexe sur la figure 1, vous avez le graphe d'une fonction f définie sur $\mathbb{R}$ d'expression \\ $f(x)=x^3-3x+\frac{4}{3}$.
+
+\begin{enumerate}
+
+\item Conjecturer le tableau de signe et le tableau de variation sur $\mathbb{R}$ de la fonction $f$ (aucune justification n'est demandée dans cette question).
+
+\item Tracer sur l'annexe la fonction g définie sur $\mathbb{R}$ d'expression $g(x)=x+\frac{4}{3}$.
+
+\item Résoudre \suggestion{graphiquement} l'équation $f(x)=g(x)$ puis l'inéquation $f(x)>2$.
+
+\item \suggestion{Déterminer le minimum de la fonction $f$ sur l'intervalle $[0;3[$.}
+
+\end{enumerate}
+
+\vspace{0,3cm}
+
+\underline{\textsc{Partie 2 :}} Algébriquement
+
+\vspace{0,2cm}
+
+\begin{enumerate}
+
+\item Déterminer le tableau de signe de la fonction $g$.
+
+\item \suggestion{Le but de cette question est de résoudre l'équation $f(x)=g(x)$.
+      \begin{enumerate}
+	\item Montrer que $f(x)=g(x)$ si et seulement si $x^3-4x=0$.
+	\item Déveloper et réduire l'expression $x(x-2)(x+2)$.
+	\item En déduire que $f(x)=g(x)$ si et seulement si $x(x-2)(x+2)=0$.
+	\item Conclure.
+      \end{enumerate}
+      }
+
+\item \suggestion{Dans un même tableau, donner le signe des expressions $2x+3$ et $5-x$. En déduire les solutions de l'inéquation $(2x+3)(5-x)<0$.}
+
+\item \suggestion{Bonus : montrer que la fonction $f$ est croissante sur $[1;+\infty[$.}
+
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\underline{\textbf{\textsc{Exercice 2 :}}} Vecteurs
+
+\vspace{0,2cm}
+
+\begin{enumerate}
+
+\item Placer dans un repère orthonormé $(O;\overrightarrow{i};\overrightarrow{j})$ les points A $(2;3)$, B $(-5;1)$ et C $(-2;-1)$.
+
+\item Calculer les coordonnées du vecteur $\overrightarrow{CA}$ ; puis montrer que I, le milieu de [AC], a pour coordonnées $(0;1)$.
+
+\item Déterminer les coordonnées du point D tel que ABCD soit un parallélogramme.
+
+\item Construire les points E et F tels que : $$\overrightarrow{DE}=\overrightarrow{AB}+\overrightarrow{AC}\hspace{1,5cm} et \hspace{1,5cm}\overrightarrow{AF}=2\overrightarrow{AB}.$$
+
+\item Montrer que les coordonnées de F sont $(-12;-1)$ et calculer celles de E.
+
+\item Soit G le point de coordonnées $(6;2)$. \suggestion{Les points F, I et G sont-ils alignés?}
+
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\underline{\textbf{\textsc{Exercice 3 :}}} Droites
+
+\begin{enumerate}
+
+\item En annexe, sur la figure 2, il y a trois droites $d_1$, $d_2$ et $d_3$. Déterminer l'équation de chacune de ces droites.
+
+\item B le point de coordonnées $(2;2,3)$ est-il sur $d_1$ ?
+
+\item Sur la même figure, tracer la droite qui passe par le point A de coordonnées $(2;-2)$ et dirigée par le vecteur directeur $\overrightarrow{u}$ de coordonnées $(1;3)$.
+
+\end{enumerate}
+
+\underline{\textbf{\textsc{Exercice 4 :}}} Probabilités
+
+\vspace{0,2cm}
+
+\underline{\textsc{Partie 1}}
+
+\vspace{0,2cm}
+
+
+Dans un lycée, il y a 120 élèves en seconde, à qui l'on propose deux options sportives : basket et 
+natation, toutes deux facultatives. Un même élève peut choisir les deux options.
+
+60 élèves choisissent au moins une option. On sait que 30 élèves sont inscrits en basket et 40 en natation.
+On choisit au hasard un élève, on note $p$ la probabilité. 
+
+\begin{enumerate}
+ \item Donner sans justification la probabilité de chacun des événements suivants :\\
+$N$ : \og il pratique la natation \fg\\
+$B$ : \og il pratique le basket \fg{}?
+  \item Décrire par une phrase l'événement \og $N\cup B$\fg. Donner sa probabilité (sans justification) et celle de son événement contraire (en justifiant).
+  \item Décrire par une phrase l'événement \og $N\cap B$\fg. Déterminer sa probabilité
+(on pourra utiliser la valeur trouvée pour $p(N\cup B)$) et celle de son événement contraire.
+  \item Comparer $p(\overline{N}\cup \overline{B})$ et $p(\overline{N}\cap \overline{B})$.
+\end{enumerate}
+
+
+\vspace{0,2cm}
+
+\underline{\textsc{Partie 2}}
+
+\vspace{0,2cm}
+
+Une urne contient 4 boules marquées par les chiffres 1, 2, 4, et 5. On tire au hasard et successivement deux boules, sans remise (impossible d'avoir un double).
+Quelle est la probabilité pour que le nombre formé par les deux chiffres obtenus soit un multiple de 3?
+
+\end{document}

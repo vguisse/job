@@ -1,0 +1,108 @@
+%!PS
+%%BoundingBox: -1 -88 223 1 
+%%HiResBoundingBox: -0.25 -87.7667 222.9643 0.25 
+%%Creator: MetaPost 1.208
+%%CreationDate: 2011.06.18:1613
+%%Pages: 1
+%*Font: jkpmi 9.96265 9.96265 67:8004
+%*Font: jkpsy 9.96265 9.96265 00:8000000000004
+%*Font: jkpmn8r 9.96265 9.96265 28:d0c000000012004d4338
+%*Font: cmsy10 9.96265 9.96265 00:8
+%*Font: cmr10 9.96265 9.96265 2b:8
+%*Font: jkpsy 7.57156 9.96265 30:8
+%%BeginProlog
+%%EndProlog
+%%Page: 1 1
+ 0 0 0 setrgbcolor
+35.7608 -10.8867 moveto
+(t) jkpmi 9.96265 fshow
+ 0.5 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 75.36722 0 moveto
+75.36722 -15.94019 lineto stroke
+80.34853 -11.22539 moveto
+(\000) jkpsy 9.96265 fshow
+86.43573 -11.22539 moveto
+(10) jkpmn8r 9.96265 fshow
+147.10802 -11.22539 moveto
+(0) jkpmn8r 9.96265 fshow
+202.3507 -10.43333 moveto
+(+) jkpmn8r 9.96265 fshow
+208.5873 -10.43333 moveto
+(1) jkpsy 9.96265 fshow
+19.0286 -25.59904 moveto
+(Signe) jkpmn8r 9.96265 fshow
+45.6985 -25.59904 moveto
+(de) jkpmn8r 9.96265 fshow
+28.2456 -37.60394 moveto
+(g) jkpmi 9.96265 fshow
+33.725 -33.48946 moveto
+(0) jkpsy 7.57156 fshow
+36.6309 -37.60394 moveto
+(\() jkpmn8r 9.96265 fshow
+40.0282 -37.60394 moveto
+(t) jkpmi 9.96265 fshow
+43.8737 -37.60394 moveto
+(\)) jkpmn8r 9.96265 fshow
+newpath 75.36722 -15.94019 moveto
+75.36722 -42.6849 lineto stroke
+115.44792 -31.80319 moveto
+(\000) cmsy10 9.96265 fshow
+147.10802 -32.56784 moveto
+(0) jkpmn8r 9.96265 fshow
+ [3 3 ] 0 setdash
+newpath 149.82281 -15.94019 moveto
+149.82281 -42.6849 lineto stroke
+176.05797 -31.80319 moveto
+(+) cmr10 9.96265 fshow
+8.7173 -63.45946 moveto
+(V) jkpmn8r 9.96265 fshow
+14.8941 -63.45946 moveto
+(aria) jkpmn8r 9.96265 fshow
+31.71101 -63.45946 moveto
+(tions) jkpmn8r 9.96265 fshow
+56.00981 -63.45946 moveto
+(de) jkpmn8r 9.96265 fshow
+34.94391 -71.31996 moveto
+(g) jkpmi 9.96265 fshow
+ [] 0 setdash
+newpath 75.36722 -42.6849 moveto
+75.36722 -87.5167 lineto stroke
+80.67728 -54.74966 moveto
+(100) jkpmn8r 9.96265 fshow
+ 0 0.5 dtransform truncate idtransform setlinewidth pop
+newpath 98.96655 -56.02 moveto
+145.1078 -76.60385 lineto stroke
+newpath 141.1096 -76.49628 moveto
+145.1078 -76.60385 lineto
+142.35677 -73.70059 lineto
+ closepath
+gsave fill grestore stroke
+147.10802 -81.96252 moveto
+(0) jkpmn8r 9.96265 fshow
+newpath 154.53755 -76.57666 moveto
+200.35043 -55.87389 lineto stroke
+newpath 197.61337 -58.79044 moveto
+200.35043 -55.87389 lineto
+196.35272 -56.00073 lineto
+ closepath
+gsave fill grestore stroke
+202.3507 -53.95761 moveto
+(+) jkpmn8r 9.96265 fshow
+208.5873 -53.95761 moveto
+(1) jkpsy 9.96265 fshow
+newpath 0 -15.94019 moveto
+222.7143 -15.94019 lineto stroke
+newpath 0 -42.6849 moveto
+222.7143 -42.6849 lineto stroke
+newpath 0 0 moveto
+222.7143 0 lineto stroke
+newpath 0 -87.5167 moveto
+222.7143 -87.5167 lineto stroke
+ 0.5 0 dtransform exch truncate exch idtransform pop setlinewidth
+newpath 0 0 moveto
+0 -87.5167 lineto stroke
+newpath 222.7143 0 moveto
+222.7143 -87.5167 lineto stroke
+showpage
+%%EOF

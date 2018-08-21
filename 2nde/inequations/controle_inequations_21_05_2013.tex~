@@ -1,0 +1,87 @@
+\documentclass[a4paper,11pt,DIV12,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{picins}
+\rhead{Inéquations, contrôle}
+\chead{}
+\lhead{21 mai 2013}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{2\up{de}7, Lycée Julie-Victoire Daubié, Argenteuil}}
+\begin{document}
+\begin{exercice}
+Résolutions\baremeexo{4} graphiques approchées.
+\vfill
+\parpic[l]{
+  \includegraphics[width=0.25\textwidth]{fonction2}
+  }
+
+\begin{minipage}{0.75\textwidth}
+
+La figure ci-contre est la représentation graphique d'une fonction $f$ définie sur $[-3;5]$.
+
+\begin{enumerate}
+ \item Résoudre graphiquement $f(x)\leq3$ (on fera apparaître les tracés utiles sur la figure).
+ \item Soit $g$ la fonction définie sur $[-3;5]$ par $g(x)=x+2$.
+      \begin{enumerate}
+	\item Tracer la représentation graphique de $g$ (on donnera les calculs utiles sur la copie).
+	\item Résoudre graphiquement $f(x)=g(x)$.
+	\item Résoudre graphiquement $f(x)>g(x)$.
+      \end{enumerate}
+\end{enumerate}
+
+
+\end{minipage}
+\end{exercice}
+
+\vfill
+\vfill
+
+\begin{exercice}
+ Résoudre\baremeexo{2} l'inéquation d'inconnue $x$ :
+\[
+ 2x-1 < 5x+5.
+\]
+\end{exercice}
+\vfill
+\begin{exercice}
+ Soit\baremeexo{6} $f$ la fonction définie sur $\R$ par :
+\[
+f(x)=-2x^2+11x-15.
+\]
+Le but de l'exercice est  de résoudre l'inéquation $f(x)\geq 0$.
+\begin{enumerate}
+ \item Montrer\baremeque{1} que pour tout nombre réel $x$, $f(x)=(x-3)(-2x+5)$.
+ \item Donner\baremeque{1,5} le tableau de signes de $x-3$, en justifiant soigneusement la réponse.
+ \item Donner\baremeque{1,5} le tableau de signes de $-2x+5$, en justifiant soigneusement la réponse.
+ \item Donner\baremeque{1} le tableau de signe de $f(x)$.
+ \item Conclure, c'est\baremeque{1} à dire donner les solutions de $f(x)\geq 0$.
+\end{enumerate}
+
+\end{exercice}
+\vfill
+\begin{exercice}
+ Une\baremeexo{5} entreprise de confection propose à ses couturières deux types de
+contrat :
+\begin{description}
+ \item[Contrat A] Salaire mensuel fixe de 320\euro{} auquel s'ajoute 26\euro
+par vêtement réalisé ;
+\item[Contrat B] Salaire mensuel fixe de 686\euro{} auquel s'ajoute 8\euro
+par vêtement réalisé.
+\end{description}
+Dans la suite, on note $x$ le nombre de vêtements réalisés.
+\begin{enumerate}
+ \item Donner les salaires correpondants aux contrats A et B pour la fabrication de 10 vêtements.\baremeque{1}
+ \item Exprimer les salaires $A(x)$ et $B(x)$ correspondants aux contrats A et B en fonction de $x$.\baremeque{2}
+ \item À partir de combien de vêtement réalisé est-il préférable de choisir le contrat A ?\baremeque{2}
+\end{enumerate}
+\end{exercice}
+
+\vfill
+\begin{exercice}
+ Quels\baremeexo{3} sont les nombres réels qui sont strictement supérieurs à leurs carrés ? Justifier. \emph{Indication : 
+on pourra résoudre l'inéquation $x>x^2$.}
+\end{exercice}
+\vfill
+
+\end{document}

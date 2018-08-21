@@ -1,0 +1,211 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../../preambule.tex}
+\chead{}
+\lhead{2\up{nde} 3, 2017-2018}
+\rhead{Programmation, fonctions}
+\rfoot{\tiny{Lycée Émile Loubet, Valence}}
+\lfoot{\tiny{vg}}
+\cfoot{}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false,            % 
+inputencoding=utf8
+}}
+
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+\begin{document}
+
+\begin{exercice}[Fonction sans argument]
+Vérifier que le code :
+\begin{python}
+for i in range(16):
+    print("*",end="")
+print()
+
+print("* Hello world! *")
+
+for i in range(16):
+    print("*",end="")
+print()
+\end{python}
+peut être remplacé par le code :
+\begin{python}
+def ligneEtoilee():
+    for i in range(16):
+        print("*",end="")
+    print()
+    
+ligneEtoilee()
+print("* Hello world! *")
+ligneEtoilee()
+\end{python}
+L'instruction \textbf{def} définit une fonction, c'est à dire
+ un bloc de code réutilisable en l'appelant par son nom. 
+ Cela permet d'éviter le copier
+coller de code, le pire ennemi du programmeur.
+\end{exercice}
+
+
+\begin{exercice}
+Modifier le code ci-dessous en utilisant une fonction pour
+éviter le copier coller de code :
+\begin{python}
+for i in range(5):
+    print("/\  ", end="")
+print()
+for i in range(5):
+    print("  \/", end="")
+print()
+print("     Une vague.")
+print()
+for i in range(4):
+    for i in range(5):
+        print("/\  ", end="")
+    print()
+    for i in range(5):
+        print("  \/", end="")
+    print()
+print("       La mer.")
+\end{python}
+\end{exercice}
+
+\begin{exercice}[Utilisation d'une fonction prédéfinie avec un argument]
+\begin{enumerate}
+\item Tester ce programme afin de comprendre la fonction \textbf{len}, qui est une 
+fonction déjà définie dans le langage \textbf{Python} :
+\begin{python}
+print("Saisissez un texte :")
+texteSaisi = input()
+a = len(texteSaisi)
+print(a)
+\end{python}
+\item Que va afficher le programme suivant :
+\begin{python}
+a = len("Bonjour") + len("à tous.")
+print(3*a)
+\end{python}
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Définir une fonction avec un argument]
+\begin{enumerate}
+  \item Tester le code suivant :
+\begin{python}
+def ligneEtoilee(longueur):
+    for i in range(longueur):
+        print("*", end="")
+    print()
+    
+ligneEtoilee(7)
+\end{python}
+\item Définir et tester une fonction nommée \textbf{box} qui prend
+en argument un texte \textbf{message} et qui 
+l'affiche dans une boîte d'étoiles. Ainsi le code :
+\begin{python}
+box("Coucou !")
+\end{python}
+doit afficher :
+\begin{verbatim}
+************
+* Coucou ! *
+************
+\end{verbatim}
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Fonction avec un argument et qui renvoie une valeur]
+Quand on définit une fonction, on peut utiliser l'instruction
+\textbf{return} qui aura le double effet de stopper l'exécution de la fonction
+et de renvoyer la valeur de l'expression qui la suit.
+\begin{enumerate}
+  \item Tester le code :
+  \begin{python}
+def valeurAbsolue(x):
+  if x >= 0:
+      return x
+  else:
+      return -x
+
+print("Saisissez un nombre :")
+texteSaisi = input()
+a = int(texteSaisi)
+b = valeurAbsolue(a)
+print("Vous avez saisi le nombre : ", a)
+print("Sa valeur absolue est : ", b)
+  \end{python}
+  \item Peut-on se passer de l'instruction \textbf{else}
+  dans ce cas\footnote{En fait ce n'est pas conseillé de s'en passer pour des
+  raison de lisibilité du code.} ?
+  \item Compléter le code suivant pour que la fonction
+  \textbf{somme(n)} renvoie la somme des entier de 0 à n.
+  Par exemple, \textbf{somme(5)} doit valoir 15.
+\begin{python}
+def somme(n):
+    <À compléter>
+
+print("Saisissez un nombre entier :")
+a = int(input())
+b = somme(a)
+print("La somme des entiers jusqu'à ", a, "vaut ", b)
+\end{python}
+  \item Refaire la question précédente sans boucle \textbf{for}
+  ni boucle \textbf{while}.
+\end{enumerate}
+\end{exercice}
+
+
+\end{document}
+

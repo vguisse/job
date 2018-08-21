@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{hyperref}
+\usepackage{pstricks,pst-all,pstricks-add,pst-tree,pst-3dplot}
+\rhead{mercredi 16 novembre 2016}
+\chead{}
+\lhead{Inégalités et Fonctions, interro n°1}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Lycée Émile Loubet, Valence, 2\up{nde} 5}}
+\begin{document}
+\noindent\textbf{NOM : }
+\begin{exercice}[cours]
+Compléter\baremeexo{1} ces définition du cours :
+\begin{definition}
+Soit $f$ une fonction définie sur un intervalle $I$ de $\R$.
+Dire que $f$ est croissante sur $I$ signifie que pour tous réels
+$x_1$ et $x_2$ de $I$, si $\ldots\ldots\ldots\ldots$ alors $\ldots\ldots\ldots\ldots\ldots$.
+\end{definition}
+\begin{definition}
+Soit $f$ une fonction définie sur un intervalle $I$ de $\R$.
+Dire que $f$ est décroissante sur $I$ signifie que pour tous réels
+$x_1$ et $x_2$ de $I$, si $\ldots\ldots\ldots\ldots$ alors $\ldots\ldots\ldots\ldots\ldots$.
+\end{definition}
+\end{exercice}
+
+\begin{exercice}
+Pour\baremeexo{4} chacune des affirmations suivantes, indiquer si elle est vraie ou fausse. Justifier la réponse.
+
+\emph{Il est attribué un point par réponse exacte correctement justifiée. Une réponse non justifiée n'est pas prise en compte.}
+
+\medskip
+
+\begin{enumerate}
+\item \textsf{\textsc{\textbf{affirmation 1 :}}} Si une fonction $f$ n'est pas strictement croissante sur $\R$, alors elle est 
+strictement décroissante sur $\R$.
+\vfill
+\item Soit $f$ une fonction définie sur $[ -6 ; 9]$ dont le tableau de variation est dressé ci-dessous.
+
+\begin{center}
+\psset{unit=1cm} 
+\begin{pspicture}(16,3)
+\psset{linewidth=.5pt}
+\psframe(16,3) \psline(3,0)(3,3) \psline(0,2)(16,2)
+\rput(1.5,2.5){$x$}\rput(3.5,2.5){$- 6$} \rput(7.5,2.5){$2$}\rput(11.5,2.5){$3$}\rput(15.5,2.5){$8$}
+\rput(1.5,1){Variation de $f$} \rput(3.5,.3){\rnode{A}{$-4$}} \rput(7.5,1.7){\rnode{B}{$0$}} \rput(11.5,.3){\rnode{C}{{$-6$}}} \rput(15.5,1.7){\rnode{D}{$12$}} 
+\psset{nodesep=5pt,arrows=->,linewidth=.75pt}
+\ncline{A}{B}  \ncline{B}{C}\ncline{C}{D}
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item \textsf{\textsc{\textbf{affirmation 2 :}}} Si $2\leqslant x \leqslant 8$ alors $0 \leqslant f(x) \leqslant 12$.
+\vfill
+\item \textsf{\textsc{\textbf{affirmation 3 :}}} Si $-6\leqslant x \leqslant 3$ alors $f(x) \leqslant 0$.
+\vfill
+\item \textsf{\textsc{\textbf{affirmation 4 :}}} La fonction $f$ admet un maximum sur $[-6;8]$ qui est 12.
+\vfill
+\end{enumerate}
+\end{enumerate}
+
+\end{exercice}
+
+
+\end{document}

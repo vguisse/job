@@ -1,0 +1,99 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage[colorlinks=true]{hyperref}
+\rhead{Contrôle sur les probabilités.}
+\chead{}
+\lhead{7 avril 2014}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{2\up{de}8, Lycée Julie-Victoire Daubié, Argenteuil}}
+\begin{document}
+{\small
+\elevetrue
+\emph{
+Les événements sont des ensembles. Les probabilités sont des nombres positifs et inférieurs à 1. Les écritures
+en contradiction avec cela seront particulièrement pénalisées.
+}
+\begin{exercice}
+ Cours\baremeexo{3}.
+\begin{enumerate}
+  \item Compléter avec un mot de deux lettres :
+	\og Une issue appartient à  $A\cup B$ si et seulement si 
+elle appartient à $A$ \ac{ ou } à $B$.\fg
+  \item Compléter avec un mot de deux lettres :
+	\og Une issue appartient à  $A\cap B$ si et seulement si 
+elle appartient à $A$ \ac{ et } à $B$.\fg
+  \item Compléter cette formule du cours : $P(A\cup B)=$
+  \item Compléter cette formule du cours : $P(\barre{A})=$
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+ On\baremeexo{8} lance un dé à 12 faces symétriques, numérotées de 1 à 12. 
+On note \[\Omega=\{1;2;3;4;5;6;7;8;9;10;11;12\}\]
+l'univers de cette expérience aléatoire, T l'événement \og le numéro est
+un multiple de 3\fg, et D l'événement : \og le numéro est un multiple de 2\fg.
+Les questions sont indépendantes.
+\begin{enumerate}
+ \item Donner\baremeque{2} la définition en compréhension de l'événement $T\cap\barre{D}$, donner sa définition en extension.
+ \item Donner\baremeque{3} $P(T)$, $P(D)$ et $P(T\cap D)$. En déduire $P(T\cup D)$.
+ \item Dans cette question, on cherche à déterminer une définition en compréhension de l'événement
+\baremeque{3}  contraire de l'événement $\barre{T}\cup\barre{D}$.
+    \begin{enumerate}
+      \item Donner la définition en compréhension de $\barre{T}\cup\barre{D}$. En déduire sa définition en extension, puis la définition
+	    en extension de son événement contraire.
+      \item Conclure.
+    \end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+
+\begin{exercice}
+Vrai \baremeexo{4} ou faux. Justifier brièvement.
+\begin{enumerate}
+ \item On considère un dé pipé (truqué) à 6 faces. La probabilité d'obtenir 6 est $0,9$ et toutes les
+autres issues on la même probabilité.
+\begin{enumerate}
+  \item Si on lance deux fois ce dé, alors on obtient au moins une fois un 6.
+  \item La probabilité d'obtenir 5 est de $\dfrac15$.
+  \item La probabilité d'obtenir 3 est de 0,02.
+\end{enumerate}
+  \item $A$ et $B$ sont deux événements tels que $P(A)=0,7$, $P(B)=0,6$ et $P(A\cap B)=0,4$.
+\begin{enumerate}
+ \item $A\cap B=\emptyset$.
+ \item $P(\barre{A})<P(\barre{B})$.
+ \item $P(A\cup B)=0,9$.
+\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+
+
+\begin{exercice}
+ On \baremeexo{5} considère une pièce de monnaie équilibrée.
+\`A chaque lancer on obtient soit pile (P), soit face (F).
+\begin{enumerate}
+ \item On lance 3 fois de suite la pièce. On notera par exemple PFF l'issue correspondant à pile au premier lancer, face au deuxième lancer
+et face au troisième lancer.
+\begin{enumerate}
+ \item Faire\baremeque{1} un arbre décrivant cette expérience aléatoire, et donner l'ensemble
+      $\Omega$ de toutes les issues.
+ \item On\baremeque{1} note $A_3$ l'événement : \og Obtenir au moins une fois face\fg. 
+Donner l'ensemble des issues de $A_3$ et calculer sa probabilité.
+\end{enumerate}
+  \item On\baremeque{1} lance 10 fois de suite la pièce. On note $A_{10}$ l'événement : \og Obtenir au moins une fois
+face\fg.
+\begin{enumerate}
+  \item Combien\baremeque{1} l'univers de cette expérience aléatoire comporte-t-il d'issues?
+  \item Décrire\baremeque{1} l'événement $\barre{A_{10}}$ en compréhension, en extension, et donner sa probabilité.
+  \item En\baremeque{1} déduire $P(A_{10})$.
+\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+
+
+
+
+
+\end{document}

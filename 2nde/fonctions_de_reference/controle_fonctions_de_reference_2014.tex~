@@ -1,0 +1,80 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage[colorlinks=true]{hyperref}
+\rhead{Fonctions de référence, contrôle, 1h}
+\chead{}
+\lhead{11 mars 2014}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{2\up{de}8, Lycée Julie-Victoire Daubié, Argenteuil}}
+\begin{document}
+
+\begin{exercice}[Cours]On pourra tracer les 2 représentations graphiques demandées \baremeexo{5}
+dans un même repère.
+\begin{enumerate}
+  \item La\baremeque{1} fonction $f$  définie sur $\R$ par :
+\[
+ f(x)=3-7x
+\]
+est-elle une fonction affine ? Justifier. Déterminer ses variations sur $\R$.
+  \item Tracer\baremeque{1} dans un repère la représentation graphique de la fonction $g$ définie sur $\R$
+par \[g(x)=\dfrac12x-2.\]
+  \item Tracer dans un repère l'allure de la courbe représentative de la fonction carré sur $[-2,2]$.
+Comment\baremeque{1,5} s'appelle cette courbe ? 
+  \item D'après le cours, quel\baremeque{1,5} est l'ensemble de définition de la fonction inverse ? Donner son tableau de variations.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Calcul]
+Pour les 2 premières questions,
+les points\baremeexo{3} portent sur le détail des calculs (minimum une étape).
+ \begin{enumerate}
+  \item Quelle\baremeque{1} est l'image de $3\times10^5$ par la fonction carré ?
+  \item Quelle\baremeque{1} est l'image de $5\times 10^{-2}$ par la fonction inverse ?
+  \item Donner\baremeque{1} sans justification la fonction affine correspondant :
+      \begin{enumerate}
+	\item à une augmentation de 30\%.
+	\item à une diminution de 25\%.
+      \end{enumerate}
+ \end{enumerate}
+
+\end{exercice}
+
+
+\begin{exercice}
+ La fonction $f$ est\baremeexo{3} la fonction affine telle que $f(-2)=3$ et $f(4)=0$.
+Tracer sa représentation graphique et déterminer une expression de $f(x)$
+en fonction de $x$ valable pour tout nombre réel $x$ .
+\end{exercice}
+
+\begin{exercice}
+ On sait\baremeexo{3} que le nombre réel $x$ vérifie : $x\in[7;8]$. Déterminer (par un raisonnement
+détaillé ou à l'aide d'un tableau de variations) :
+\begin{enumerate}
+ \item un encadrement de $x^2$.
+ \item un encadrement de $\dfrac{1}{x}$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+ Les affirmations\baremeexo{4} suivantes sont-elles vraies ou fausses ? Les réponses seront justifiées :
+\begin{itemize}
+ \item par une démonstration pour une affirmation vraie,
+ \item par un contre-exemple pour une affirmation fausse.
+\end{itemize}
+\begin{enumerate}
+ \item Si $x\geq 0,5$, alors $\dfrac{1}{x}\leq 2$.
+ \item Si $x\leq 10^3$, alors $x^2\leq 10^6$.
+ \item Si $x^2\geq 1$, alors $x\geq 1$.
+ \item Si $x\geq 99$, alors $\dfrac{1}{x}\leq0,01$.
+\end{enumerate}
+
+\end{exercice}
+
+\begin{exercice}
+ Énoncer\baremeexo{2} la réciproque de la première affirmation de l'exercice précédent, et prouver qu'elle est fausse.
+
+Énoncer la contraposée de la première affirmation de l'exercice précédent, et prouver qu'elle est vraie.
+\end{exercice}
+
+\end{document}

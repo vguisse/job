@@ -1,0 +1,151 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule.tex}
+\chead{}
+\lhead{2\up{nde}10, décembre 2011}
+\rhead{Repérage}
+\rfoot{}
+\lfoot{}
+\cfoot{}
+
+\begin{document}
+\section{Coordonnées d'un point du plan}
+Pour repérer un point sur la droite $(d)$ munie d'un repère $(O,\vect{i})$, il faut un seul nombre : son abscisse.
+\begin{center}
+ <Figure : repérage d'un point en dimension 1, $\vect{OA}=x\vect{i}$>
+\end{center}
+Pour repérer un point du plan $\mathcal{P}$ muni d'un repère  $\Oij$il faut deux nombres : l'abscisse et l'ordonnée.
+\begin{center}
+ <Figure : repérage d'un point en dimension 2, $\vect{OA}=x\vect{i}+y\vect{j}$>
+
+Notation $A(x_A,y_A)$.
+
+Remarque : la correspondance entre un point et son abscisse est une fonction, de même que la correspondance
+entre un point et son ordonnée.
+\end{center}
+\begin{exercice}
+ 37, ensembles de points : 39, 40 p. 256
+\end{exercice}
+
+\section{Coordonnées d'un vecteur}
+\subsection{Définition}
+\begin{definition}[et théorème admis]
+ Soit $\vect{v}$ un vecteur du plan muni du repère $\Oij$. Alors il existe un unique couple
+de réels $(x,y)$ tel que $\vect{v}=x\vect{i}+y\vect{j}$. <vocabulaire coordonnées, abscisse ordonnée d'un vecteur>.
+On note : $\vect{v}(x,y)$ <ou en colonne>. 
+\end{definition}
+\begin{exercice}
+ 28 p. 330, animation géogébra.
+\end{exercice}
+
+\subsection{Calcul}
+\begin{theoreme}
+ Soit $A$ et $B$ deux points du plan muni du repère $\Oij$. Alors $\vect{AB}(x_B-x_A, y_B-y_A)$.
+\end{theoreme}
+\begin{remarque}
+\begin{enumerate}
+ \item Le vecteur $\vect{AB}$ n'est pas égal au vecteur $\vect{BA}$, donc la formule n'est pas symétrique.
+ \item <est-ce déjà connu en dimension 1? Évolution = Valeur finale - Valeur initiale>. 
+ \item moyen mnémotechnique : $A+\vect{AB}=B\equi\vect{AB}=B-A$.
+\end{enumerate}
+\end{remarque}
+
+\begin{demonstration}
+ 
+\end{demonstration}
+\begin{exercice}
+ 29 p.330 et 30 p. 331.
+\end{exercice}
+
+
+\subsection{Coordonnées et opérations sur les vecteurs}
+\begin{theoreme}
+ Soit $\vect{u}(x,y)$ et $\vect{u'(x',y')}$ deux vecteurs du plan muni d'un repère $\Oij$,
+et $k$ un réel. Alors <coordonnées de u+u', ku>.
+\end{theoreme}
+\begin{exercice}
+62p. 333,  41 p. 331, 45 p. 332
+\end{exercice}
+
+
+\section{Applications}
+
+\subsection{Parallélisme}
+\begin{theoreme}
+ Deux vecteurs du plan muni d'un repère sont colinéaires si et seulement si leurs coordonnées sont proportionnelles.
+\end{theoreme}
+\begin{exercice}
+ 63, 64, 69, 71 p.334.
+\end{exercice}
+
+
+
+\subsection{Coordonnées du milieu d'un segment}
+\begin{center}
+ <Figure : milieu d'un sement>
+\end{center}
+\begin{theoreme}
+ Soit $A$ et $B$ deux points du plan muni d'un repère. Le milieu $M$ du segment $[AB]$ a pour coordonnées :
+\[
+ x_M=\dfrac{x_A+x_B}{2},y_M=\dfrac{y_A+y_B}{2}
+\]
+\end{theoreme}
+\begin{remarque}le milieu de $[AB]$ est égal au milieu de $[BA]$, donc les formules sont symétriques :
+\[
+  \dfrac{x_A+x_B}{2}=\dfrac{x_B+x_A}{2}.
+\]
+\end{remarque}
+\begin{demonstration}
+Soit $C$ le point tel que $OACB$ soit un parallélogramme, alors $M$ est aussi le milieu de $[OC]$,
+donc :
+\[
+ \vect{OM}=\frac12\vect{OD}=\frac12(\vect{OA}+\vect{OB})=...
+\]
+\end{demonstration}
+
+\begin{exercice}
+ 42, 43, 44, 45 p. 256
+
+49 p. 257 (parallélogramme).
+\end{exercice}
+
+\subsection{Calculs de distances dans le plan muni d'un repère orthonormé}
+\begin{center}
+ <Figure : distance AB>
+\end{center}
+\begin{theoreme}[Admis, conséquence du théorème de Pythagore]
+ Soit $A$ et $B$ deux points du plan muni d'un repère orthonormé. Alors on a :
+\[
+ AB=\norme{\vect{AB}}=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}
+\]
+\end{theoreme}
+\begin{remarque}
+ La distance AB est égale à la distance BA, donc la formule est symétrique (grâce aux carrés) :
+\[
+ \sqrt{(x_B-x_A)^2+(y_B-y_A)^2}=\sqrt{(x_A-x_B)^2+(y_A-y_B)^2}
+\]
+
+\end{remarque}
+
+\begin{exemple}
+ On donne, dans un repère orthonormé, $A(2,-1)$ et $B(5,-5)$. Calculer $AB$.
+\end{exemple}
+\begin{exercice}
+ 54, 55, 56 p.257
+\end{exercice}
+
+
+
+\section{\'Equation d'un ensemble de points}
+\begin{exemple}
+ L'ensemble $E_1$ d'équation $x=3$
+\end{exemple}
+\begin{exemple}
+ L'ensemble $E_2$ d'équation $y=-3$
+\end{exemple}
+\begin{exemple}
+ L'ensemble $E_3$ d'équation $x^2+y^2=1$
+\end{exemple}
+
+
+\end{document}
+

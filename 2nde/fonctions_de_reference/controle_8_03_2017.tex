@@ -1,0 +1,98 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{hyperref}
+\rhead{Mercredi 8 mars 2017}
+\chead{}
+\lhead{2\up{nde}5, contrôle sur les fonctions de référence}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Lycée Émile Loubet, Valence}}
+\begin{document}
+
+\begin{exercice}
+Fonctions\baremeexo{4} affines.
+\begin{enumerate}
+  \item Tracer\baremeque{2} dans le plan muni d'un repère ci-dessous les représentations graphiques des fonction 
+$f$ et $g$ définies sur $\R$ par $f(x)=2x-3$ et $g(x)=5-2x$.
+\[
+ \includegraphics[width=0.75\textwidth]{repere.eps}
+\]
+  \item Déterminer\baremeque{2} les fonctions affines $f$ et $g$ dont les représentations graphiques sont les deux droites (AB) et (CD) ci-dessous.
+\[
+ \includegraphics[width=0.75\textwidth]{droites.eps}
+\]
+\end{enumerate}
+ 
+\end{exercice}
+
+\begin{exercice}
+ Associer\baremeexo{2} chacune des trois représentations graphiques suivantes :
+\[
+\begin{array}{ccc}
+\textbf{1) }\includegraphics[width=0.25\textwidth]{x2.eps}&\textbf{2) }\includegraphics[width=0.25\textwidth]{moinsx2sur2plus1.eps}&\textbf{3) }\includegraphics[width=0.25\textwidth]{x2moins1.eps}\\
+\end{array}
+\]
+à l'une de ces six fonctions :
+\[
+\begin{array}{llllll}
+ \textbf{a) }x\donne-\frac{x^2}{2}+1& \textbf{c) } x\donne0,5x^2& \textbf{b) }x\donne-2x^2+1&
+\textbf{d) }x\donne x^2-1& \textbf{e) }x\donne x^2+1&\textbf{f) } x\donne x^2
+\end{array}
+\]
+\end{exercice}
+
+\begin{exercice}
+ La\baremeexo{8} fonction $f$ est définie sur $\R$ par :
+\[
+ f(x)=3x^2-3x-6.
+\]
+\begin{enumerate}
+ \item Donner\baremeque{2} en justifiant le tableau de variations de $f$. Préciser la valeur des 
+éventuels maximum ou minimum de $f$.
+ \item Prouver\baremeque{1,5} que pour tout nombre réel $x$,
+ $f(x)=3(x+1)(x-2)$.
+  \item Prouver\baremeque{1,5} que pour tout nombre réel $x$, $f(x)=3[(x-\frac12)^2-\frac54].$
+  \item Quelle est l'image de\baremeque{1} 0 par $f$?
+  \item Quels sont\baremeque{1} les antécédents de 0? Faire figurer cette information dans le tableau de variations de $f$.
+  \item Résoudre\baremeque{1} $f(x)=-6$.
+\end{enumerate}
+\end{exercice}
+
+
+
+
+\begin{exercice}
+$ABCD$ est\baremeexo{6} un carré de côté 12 cm. $M$ étant un point du segment $[AB]$, on construit le carré $AMNP$ et le triangle rectangle isocèle $PRD$ comme indiqué sur la figure ci-dessous. 
+
+	\begin{center}
+	\psset{unit=.4cm}
+	\begin{pspicture}(0,0)(12,12)
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\psframe[linewidth=.75pt, linecolor=prune,hatchwidth=0.25pt,hatchcolor=prune,fillstyle=hlines](0,0)(5,5) 
+\pspolygon[linewidth=.75pt, linecolor=prune,hatchwidth=0.25pt,hatchcolor=prune,fillstyle=vlines](0,5)(0,12)(7,12)(0,5)
+\psframe[linewidth=1pt, linecolor=bleu](0,0)(12,12)
+\uput[dl](0,0){\footnotesize{\bleu $A$}}\uput[dr](12,0){\footnotesize{\bleu $B$}}\uput[ur](12,12){\footnotesize{\bleu $C$}}\uput[ul](0,12){\footnotesize{\bleu $D$}}
+\uput[d](5,0){\footnotesize{\prune $M$}}\uput[r](5,5){\footnotesize{\prune $N$}}\uput[l](0,5){\footnotesize{\prune $P$}}\uput[u](7,12){\footnotesize{\prune $R$}}
+\uput[d](2.5,0){\footnotesize{$x$}}
+\end{pspicture}
+	\end{center}
+
+On pose $x=AM$ avec $x\in \left[ 0 ; 12 \right]$
+\begin{enumerate}
+\item Exprimer\baremeque{1} en fonction de $x$ l'aire  du triangle $PRD$.
+\item On note $f(x)$ l'aire en $\mathrm{cm}^2$ de la partie hachurée.
+\begin{enumerate}
+\item Montrer\baremeque{2} que pour tout réel $x$ appartenant à l'intervalle $\left[ 0 ; 12 \right]$, $f(x)=\dfrac{3}{2}x^2-12x+72$.
+\item Donner, en justifiant, le tableau\baremeque{1} de variation de la fonction $f$. 
+
+En déduire la valeur minimale de l'aire de la partie hachurée.
+\end{enumerate}
+\item Déterminer\baremeque{2} les positions éventuelles du point $M$ pour que l'aire de la partie hachurée soit égale à la moitié de l'aire du carré $ABCD$.
+\end{enumerate}
+\end{exercice}
+
+
+
+
+\end{document}

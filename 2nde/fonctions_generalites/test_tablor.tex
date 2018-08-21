@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[french]{babel} % o r e u n o z e r l a n g o u a g e
+\usepackage[xcas]{tablor} % x c a s en o p t i o n : c f p l u s l o i n
+
+% COMPILER AVEC ALT-SHIFT-4
+\begin{document}
+\initablor
+Voici un tableau de variations :
+
+\begin{TV}
+TV([-infinity,+infinity],[2],"f","x",ln(x)/(2-x),1,n,\tv)
+\end{TV}
+
+\nettoyer
+
+\end{document}

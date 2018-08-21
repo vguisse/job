@@ -1,0 +1,92 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage[colorlinks=true]{hyperref}
+\rhead{Contrôle sur les probabilités.}
+\chead{}
+\lhead{4 avril 2011}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{2\up{de}4, Lycée Romain Rolland, Argenteuil}}
+\begin{document}
+{\small
+\elevetrue
+\emph{
+Les événements sont des ensembles. Les probabilités sont des nombres positifs et inférieurs à 1. Les écritures
+en contradiction avec cela seront particulièrement pénalisées.
+}
+\begin{exercice}
+ Cours\baremeexo{4}.
+\begin{enumerate}
+  \item Compléter : \og L'univers d'une expérience aléatoire 
+	est l'\ac{ ensemble } de toutes ses \ac{ issues }\fg.
+  \item Compléter avec un mot de deux lettres :
+	\og Une issue appartient à  $A\cup B$ si et seulement si 
+elle appartient à $A$ \ac{ ou } à $B$.\fg
+  \item Compléter avec un mot de deux lettres :
+	\og Une issue appartient à  $A\cap B$ si et seulement si 
+elle appartient à $A$ \ac{ et } à $B$.\fg
+  \item Compléter cette formule du cours : $P(A\cup B)=$
+  \item Compléter cette formule du cours : $P(\barre{A})=$
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Vrai \baremeexo{5} ou faux (aucune justification n'est demandée).
+\begin{enumerate}
+ \item On considère un dé pipé à 6 faces. La probabilité d'obtenir 6 est $0,9$ et toutes les
+autres issues on la même probabilité.
+\begin{enumerate}
+  \item La probabilité d'obtenir 3 est de $\dfrac15$.
+  \item Si on lance deux fois ce dé, alors on obtient au moins une fois un 6.
+\end{enumerate}
+  \item $A$ et $B$ sont deux événements tels que $P(A)=0,7$, $P(B)=0,6$ et $P(A\cap B)=0,4$.
+\begin{enumerate}
+ \item $A$ et $B$ sont incompatibles.
+ \item $P(\barre{A})<P(\barre{B})$.
+ \item $P(A\cup B)=0,9$.
+\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+ On\baremeexo{6} lance un dé à 12 faces, numérotées de 1 à 12. On note $\Omega$
+l'univers de cette expérience aléatoire, T l'événement \og le numéro est
+un multiple de 3\fg, et D l'événement : \og le numéro est un multiple de 2\fg.
+Les questions sont indépendantes.
+\begin{enumerate}
+ \item Donner la définition en compréhension de l'événement $T\cap\barre{D}$, donner sa définition en extension.
+ \item Calculer $P(T\cup D)$ de deux manières différentes.
+ \item Quel est l'événement contraire de l'événement $\barre{T}\cup\barre{D}$ ? Donner sa définition en compréhension et sa définition en extension.
+\end{enumerate}
+
+\end{exercice}
+
+
+\begin{exercice}
+ On \baremeexo{5} considère une pièce de monnaie équilibrée.
+\`A chaque lancé on obtient soit pile (P), soit face (F).
+\begin{enumerate}
+ \item On lance 3 fois de suite la pièce. On notera par exemple PFF l'issue correspondant à pile au premier lancé, face au deuxième lancé
+et face au troisième lancé.
+\begin{enumerate}
+ \item Faire un arbre décrivant cette expérience aléatoire, et donner l'ensemble
+      $\Omega$ de toutes les issues.
+ \item On note $A$ l'événement : \og Obtenir exactement 2 fois face\fg. 
+Donner l'ensemble des issues de $A$ et calculer sa probabilité.
+\end{enumerate}
+  \item On lance 10 fois de suite cette même pièce. On note $B$ l'événement : \og Obtenir au moins une fois
+face\fg.
+\begin{enumerate}
+  \item Combien l'univers de cette expérience aléatoire comporte-t-il d'issues?
+  \item Décrire l'événement $\barre{B}$ en extension, et calculer sa probabilité.
+  \item En déduire $P(B)$.
+\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+
+
+
+
+
+\end{document}

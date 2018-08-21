@@ -1,0 +1,163 @@
+\documentclass[a4paper,11pt,DIV12,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\rhead{Statistiques descriptives}
+\rfoot{\tiny{JVD Argenteuil, 2\up{nde} 8}}
+\begin{document}
+
+\section{Langage des statistiques descriptives}
+\begin{exemple}
+ Résultats au dernier contrôle d'une classe de 22 élèves.
+\place{données de l'exercice 17 p. 257 sous forme de fonction}
+\end{exemple}
+
+On considère un ensemble à $N$ éléments appelé la population, et une
+fonction appelée variable statistique de cet ensemble dans un ensemble fini de valeurs
+(numériques ou pas)
+$x_1$, $x_2$, ..., $x_p$ :
+\place{variable statistique}
+
+Une série statistique est un résumé de la variable statistique, on ne s'intéresse pas 
+à la correspondance complète, mais seulement au nombre d'antécédents de chaque valeur prise.
+On note $n_i$ le nombre d'antécédents de $x_i$, et on l'appelle l'effectif de la valeur $x_i$.
+Le nombre $f_i=\dfrac{n_i}{N}$ est appelé la fréquence de la valeur $x_i$.
+
+\place{données de l'exercice 17 p. 257 sous forme de série statistique}
+
+On peut aussi regrouper les valeurs par classes :
+
+\place{données de l'exercice 17 p. 257 regroupées par classes}
+
+\exercice{5 et 9 p. 256}
+
+\pagebreak
+\begin{theoreme}
+Une série statistique pour une population de $N$ individus :
+\[ 
+\begin{tabular}{|p{3cm}|c|c|c|c|}
+ \hline
+ \text{Valeur}		&	$x_1$	&	$x_2$	&	...	&	$x_p$ \\\hline
+ Effectif	&	$n_1$	&	$n_2$	&	...	&	$n_p$ \\\hline
+ Fréquence	&	$f_1$	&	$f_2$	&	...	&	$f_p$ \\\hline
+\end{tabular}
+\]
+étant donnée, on a les relations :
+\[ 
+ \sum_{i=1}^{n}f_i=f_1+f_2+\cdots+f_p=1 
+\]
+\[ 
+ \sum_{i=1}^{n}n_i=n_1+n_2+\cdots+n_p=N 
+\]
+\end{theoreme}
+\begin{demonstration}
+On a :
+\[
+f_1+f_2+\cdots+f_p=\dfrac{n_1}{N}+\dfrac{n_2}{N}+\cdots+\dfrac{n_p}{N}=\dfrac{n_1+n_2+\cdots+n_p}{N}=\dfrac{N}{N}=1.
+\]
+\end{demonstration}
+
+\exercice{35 1. p. 259}
+
+\section{Effectifs et fréquences cumulés croissants}
+
+\begin{exemple}
+ Exercice 17 p. 257.
+\end{exemple}
+
+\begin{definition}
+ Le 1\up{er} quartile $Q_1$ est la plus petite valeur de la série pour laquelle 
+la fréquence cumulée croissante dépasse $25\%$. Une médiane $Me$ est une valeur
+comprise entre les deux fréquences cumulées croissantes successives
+qui encadrent 50\%. Le 3\up{e} quartile $Q_3$ est la plus petite valeur de la série pour laquelle
+la fréquence cumulée croissante dépasse $75\%$.
+\end{definition}
+
+
+\begin{exercice}
+ 10, 11, 13 p. 257
+\end{exercice}
+
+
+\begin{exercice}
+ 51 p. 261.
+\end{exercice}
+
+\begin{remarque}
+ La calculatrice donne tout directement : voir p. 326 dans le manuel.
+\end{remarque}
+
+
+\section{Indicateurs de tendance centrale et de dispersion}
+\subsection{Moyenne}
+\begin{definition}
+Une série statistique pour une population de $N$ individus :
+\[ 
+\begin{tabular}{|p{3cm}|c|c|c|c|}
+ \hline
+ \text{Valeur}		&	$x_1$	&	$x_2$	&	...	&	$x_p$ \\\hline
+ Effectif	&	$n_1$	&	$n_2$	&	...	&	$n_p$ \\\hline
+ Fréquence	&	$f_1$	&	$f_2$	&	...	&	$f_p$ \\\hline
+\end{tabular}
+\]
+étant donnée, la moyenne $\barre{x}$ est la valeur qui donne le même total lorsqu'on
+l'attribue à tous les individus :
+\[
+ N\barre{x}=n_1x_1+n_2x_2+\cdots+n_px_p.
+\]
+\end{definition}
+\begin{theoreme}
+ Dans le contexte de la définition précédente, on a :
+\begin{align*}
+ \barre{x}&=\dfrac{n_1x_1+n_2x_2+\cdots+n_px_p}{N}\\
+ \barre{x}&=f_1x_1+f_2x_2+\cdots+f_px_p
+\end{align*}
+\end{theoreme}
+
+
+\begin{demonstration}
+ La première s'obtient en divisant par $N$ les deux membres de la définition, la deuxième s'obtient
+à partir de la première :
+\begin{align*}
+ \barre{x}&=\dfrac{n_1x_1+n_2x_2+\cdots+n_px_p}{N}\\
+	  &=\frac{n_1x_1}{N}+\frac{n_2x_2}{N}+\cdots+\frac{n_px_p}{N}\\
+	  &=f_1x_1+f_2x_2+\cdots+f_px_p.
+\end{align*}
+\end{demonstration}
+
+\begin{exercice}
+38, 41 p. 260
+\end{exercice}
+
+
+\begin{theoreme}[Associativité de la moyenne]
+ Si plusieurs population d'effectifs $N_1$, $N_2$, ..., $N_P$ ont pour moyennes
+respectives $\barre{x_1}$, $\barre{x_2}$, et $N_p$, alors 
+la réunion de ces populations, d'effectif $N=N_1+N_2+\cdots+N_p$
+a pour moyenne
+\[
+ \barre{x}=\dfrac{N_1\barre{x_1}+N_2\barre{x_2}+\cdots+N_p\barre{x_p}}{N_1+N_2+\cdots+N_p}.
+\]
+\end{theoreme}
+\begin{demonstration}
+ D'après la définition de la moyenne, on doit avoir :
+\[
+(N_1+N_2+\cdots+N_p)\barre{x}=N_1\barre{x_1}+N_2\barre{x_2}+\cdots+N_p\barre{x_p}.
+\]
+\end{demonstration}
+
+\begin{exercice}
+ 39 p. 260.
+\end{exercice}
+
+\subsection{Médiane}
+de manière informelle, une médiane d'une série statistique est une valeur qui partage l'effectif total
+en deux.
+
+
+\subsection{Étendue}
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,150 @@
+\documentclass[a4paper,11pt,DIV12,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\rhead{Probabilités}
+\begin{document}
+\section{Expérience aléatoire, univers, probabilité d'une issue}
+Une expérience aléatoire est une expérience qui a plusieurs résultats possibles, appelés
+les issues. On ne peut pas savoir à l'avance laquelle de ces issues sera réalisée.
+
+L'univers d'une expérience aléatoire, souvent noté $\Omega$, est l'ensemble
+des issues.
+\begin{exemple}
+ \label{ex:de}On jette un dé à 6 faces numérotées. Il y a 6 résultats différents 
+possibles qu'on peut noter 1, 2, 3, 4, 5, et 6. Autrement dit :
+\[\Omega=\{1;2;3;4;5;6\}.\]
+\end{exemple}
+\begin{exemple}
+ \label{ex:cartes}On tire au hasard une carte dans un jeu de 32 cartes. Il y a 32 résultats différents possibles qu'on peut noter 
+$7_{\spadesuit}$, $8_{\spadesuit}$, ..., $A_{\clubsuit}$. Autrement dit :
+\begin{align*}
+ \Omega=&\{	7_{\spadesuit};8_{\spadesuit};9_{\spadesuit};10_{\spadesuit};
+		V_{\spadesuit};D_{\spadesuit};R_{\spadesuit};A_{\spadesuit}\\
+	&	7_{\heartsuit};8_{\heartsuit};9_{\heartsuit};10_{\heartsuit};
+		V_{\heartsuit};D_{\heartsuit};R_{\heartsuit};A_{\heartsuit}\\
+	&	7_{\diamondsuit};8_{\diamondsuit};9_{\diamondsuit};10_{\diamondsuit};
+		V_{\diamondsuit};D_{\diamondsuit};R_{\diamondsuit};A_{\diamondsuit}\\
+	&	7_{\clubsuit};8_{\clubsuit};9_{\clubsuit};10_{\clubsuit};
+		V_{\clubsuit};D_{\clubsuit};R_{\clubsuit};A_{\clubsuit}\}
+\end{align*}
+\end{exemple}
+\begin{exemple}
+ \label{ex:urne}Dans une urne, il y a 6 boule blanches et 4 boules noires. On en tire une au hasard. Il y a 10 résultats différents
+possibles que l'on peut noter $b_1$, $b_2$, $b_3$, ..., $b_6$, $n_1$, $n_2$, $n_3$, $n_4$. Autrement dit :
+\[
+ \Omega=\{b_1;b_2;b_3;b_4;b_5;b_6;b_7;n_1;n_2;n_3\}.
+\]
+
+
+On peut aussi considérer qu'il y a seulement deux résultats différents possibles 
+que l'on peut noter $b$ et $n$. Autrement dit :
+\[
+ \Omega'=\{b;n\}.
+\]
+
+\end{exemple}
+
+\begin{definition}
+ Soit $\Omega=\{x_1;x_2;...;x_n\}$ l'univers d'une expérience aléatoire. On dit que les 
+nombres $p_1$, $p_2$, ..., $p_n$ sont les probabilités des issues $x_1$, $x_2$, ..., $x_n$
+lorsqu'ils correspondent aux fréquences d'apparitions de ces issues lorsque l'expérience aléatoire est répétée 
+un grand nombre de fois. Ce sont des nombres compris entre $0$ et $1$ et qui vérifient :
+\[
+ p_1+p_2+\cdots+p_n=1.
+\]
+Définir un loi de probabilité sur $\Omega$ consiste à donner des nombres $p_1$, $p_2$, $\dots$, $p_n$
+convenables.
+\end{definition}
+\begin{exemple}
+ Pour l'exemple du dé, on a la loi de probabilité :
+\renewcommand{\arraystretch}{2}
+\[
+ \begin{array}{|*{7}{c|}}
+  \hline
+  x_i	&	1	&	2	&	3	&	4	&	5	&	6\\\hline
+  p_i	&	\frac16	&	\frac16	&	\frac16	&	\frac16	&	\frac16	&	\frac16\\\hline
+ \end{array}
+\]
+Lorsque que comme dans cet exemple, les probabilités sont toutes égales à un même nombre, on dit
+que la loi de probabilité est équirépartie. Dans ce cas, comme la somme des probabilités fait 1
+on aura toujours :
+\[
+ p_i=p=\frac1n.
+\]
+\end{exemple}
+\begin{exemple}
+ Pour le tirage dans l'urne, on a la loi de probabilité :
+\renewcommand{\arraystretch}{2}
+\[
+ \begin{array}{|*{7}{c|}}
+  \hline
+  x_i	&	b		&	n		\\\hline
+  p_i	&	\frac{7}{10}	&	\frac{3}{10}	\\\hline
+ \end{array}
+\]
+La loi de probabilité n'est pas équirépartie, mais on a toujours
+la somme des probabilités qui fait 1. 
+\end{exemple}
+
+
+\section{\'Evénements, probabilité d'un événement}
+\begin{definition}
+ Soit $\Omega=\{x_1;x_2;...;x_n\}$ l'univers d'une expérience aléatoire,
+un événement est une partie de $\Omega$ (c'est à dire un sous ensemble
+de $\Omega$). Il peut être décrit par une phrase ou par l'ensemble de 
+des issues qui le constituent.
+\end{definition}
+
+
+Ainsi :
+\begin{itemize}
+ \item dans l'exemple du dé, on peut considérer l'événement $M$ : \og obtenir un multiple de 3\fg.
+  On a : $M=\{3;6\}$.
+ \item dans l'exemple avec les cartes, on peut considérer l'événement 
+$N$ : \og tirer une carte noire\fg, l'événement $V$ : \og Tirer un valet \fg;
+\end{itemize}
+
+\begin{definition}
+ La probabilité d'un événement $A$ est la somme des probabilités des issues 
+qui le constituent. On la note $P(A)$, c'est un nombre compris entre 0 et 1
+et qui correspond à la fréquence d'apparition de l'événement $A$.
+\end{definition}
+
+Ainsi :
+\begin{itemize}
+ \item dans l'exemple du dé, on a :
+    \[
+     P(M)=\frac16+\frac16=\frac26=\frac13.
+    \]
+  De manière générale, quand la loi est équirépartie, on a toujours :
+    \[
+     P(A)=\frac{\#A}{\#\Omega}
+	 =\frac{\text{Nombre d'issues favorables}}{\text{Nombre d'issues possibles}};
+    \]
+ \item dans l'exemple avec les cartes, on a :
+    \begin{align*}
+     P(N)&=\dfrac{16}{32}=\frac12\\
+     P(V)&=\dfrac{4}{32}=\frac18.
+    \end{align*}
+\end{itemize}
+\pagebreak
+\section{Opérations sur les événements}
+\begin{definition}
+ L'événement $A\cup B$ (lire $A$ union $B$) est constitué des issues appartenant à l'événement
+$A$ ou à l'événement $B$ (ou aux deux à la fois).
+\end{definition}
+Par exemple l'événement $N\cup V$ : \og Obtenir une carte noire ou obtenir un valet\fg{}
+est constitué de 18 issues.
+\begin{definition}
+ L'événement $A\cap B$ (lire $A$ inter $B$) est constitué des issues appartenant à l'événement
+$A$ et à l'événement $B$.
+\end{definition}
+Par exemple l'événement $N\cap V$ : \og Obtenir une carte noire et obtenir un valet\fg{}
+est constitué de 2 issues. 
+\begin{definition}[\'Evénement contraire]
+ L'événement $\barre{A}$ (lire $A$ barre) est constitué des issues qui n'appartiennent
+pas à l'événement $A$.
+\end{definition}
+Par exemple l'événement $\barre{M}$ : \og Ne pas obtenir un multiple de 3\fg{} est 
+constitué de 4 issues.
+
+\end{document}

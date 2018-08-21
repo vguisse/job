@@ -1,0 +1,152 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule.tex}
+\chead{}
+\lhead{2\up{nde}8, janvier 2014}
+\rhead{Fonctions de référence}
+\rfoot{}
+\lfoot{}
+\cfoot{}
+
+\begin{document}
+\section{Rappels sur les inégalités}
+\begin{axiome} Soit $A$, $B$, $C$, et $T$ des réels.
+ \begin{description}
+  \item [(a)] Si $A\leq B$ et $B\leq C$, alors $A\leq C$ (\textbf{transitivité}).
+  \item [(b)]\label{item:translation} $A\leq B$ si et seulement si $A+T\leq B+T$ (\textbf{invariance par translation}).
+  \item [(c)] La règle des signes. il est toujours clair de présenter sont utilisation dans un tableau de signes.
+ \end{description}
+\end{axiome}
+
+\begin{theoreme}[Résultats d'algèbre] Soit $A$, $B$, $A'$, $B'$, $T$ et $K$ des réels.
+\begin{description}
+  \item [(a)] $A^2\geq 0$.
+  \item [(b)] $A\leq B$ si et seulement si $A-B\leq 0$.
+  \item [(c)] Si $A\leq A'$ et $B\leq B'$, alors $A+B\leq A'+B'$ (\textbf{somme d'inégalités}).
+  \item [(d)] Si $K>0$, alors  : $A\leq B$  si et seulement si $KA\leq KB$ (\textbf{homothétie de rapport positif}).
+  \item [(e)]Si $K<0$, alors  : $A\leq B$  si et seulement si $KA\geq KB$ (\textbf{homothétie de rapport négatif}).
+\end{description}
+\end{theoreme}
+
+\begin{exemple}
+ Démontrer que pour tout $x>1$, $x^2>x$. Démontrer que pour tout $0<x<1$, $x^2<x$. 
+Résoudre une inéquation du premier degré.
+\end{exemple}
+
+
+\section{Fonctions affines}
+\subsection{Définition et exemples}
+\begin{definition}
+ Les fonctions affines sont les fonctions de la forme $x\donne ax+b$, o\`u $a$ et $b$ sont deux nombres réels.
+\end{definition}
+\begin{remarque}
+ Lorsque $b=0$, on dit aussi que la fonction est linéaire (l'image est proportionnelle à l'antécédent
+et le coefficient de proportionnalité est $a$).
+\end{remarque}
+\begin{exemple}
+ On modélise la fréquence cardiaque maximale à l'effort en fonction de l'âge
+par la fonction $f(x)=220-x$, définie sur $[0,120]$. On a $a=-1$ et $b=220$. Preuve de la décroissance de $f$.
+\end{exemple}
+\begin{exemple}
+ Les prix diminuent de 15\%. La fonction $n$ qui à l'ancien prix $x$ associe le nouveau prix $n(x)$ est définie sur $\R_+$ par :
+\[
+ n(x)=x-\frac{15}{100}x.
+\]
+Pour tout $x\in\R_+$, on peut factoriser :
+\[
+ n(x)=(1-0,15)x=0,85x.
+\]
+Ainsi on voit que $n$ est une fonction affine c'est à dire de la forme $x\donne ax+b$ avec $a=0,85$ et $b=0$ (c'est donc aussi une fonction linéaire). Preuve de la croissance de $n$.
+\end{exemple}
+\subsection{Variations des fonctions affines}
+\begin{theoreme}
+ Soit $f:x\donne ax+b$ une fonction affine. Les variations de $f$ sont données par le signe de $a$ :
+\begin{itemize}
+ \item Si $a>0$, alors $f$ est strictement croissante sur son ensemble de définition.
+  \item Si $a<0$, alors $f$ est strictement décroissante sur son ensemble de définition.
+\end{itemize}
+\end{theoreme}
+\begin{remarque}
+ Évidemment, si $a=0$ alors $f$ est constante.
+\end{remarque}
+\begin{demonstration}
+ Supposons que $a>0$. Alors si $x_1<x_2$ sont deux réels de l'ensemble de définition de $f$, on a ... donc $f(x_1)<f(x_2)$.
+
+Supposons que $a<0$. Alors si $x_1<x_2$ sont deux réels de l'ensemble de définition de $f$, on a ... donc $f(x_1)>f(x_2)$.
+\end{demonstration}
+\begin{exercice}
+ Ex. 54 et 55 p. 72.
+\end{exercice}
+
+
+\subsection{Représentation graphique des fonction affines}
+\begin{theoreme}
+ La fonction $f$ est une fonction affine si et seulement si il existe un réel $a$ tel que pour tous réels $x_1<x_2$ de son ensemble de définition.
+son taux d'accroissement $\dfrac{f(x_2)-f(x_1)}{x_2-x_1}$ est constant égal à $a$. On alors $f(x)=ax+f(0)$. 
+\end{theoreme}
+\begin{demonstration}
+ Si $f(x)=ax+b$ est une fonction affine, soit $x_1<x_2$ deux réels de son ensemble de définition. $x_2-x_1\neq0$ et on peut calculer le taux d'accroissement :
+\[
+ \dfrac{f(x_2)-f(x_1)}{x_2-x_1}=\dfrac{ax_2+b-(ax_1+b)}{x_2-x_1}=\dfrac{ax_2-ax_1}{x_2-x_1}=\dfrac{a(x_2-x_1)}{x_2-x_1}=a.
+\]
+Réciproquement, on admet que si le taux d'accroissement est constant, alors la fonction est affine.
+\end{demonstration}
+Ainsi, quand on connaît la valeur d'une fonction affine en deux points, on peut retrouver $a$ puis $b$.
+\begin{exercice}
+ Ex. 56 et 57 p. 73.
+\end{exercice}
+
+\begin{theoreme}[admis]
+ Réciproquement, si une fonction à un taux d'accroissement constant, alors elle est affine.
+\end{theoreme}
+
+\begin{theoreme}[Admis]
+ Une fonction est affine si et seulement si sa représentation graphique est une droite.
+Alors, en notant $f(x)=ax+b$, $a$ est le coefficient directeur de la droite et $b$ son ordonnée à l'origine.
+\end{theoreme}
+\begin{exemple}
+\place{Représenter graphiquement $f(x)=2x-3$}
+\end{exemple}
+\begin{exercice}
+ 58 p. 73.
+\end{exercice}
+\begin{exemple}
+ Exercice 60 p. 72
+\end{exemple}
+
+
+\section{La fonction carré : $f(x)=x^2$}
+\begin{exercice}
+ 18 p. 118
+\end{exercice}
+\subsection{Ensemble de définition}
+\subsection{Représentation graphique}
+Sur [-2;2], unité 2 carreaux.
+\begin{exercice}
+ 20 et 21 p. 118.
+\end{exercice}
+
+\subsection{Variations}
+Théorème et preuve.
+\begin{exercice}
+ 26 et 29 p. 119 ; 31 et 38 p. 119 
+\end{exercice}
+
+\section{La fonction inverse : $f(x)=\dfrac{1}{x}$}
+\begin{exercice}
+ 44 et 47 p. 120
+\end{exercice}
+\subsection{Ensemble de définition}
+\subsection{Représentation graphique}
+Sur [-5;5], unité 1 carreaux.
+\begin{exercice}
+ 50 p. 121
+\end{exercice}
+
+\subsection{Variations}
+Théorème et preuve.
+\begin{exercice}
+ 48 p. 120 ; 51 p. 121 
+\end{exercice}
+
+\end{document}
+

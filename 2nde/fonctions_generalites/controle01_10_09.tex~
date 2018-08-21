@@ -1,0 +1,61 @@
+\documentclass[a4paper,11pt,DIV14,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+
+\rhead{1\up{er} octobre 2009}
+\chead{}
+\lhead{Maths, contr\^ole (1h)}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Romain Rolland Argenteuil, 2\up{nde}1}}
+\begin{document}
+\begin{exercice}
+ Calculer\baremeexo{2} l'écriture scientifique des nombres suivants :
+\begin{align*}
+ A&=\numprint{0,0005}\times3\times10^5&
+ B&=\numprint{1500000}\times2\times10^{-6}&
+ C&=\frac{\numprint{300}\times 10^5}{10^7}&
+ D&=\frac34\times\frac{10^{-2}}{10^{-3}}
+\end{align*}
+\end{exercice}
+
+\begin{exercice}
+ Quelles\baremeexo{8} sont les quatre manières de définir une fonction qui ont été vues en cours? 
+Donner à chaque fois un petit exemple.
+\end{exercice}
+
+\begin{exercice}
+ On définit\baremeexo{4} une fonction $f$ de la variable $x$ par sa courbe représentative :
+\[
+ \includegraphics{fonction}
+\]
+\begin{itemize}
+ \item Quel\baremeque{1} est l'ensemble de définition de cette fonction?
+ \item Quel\baremeque{1} est l'image de 2?
+ \item Combien\baremeque{1} vaut $f(-1)$? Peut-on donner une valeur exacte?
+ \item Quels\baremeque{1} sont les antécédents de 2? (on donnera des valeurs exactes ou approchées selon les cas).
+\end{itemize}
+
+\end{exercice}
+
+
+\begin{exercice}
+ Une fonction\baremeexo{6} est définie par l'algorithme suivant :
+\[
+\begin{tabular}{ll}
+ Entrée :	&$x$ un réel\\
+ Sortie :	&$b$\\
+ Traitement :	&$3x\donne a$\\
+		&$(a-4)^2\donne b$
+\end{tabular}
+\]
+\begin{enumerate}
+ \item Quel \baremeque{1}est l'image de 2 par $f$?
+ \item Quel \baremeque{1}est l'ensemble de définition de cette fonction?
+ \item Donner \baremeque{2} deux formules différentes permettant aussi de définir $f$.
+ \item Le nombre\baremeque{2} $-1$ a-t-il des antécédents par $f$? Justifier.
+\end{enumerate}
+\end{exercice}
+
+
+
+\end{document}

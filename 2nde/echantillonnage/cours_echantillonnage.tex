@@ -1,0 +1,38 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule.tex}
+\chead{}
+\lhead{2\up{nde}8, novembre 2013}
+\rhead{Échantillonnage}
+\rfoot{}
+\lfoot{}
+\cfoot{}
+
+\begin{document}
+\section{Échantillonage}
+On considère une population de $N$ individus, parmi laquelle une proportion $p$
+a une certaine caractéristique.
+
+\begin{exemple}
+ Les 65 millions de français et leur 12,5\% de gauchers.
+\end{exemple}
+\begin{exemple}
+ Les 35 millions de suffrages exprimés à l'élection présidentielle de 2012 et leur 51,64\% pour F. Hollande.
+\end{exemple}
+
+Comme $N$ est grand, on peut être amené à tirer au hasard un échantillon de $n$ individus, et a mesurer
+dans cet échantillon la fréquence $f$ des individus possédant la caractéristique étudiée.
+
+\begin{exemple}
+ 32 lycéens et leur XX\% de gauchers.
+\end{exemple}
+
+\begin{exemple}
+ 1002 inscrits sur les listes électorales et leur 53\% pensant voter pour F. Hollande (sondage CSA mai 2012).
+\end{exemple}
+
+\section{Intervalle de fluctuation d'échantillonnage au seuil de 95\%}
+Bien sûr on pense que $f$ va être proche de $p$, surtout si $n$ est grand.
+Lorsque $n>30$, $np>5$ et $n(1-p)>5$, on admet qu'on a : $P(f\in[p-\frac{1}{\sqrt{n}},p+\frac{1}{\sqrt{n}}])=0,95$.
+
+\end{document}
+

@@ -1,0 +1,61 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{hyperref}
+\usepackage{multicol}
+\rhead{mercredi 10 mai 2017}
+\chead{}
+\lhead{Équations de droites, interro. n°2, 15'}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Lycée Émile Loubet, Valence, 2\up{nde} 5}}
+\begin{document}
+\newcommand{\vv}[1]{\vect{#1}}
+\noindent\textbf{NOM : }
+
+
+
+\begin{exercice}
+Dans le plan muni d'un repère orthonormé $\Oij$, on a tracé cinq droites.
+
+\begin{center}
+\psset{unit=0.5cm}		
+\begin{pspicture}(-10,-10)(12,10)
+\def\pshlabel#1{\footnotesize #1}
+\def\psvlabel#1{\footnotesize #1}
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\psgrid[gridwidth=0.25pt,gridcolor=darkgray,subgriddiv=0,gridlabels=0](0,0)(-10,-10)(12,10)
+\psset{unit=1cm}		
+\psaxes[labelsep=.8mm,linewidth=.75pt,ticksize=-2pt 2pt]{->}(0,0)(-5,-5)(6,5)
+\uput[dl](0,0){\footnotesize{0}}
+\uput[dl](6,0){$x$} \uput[dl](0,5){$y$}
+\def\f{-x/2+1}
+\psplot[algebraic=true,plotpoints=2,linewidth=1pt, linecolor=bleu]{-5}{6}{\f}
+\def\f{2*x-1}
+\psplot[algebraic=true,plotpoints=2,linewidth=1pt, linecolor=bleu]{-2}{3}{\f}
+\def\g{2*x/3-4/3}
+\psplot[algebraic=true,plotpoints=2,linewidth=1.25pt, linecolor=prune]{-5}{6}{\g}
+\def\f{3}
+\psplot[algebraic=true,plotpoints=2,linewidth=1pt, linecolor=bleu]{-5}{6}{\f}
+\psline[linewidth=1pt, linecolor=bleu](-3.5,-5)(-3.5,5)
+\uput[ul](-3.5,-5){\bleu{\footnotesize{$\mathcal{D}_3$}}}
+\uput[ul](6,3){\bleu{\footnotesize{$\mathcal{D}_2$}}}
+\uput[dl](6,-2){\bleu{\footnotesize{$\mathcal{D}_5$}}}
+\uput[dl](2.5,4.5){\bleu{\footnotesize{$\mathcal{D}_4$}}}
+\uput[ul](5,2){\prune{\footnotesize{$\mathcal{D}_1$}}}
+\end{pspicture}
+\end{center}
+\begin{enumerate}
+  \item À l'aide\baremeque{2} du graphique, déterminer une équation de $\mathcal{D}_1$. 
+  \vfill
+  \item Donner\baremeque{2} une équation de chacune des quatre droites $\mathcal{D}_2$, $\mathcal{D}_3$, $\mathcal{D}_4$ et $\mathcal{D}_5$.
+  \vfill
+  \item Déterminer une équation \baremeque{1} de la droite $\mathcal{D}_6$,
+  parallèle à $\mathcal{D}_5$ et passant par l'origine du repère.
+  \vfill
+\end{enumerate}
+
+\end{exercice}
+
+
+\end{document}

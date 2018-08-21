@@ -1,0 +1,86 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{pstricks,pst-all,pstricks-add,pst-tree,pst-3dplot}
+\rhead{mercredi 11 octobre 2017}
+\chead{}
+\lhead{Fonctions, évaluation finale}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Lycée Émile Loubet, Valence, 2\up{nde} 3}}
+\begin{document}
+\begin{exercice}
+Recopier\baremeexo{2} et compléter cette définition du cours :
+\og Soit $f$ une fonction définie sur un intervalle $I$.
+Dire que $f$ est décroissante sur $I$ signifie que pour tous réels \dots, 
+si $x_1\leqslant x_2$, alors \dots\fg.
+\end{exercice}
+
+\begin{exercice}
+On considère\baremeexo{3} la fonction $f$ définie sur $\R$ par $f(x)= 2x^2-\dfrac{1}{4}$.\\
+Calculer :
+$f(1)$, $f(-3)$ et $f\left(\frac{3}{2}\right)$.
+
+ \noindent{(\emph{On détaillera les calculs et on donnera les réponses sous forme simplifiée})}
+\end{exercice}
+
+\begin{exercice}
+Soit\baremeexo{2} $f$ la fonction définie sur $\R$
+par $f(x)=3x+1$.
+Déterminer les éventuels antécédents de 10 par $f$. 
+\end{exercice}
+
+\begin{exercice}
+Soit\baremeexo{4} $x$ un nombre réel.
+Recopier et compléter ces équivalences avec un ensemble :
+\begin{enumerate}
+\item $x>0$ et $x<3$ $\Leftrightarrow$ $x\in\ldots\ldots$.
+\item $x=3$ ou $x=7$ $\Leftrightarrow$ $x\in\ldots\ldots$.
+\item $x<-1$ et $x\geqslant-3$ $\Leftrightarrow$ $x\in\ldots\ldots$.
+\item $x>0$ et $x\geqslant 42$ $\Leftrightarrow$ $x\in\ldots\ldots$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit\baremeexo{6} $f$ la fonction définie par la courbe représentative ci-dessous.
+
+\begin{center}
+\psset{unit=.5cm}
+\begin{pspicture}(-10,-8)(22,10)
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\def\pshlabel#1{\scriptsize #1}
+\def\psvlabel#1{\scriptsize #1}
+\def\f{3.5*(x-2)*(x+1)/(x^2-3*x+4)}
+\newrgbcolor{bleu}{0.1 0.05 .5}
+\newrgbcolor{prune}{.6 0 .48}
+\psgrid[gridwidth=0.25pt,gridcolor=darkgray,subgriddiv=0,gridlabels=0](0,0)(-10,-8)(22,10)
+\psset{unit=1cm}
+\psaxes[labelsep=.8mm,linewidth=2pt,ticksize=-2pt 2pt]{->}(0,0)(-5,-4)(11,5)
+\uput[dl](0,0){\footnotesize{0}}
+\uput[dl](11,0){\footnotesize{$x$}} \uput[dl](0,5){\footnotesize{$y$}}
+\psplot[algebraic=true,plotpoints=500,linewidth=1.25pt, linecolor=bleu]{-4}{10}{\f}
+\psdots[linewidth=1pt, linecolor=bleu, dotscale=.8](-4,1.96975)(10,4.16216)
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item Lire graphiquement l'ensemble de définition de la fonction $f$.
+\item Donner le tableau de variations de la fonction $f$.
+\item La fonction $f$ admet-elle des extremums ? Les donner.
+\item Lire graphiquement l'image de 3 par la fonction $f$.
+\item Résoudre graphiquement l'équation  $f(x)=1$. En déduire
+les éventuels antécédents de 1 par $f$.
+\item Résoudre graphiquement l'inéquation  $f(x)\leqslant 0$.
+\end{enumerate}
+\end{exercice}
+
+
+\begin{exercice}
+On\baremeexo{3} considère à nouveau la fonction $f$ de l'exercice 2.
+\begin{enumerate}
+  \item Démontrer que pour tout nombre réel $x$, on a $x^2\geqslant 0$.
+  \item Démontrer que $f$ admet un minimum qu'on précisera.
+\end{enumerate}
+\end{exercice}
+
+
+\end{document}

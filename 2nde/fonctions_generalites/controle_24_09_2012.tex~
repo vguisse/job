@@ -1,0 +1,93 @@
+\documentclass[a4paper,10pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{hyperref}
+\usepackage{picins}
+\rhead{Mardi 25 septembre 2012}
+\chead{}
+\lhead{2\up{nde}10, contrôle sur les fonctions}
+\lfoot{\tiny{vg}}
+\cfoot{\thepage}
+\rfoot{\tiny{Julie-Victoire Daubié, Argenteuil, TS2}}
+\begin{document}
+
+
+\begin{exercice}[Cours]
+Une\baremeexo{2} fonction numérique est une correspondance \og un $\donne$ au plus un\fg{} entre les nombres
+d'un ensemble de départ et les nombres d'un ensemble d'arrivée.
+
+Reproduire ce tableau à deux colonnes :
+\[
+ \begin{array}{|p{5cm}|p{5cm}|}
+  \hline
+\begin{center}Départ\end{center}	&	\begin{center}Arrivée\end{center}\\\hline
+ \end{array}
+\]
+Placer dans la colonne convenable chacune de ces 8 dénominations : image, antécédent, variable, $x$, $f(x)$,
+axe des ordonnées, ensemble de définition, axe des abscisses. 
+\end{exercice}
+
+
+
+\begin{exercice}[Calcul]
+On\baremeexo{5} donnera les étapes essentielles des calculs.
+ \begin{enumerate}
+  \item Calculer $5x^2$ pour $x=-2$.
+  \item calculer $x^2-x+1$ pour $x=\dfrac{3}{4}$ ;
+  \item Est-il vrai que pour $x=-3$ on ait $2x^2+3x-9=0$ ?
+  \item Calculer l'image de 0 par $f$ avec : $f(x)=4x^3-3(x-5)+2$.
+  \item Soit $f$ la fonction définie sur $\R$ par $f(x)=1-5x$. Déterminer
+les événtuels antécédents de 12.
+ \end{enumerate}
+\end{exercice}
+
+\begin{exercice}Lectures graphiques.\\
+\parpic[l]{\includegraphics[width=0.4\textwidth]{fonction}}
+On définit\baremeexo{3} une fonction $f$
+ de la variable $x$ par sa courbe représentative :
+Les croix marquent des points de la courbe qui coïncident avec le quadrillage 
+(ils correspondent donc
+à des valeurs exactes). Pour chaque réponse, s'il s'agit d'une valeur approchée, on la fera précéder de \og environ\fg.
+\begin{enumerate}
+ \item \picskip{1}Quel\baremeque{1} est l'image de 2?
+ \item \picskip{1}Combien\baremeque{1} vaut $f(-1)$? Peut-on donner une valeur exacte?
+ \item \picskip{1}Quels\baremeque{1} sont les antécédents de 2?
+\end{enumerate}
+\picskip{0}
+\end{exercice}
+
+\begin{exercice}
+ Soit $f$ la fonction\baremeexo{6} définie sur $\R$ par $f(x)=x^2-x+41$. On note $\mathcal{C}$
+sa courbe représentative dans un repère du plan. On ne demande pas de tracer $\mathcal{C}$.
+Pour chacune des affirmations suivantes, dire si elle est vraie ou fausse. Démontrer 
+soigneusement votre réponse.
+\begin{enumerate}
+ \item Les nombres 0 et 1 ont la même image par $f$.
+ \item Le point $A(10;130)$ appartient à $\mathcal{C}$.
+ \item Le point $B(0;41)$ est le point d'intersection de $\mathcal{C}$ avec l'axe des ordonnées.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}Exprimer en fonction de $x$.\\
+ Pendant\baremeexo{1,5} la saison touristique, un commerçant décide d'augmenter ses prix de 35\%. Exprimer le
+nouveau prix $n(x)$ en fonction de l'ancien prix $x$. En déduire le nouveau prix d'un article qui
+était vendu 150\euro{} avant l'augmentation.
+\end{exercice}
+
+
+\begin{exercice}Exprimer en fonction de $x$, difficile.\\
+\parpic{\includegraphics[width=0.4\textwidth]{noye}}
+La côte, supposée\baremeexo{2,5} rectiligne, est modélisée par une droite $(d)$. Le sauveteur part du poste de sauvetage
+(point $P$) et court
+en ligne droite sur la plage. Arrivé en un point $M\in[PH]$, il se met à l'eau et nage en ligne droite 
+jusqu'au noyé (point $N$). On repère la position de $M$ sur $[PH]$ par le nombre $x=MH$.
+Exprimer la distance $PM(x)$ en fonction de $x$. Exprimer $MN(x)$ en fonction de $x$ (on pourra utiliser le théorème de Pythagore).
+En déduire l'expression de la distance totale $d(x)$ parcourue par le sauveteur en fonction de $x$.
+\end{exercice}
+
+
+
+
+
+
+
+\end{document}

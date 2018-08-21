@@ -1,0 +1,114 @@
+\documentclass[a4paper,11pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{pstricks-add}
+\rhead{mercredi 19 octobre 2016}
+\chead{}
+\lhead{Vecteurs, interro. n°2}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Lycée Émile Loubet, Valence, 2\up{nde} 5}}
+\begin{document}
+\newcommand{\vv}[1]{\vect{#1}}
+\noindent\textbf{NOM : }
+\begin{exercice}[cours]
+Soit\baremeexo{1} $\vect{u}$ un vecteur distinct du vecteur nul, et $\vect{v}$ le vecteur
+défini par $\vect{v}=-3\vect{u}$.
+Comparer la direction, le sens et la longueur de ces deux vecteurs.
+\end{exercice}
+\vfill
+\vfill
+\begin{exercice}[D'après 81 p. 217]
+Les\baremeexo{4} triangles de la figure ci-dessous sont tous équilatéraux.
+\begin{enumerate}
+  \item
+En utilisant\baremeque{2} uniquement les points de la figure, déterminer
+un vecteur égal aux sommes suivantes :
+\begin{enumerate}
+\item $3\vect{FG}+\vect{IC}=\dots$
+\vfill
+\item $2\vect{AG}+2\vect{EG}=\dots$
+\vfill
+\item $\frac13\vect{IF}-\frac12\vect{DC}=\dots$
+\vfill
+\item $\frac23\vect{FI}-\frac12 \vect{BJ}=\dots$
+\end{enumerate}
+\begin{center}
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(1.68,1.24)(12.54,8.08)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2]{->}(0,0)(1.68,1.24)(12.54,8.08)
+\psline[linecolor=zzttqq](4,2)(7,2)
+\psline[linecolor=zzttqq](7,2)(5.5,4.6)
+\psline[linecolor=zzttqq](5.5,4.6)(4,2)
+\psline[linecolor=zzttqq](5.5,4.6)(7,2)
+\psline[linecolor=zzttqq](7,2)(8.5,4.6)
+\psline[linecolor=zzttqq](8.5,4.6)(5.5,4.6)
+\psline[linecolor=zzttqq](7,2)(10,2)
+\psline[linecolor=zzttqq](10,2)(8.5,4.6)
+\psline[linecolor=zzttqq](8.5,4.6)(7,2)
+\psline[linecolor=zzttqq](5.5,4.6)(8.5,4.6)
+\psline[linecolor=zzttqq](8.5,4.6)(7,7.2)
+\psline[linecolor=zzttqq](7,7.2)(5.5,4.6)
+\psline[linecolor=zzttqq](8.5,4.6)(10,2)
+\psline[linecolor=zzttqq](10,2)(11.5,4.6)
+\psline[linecolor=zzttqq](11.5,4.6)(8.5,4.6)
+\psline[linecolor=zzttqq](7,7.2)(8.5,4.6)
+\psline[linecolor=zzttqq](8.5,4.6)(10,7.2)
+\psline[linecolor=zzttqq](10,7.2)(7,7.2)
+\psline[linecolor=zzttqq](8.5,4.6)(11.5,4.6)
+\psline[linecolor=zzttqq](11.5,4.6)(10,7.2)
+\psline[linecolor=zzttqq](10,7.2)(8.5,4.6)
+\psline[linecolor=zzttqq](5.5,4.6)(7,7.2)
+\psline[linecolor=zzttqq](7,7.2)(4,7.2)
+\psline[linecolor=zzttqq](4,7.2)(5.5,4.6)
+\psline[linecolor=zzttqq](4,2)(5.5,4.6)
+\psline[linecolor=zzttqq](5.5,4.6)(2.5,4.6)
+\psline[linecolor=zzttqq](2.5,4.6)(4,2)
+\psline[linecolor=zzttqq](2.5,4.6)(5.5,4.6)
+\psline[linecolor=zzttqq](5.5,4.6)(4,7.2)
+\psline[linecolor=zzttqq](4,7.2)(2.5,4.6)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](4,2)
+\rput[bl](4.18,2.12){\black{$A$}}
+\psdots[dotstyle=*,linecolor=blue](7,2)
+\rput[bl](7.18,2.12){\black{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](5.5,4.6)
+\rput[bl](5.68,4.72){\black{$G$}}
+\psdots[dotstyle=*,linecolor=darkgray](8.5,4.6)
+\psdots[dotstyle=*,linecolor=blue](10,2)
+\rput[bl](10.18,2.12){\black{$C$}}
+\psdots[dotstyle=*,linecolor=darkgray](8.5,4.6)
+\rput[bl](8.68,4.72){\black{$H$}}
+\psdots[dotstyle=*,linecolor=darkgray](7,7.2)
+\rput[bl](7.08,7.32){\black{$D$}}
+\psdots[dotstyle=*,linecolor=darkgray](11.5,4.6)
+\rput[bl](11.58,4.72){\black{$I$}}
+\psdots[dotstyle=*,linecolor=darkgray](10,7.2)
+\psdots[dotstyle=*,linecolor=darkgray](10,7.2)
+\rput[bl](10.08,7.32){\black{$J$}}
+\psdots[dotstyle=*,linecolor=darkgray](2.5,4.6)
+\rput[bl](2.68,4.72){\black{$F$}}
+\psdots[dotstyle=*,linecolor=darkgray](4,7.2)
+\rput[bl](4.08,7.32){\black{$E$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+\item Vrai\baremeque{2} ou faux ? Justifier.
+\begin{enumerate}
+  \item $\vect{AB}$ et $\vect{FI}$ sont colinéaires.
+  \vfill
+  \item $\vect{BI}$ et $\vect{FJ}$ sont colinéaires.
+  \vfill
+  \item $\vect{FG}$ et $\vect{0}$ sont colinéaires.
+  \vfill
+  \item Si deux vecteurs sont colinéaires à un même troisième,
+  alors ils sont colinéaires entre eux.
+\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+
+
+\end{document}
