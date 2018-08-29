@@ -1,0 +1,302 @@
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage[official]{eurosym}
+\usepackage{enumitem}
+\usepackage{numprint}
+\usepackage{graphicx}
+\usepackage{xifthen}
+\usepackage{pifont}
+%\usepackage{xlop}
+\usepackage{subfig}
+\usepackage{cellspace,stmaryrd}
+\usepackage[french]{varioref}
+\usepackage{pstricks,pst-circ,pstricks-add,pst-plot,pst-math}
+%\usepackage{pst-all,pst-tree,pst-3dplot}
+\RequirePackage[amsmath,thmmarks,hyperref,framed]{ntheorem}
+\usepackage{mathrsfs}
+
+% ==================================================
+% Intervalles
+% ==================================================
+\newcommand{\intervalle}[4]{\mathopen{#1}#2\mathpunct{};#3\mathclose{#4}}
+\newcommand{\intff}[2]{\intervalle{[}{#1}{#2}{]}}
+\newcommand{\intof}[2]{\intervalle{]}{#1}{#2}{]}}
+\newcommand{\intfo}[2]{\intervalle{[}{#1}{#2}{[}}
+\newcommand{\intoo}[2]{\intervalle{]}{#1}{#2}{[}}
+\newcommand{\intn}[2]{\intervalle{\llbracket}{#1}{#2}{\rrbracket}}
+\newcommand{\bigintervalle}[4]{\bigl{#1}#2\mathpunct{};#3\bigr{#4}}
+\newcommand{\bigintff}[2]{\bigintervalle{[}{#1}{#2}{]}}
+\newcommand{\bigintof}[2]{\bigintervalle{]}{#1}{#2}{]}}
+\newcommand{\bigintfo}[2]{\bigintervalle{[}{#1}{#2}{[}}
+\newcommand{\bigintoo}[2]{\bigintervalle{]}{#1}{#2}{[}}
+\newcommand{\bigintn}[2]{\bigintervalle{\llbracket}{#1}{#2}{\rrbracket}}
+\newcommand{\Bigintervalle}[4]{\Bigl{#1}#2\mathpunct{};#3\Bigr{#4}}
+\newcommand{\Bigintff}[2]{\Bigintervalle{[}{#1}{#2}{]}}
+\newcommand{\Bigintof}[2]{\Bigintervalle{]}{#1}{#2}{]}}
+\newcommand{\Bigintfo}[2]{\Bigintervalle{[}{#1}{#2}{[}}
+\newcommand{\Bigintoo}[2]{\Bigintervalle{]}{#1}{#2}{[}}
+\newcommand{\Bigintn}[2]{\Bigintervalle{\llbracket}{#1}{#2}{\rrbracket}}
+\newcommand{\biggintervalle}[4]{\biggl{#1}#2\mathpunct{};#3\biggr{#4}}
+\newcommand{\biggintff}[2]{\biggintervalle{[}{#1}{#2}{]}}
+\newcommand{\biggintof}[2]{\biggintervalle{]}{#1}{#2}{]}}
+\newcommand{\biggintfo}[2]{\biggintervalle{[}{#1}{#2}{[}}
+\newcommand{\biggintoo}[2]{\biggintervalle{]}{#1}{#2}{[}}
+\newcommand{\biggintn}[2]{\biggintervalle{\llbracket}{#1}{#2}{\rrbracket}}
+\newcommand{\Biggintervalle}[4]{\Biggl{#1}#2\mathpunct{};#3\Biggr{#4}}
+\newcommand{\Biggintff}[2]{\Biggintervalle{[}{#1}{#2}{]}}
+\newcommand{\Biggintof}[2]{\Biggintervalle{]}{#1}{#2}{]}}
+\newcommand{\Biggintfo}[2]{\Biggintervalle{[}{#1}{#2}{[}}
+\newcommand{\Biggintoo}[2]{\Biggintervalle{]}{#1}{#2}{[}}
+\newcommand{\Biggintn}[2]{\Biggintervalle{\llbracket}{#1}{#2}{\rrbracket}}
+
+\newcommand{\pt}{.}
+\newcommand{\et}{\text{ et }}
+\newcommand{\si}{\text{ si }}
+\newcommand{\tq}{\text{ tq }}
+\newcommand{\sinon}{\text{ sinon }}
+\newcommand{\avec}{\text{ avec }}
+\def\pour{\text{~pour~}}
+
+\newenvironment{enumeratecol}[1][2]{\begin{multicols}{#1}\begin{enumerate}}{\end{enumerate}\end{multicols}}
+
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+
+
+%\newtheorem{theoreme}{Théorème}
+%\newtheorem{axiome}{Axiome}
+\newtheorem*{proprieteadmise}{Propriété (admise)}
+%\newtheorem*{demonstration}{Démonstration}
+\newtheorem*{notation}{Notation}
+\newtheorem*{application}{Application}
+\newtheorem*{consequence}{Conséquence}
+\newtheorem{roc}{Restitution organisée de connaissances.}
+
+
+\theoremstyle{plain}
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremseparator{.}
+\newtheorem{exercice}{Exercice}
+\newtheorem{cours}{Question de cours}
+\newtheorem{probleme}{Problème}
+
+\theoremstyle{plain}
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremseparator{.}
+\newtheorem*{rappel}{Rappel}
+\newtheorem{exemple}{Exemple}
+\newtheorem*{contreexemple}{Contre-exemple}
+\newtheorem{remarque}{Remarque}
+\newtheorem*{interpretation}{Interprétation}
+\newtheorem*{convention}{Convention}
+\newtheorem*{vocabulaire}{vocabulaire}
+
+\theoremheaderfont{\sc}\theorembodyfont{\upshape}
+\theoremstyle{nonumberplain}
+\theoremseparator{ : }
+%\theoremsymbol{\rule{1ex}{1ex}}
+\theoremsymbol{\ensuremath\square}
+\newtheorem{demonstration}{D\'emonstration}
+
+
+
+\usepackage[S]{thmbox}
+\newtheorem[S]{theoreme}{Théorème}
+\newtheorem[S]{propriete}{Propriété}
+\newtheorem[S]{axiome}{Axiome}
+\newtheorem[S]{methode}{Méthode de résolution}
+\newtheorem[L]{definition}{Définition}
+
+\newcommand{\defi}[1]{
+\begin{definition}
+#1
+\end{definition}
+}
+
+\newcommand{\theo}[1]{
+\begin{theoreme}
+#1
+\end{theoreme}
+}
+
+\newcommand{\demo}[1]{
+\begin{demonstration}
+#1
+\end{demonstration}
+}
+
+
+%-------------------------------------------------
+%         TYPOGRAPHIE
+%-------------------------------------------------
+\newcommand{\celsius}{\,\degres\textrm{C}}
+
+
+%-------------------------------------------------
+%         SCOLAIRE
+%-------------------------------------------------
+\newcommand{\trou}[1]{\textcolor{white}{#1}}
+\newcommand{\prof}[1]{\textcolor{blue}{#1}}
+\newcommand{\exercices}[1]{\begin{flushright}\textbf{Exercices : }#1\end{flushright}}
+
+\newcommand{\np}[1]{\numprint{#1}}
+
+\newcommand{\place}[1]{
+\vfill\begin{center}
+< #1>
+\end{center}
+\vfill
+}
+
+\newif\ifeleve
+\def\ac#1{\ifeleve%
+\setbox1\hbox{#1}%
+\lower2pt\hbox to \wd1{\dotfill}%
+\else#1\fi}
+
+\newcommand{\croi}{% croissante
+\unitlength=1cm
+\begin{minipage} {1cm}%pour centrer verticalement f(x)
+\begin{picture}(1,1) % dessin de 2 X 2
+\put(0,0){\vector(1,1){1}} % 1 à partir (0,0) direction (1,1)
+\end{picture}
+\end{minipage}
+}
+\newcommand{\dec}{%décroissante
+\unitlength=1cm
+\begin{minipage} {1cm}%pour centrer verticalement f(x)
+\begin{picture}(1,1) % dessin de 2 X 2
+\put(0,1){\vector(1,-1){1}}
+\end{picture}
+\end{minipage}
+} 
+
+\newcommand{\tauxfxh}[3]{\dfrac{#1(#2+#3)-#1(#2)}{#3}}
+
+\newcounter{QCM}
+\setcounter{QCM}{1}
+\newcommand{\question}[1]{{\item[Question \arabic{QCM}]\addtocounter{QCM}{1}#1}}
+\newcommand{\choix}[3]{
+\[
+ \begin{tabular}{p{5cm}p{5cm}p{5cm}}
+  \textbf{a) }#1.&\textbf{b) }#2.&\textbf{c) }#3.
+ \end{tabular}
+\]
+}
+
+%-------------------------------------------------
+%         GEOMETRIE
+%-------------------------------------------------
+\newcommand{\vect}{\overrightarrow}
+\newcommand{\norme}[1]{\|#1\|}
+\newcommand{\Norme}[1]{\left\|#1\right\|}
+\newcommand{\Oijk}{(O,\vect{i},\vect{j},\vect{k})}
+\newcommand{\Oij}{(O,\vect{i},\vect{j})}
+\newcommand{\Ouv}{(O,\vect{u},\vect{v})}
+\newcommand{\bary}{\mathrm{Bar}}
+
+%-------------------------------------------------
+%         FONCTIONS
+%-------------------------------------------------
+\newcommand{\donne}{\mapsto}
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\dt}{\mathrm{d}t}
+\newcommand{\intab}{\int_{a}^{b}}
+%-------------------------------------------------
+%         PROBA
+%-------------------------------------------------
+\newcommand{\barre}[1]{\overline{#1}}
+
+%-------------------------------------------------
+%         ALGEBRE LINEAIRE
+%-------------------------------------------------
+\newcommand{\rg}{\text{rg}}
+\newcommand{\tr}{\text{tr}}
+\renewcommand{\Im}{\text{Im}}
+\newcommand{\Vect}{\text{Vect}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\transpose}{{}^{t}}
+%\newcommand{\ker}{\text{ker}}
+\newcommand{\coordo}[2]{
+\begin{pmatrix}
+#1 \\ #2
+\end{pmatrix}
+}
+
+%-------------------------------------------------
+%         ARITHMETIQUE
+%-------------------------------------------------
+\newcommand{\congru}{\equiv}
+
+%-------------------------------------------------
+%         NOMBRES COMPLEXES
+%-------------------------------------------------
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ei}[1]{\mathrm{e}^{\ii#1}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\re}[1]{\mathrm{Re}(#1)}
+\newcommand{\im}[1]{\mathrm{Im}(#1)}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\renewcommand{\arg}[1]{\mathrm{Arg}(#1)}
+
+\newcommand{\pparmin}[2]{\binom{#2}{#1}}
+\newcommand{\Pparmin}[2]{\dbinom{#2}{#1}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\rond}{\circ}
+\newcommand{\repereoij}{repère orthonormal $(O,\vect{i},\vect{j})$}
+\newcommand{\repereoijdirect}{repère orthonormal direct $(O,\vect{i},\vect{j})$}
+\newcommand{\accoladedouble}[2]{\left\{\begin{array}{ll}#1\\#2\end{array}\right.}
+\newcommand{\soitlasuite}[4]{Soit $(#1)$ la suite définie par $\accoladedouble{#2}{#3\text{ pour tout $#4$}}$}
+\newcommand{\coordvect}[2]{\left(\begin{array}{c}#1\\#2\end{array}\right)}
+\newcommand{\baremeexo}[1]{\marginpar{\textbf{(#1)}}}
+\newcommand{\baremeque}[1]{\marginpar{(#1)}}
+\newcommand{\bq}[1]{\marginpar{\textcolor{red}{(#1)}}}
+
+
+\newcommand{\less}{\leqslant}
+\newcommand{\more}{\geqslant}
+\newcommand{\equi}{\Longleftrightarrow}
+\newcommand{\implique}{\Rightarrow}
+\newcommand{\equidef}{\stackrel{def}{\Longleftrightarrow}}
+\newcommand{\ssi}{\Longleftrightarrow}
+\newcommand{\eqdef}{\stackrel{def}{=}}
+\newcommand{\egaldef}{\stackrel{\tiny{def}}{=}}
+\newcommand{\egalnot}{\stackrel{\tiny{notation}}{=}}
+\newcommand{\latin}[1]{\emph{#1}}
+\newcommand{\negl}[1]{\underset{\text{\tiny{$#1$}}}{\ll}}
+
+\newcommand{\limsuite}{\displaystyle\lim_{n\to+\infty}}
+
+% Partie à ommettre en première lecture
+\newcommand{\optionnel}[1]{\noindent\hrulefill \rotatebox{180}{\ding{72}\ding{72}\ding{72}} \hrulefill #1 \noindent\hrulefill \ding{72}\ding{72}\ding{72} \hrulefill}
+% En tête et pieds custom
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\today}
+\rhead{Cours}		
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Lycée Émile Loubet, Valence}}
+
+
+% de Dupuy de lome
+%\newcommand{\norme}[1]{\left\lVert\ifempty{#1}{\dotpourvariable}{#1}\right\rVert}
+\newcommand{\bignorme}[1]{\bigl\lVert#1\bigr\rVert}
