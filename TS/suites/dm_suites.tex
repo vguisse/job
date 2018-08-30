@@ -1,0 +1,74 @@
+\documentclass[a4paper,11pt,DIV12,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\rhead{\today}
+\chead{}
+\lhead{Devoir maison pour lundi 12 octobre, suites et récurrence}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Romain Rolland Argenteuil, TS2}}
+\usepackage{pstricks,pst-plot,pst-text,pst-tree}
+\begin{document}
+\begin{exercice}
+ Cet exercice consiste à démontrer un résultat souvent utile :
+\begin{theoreme}
+ Soit $(u_n)$ une suite et $f$ une fonction telles que pour tout entier naturel $n$, 
+$u_{n+1}=f(u_n)$. Si $(u_n)$ converge vers le réel $\ell$, et
+si $f$ est continue en $\ell$, alors $\ell$ est une solution de l'équation $f(x)=x$.
+\end{theoreme}
+\begin{enumerate}
+ \item On se place dans les hypothèses du théorème, le démontrer 
+en établissant successivement :\begin{enumerate}
+ \item $\displaystyle\lim_{n\to+\infty}u_{n+1}=\ell.$
+ \item $\displaystyle\lim_{n\to+\infty}f(u_n)=f(\ell).$
+\end{enumerate}
+  \item \og Contre-exemple\footnote{Un contre-exemple, dans ce contexte,
+n'est pas un cas ou le théorème est faux car il est bien vrai dans tous les cas, mais
+un cas qui permet de voir qu'une certaine hypothèse du théorème est bien indispensable.}\fg : donner une suite $(u_n)$ et une fonction $f$ telles que pour tout entier naturel $n$, 
+$u_{n+1}=f(u_n)$, que $(u_n)$ converge vers le réel $\ell$ mais que $\ell$ ne soit pas une 
+solution de $f(x)=x$.
+\end{enumerate}
+
+
+\end{exercice}
+
+\begin{exercice}
+\noindent\textbf{Les parties A et B sont indépendantes}
+
+\noindent \textbf{Partie A}\\
+On considère l'ensemble (E) des suites $\left(x_{n}\right)$ définies sur $\N$ et vérifiant la relation suivante :\\
+pour tout entier naturel $n$ non nul, $x_{n+1} - x_{n} = 0,24x_{n-1}$.
+
+\begin{enumerate}
+\item  On considère un réel $\lambda$ non nul et on définit sur $\N$ la suite $\left(t_{n}\right)$ par $t_{n} = \lambda^n$.\\
+Démontrer que la suite $\left(t_{n}\right)$ appartient à l'ensemble (E) si et seulement si $\lambda$ est solution de l'équation $\lambda^2 - \lambda - 0,24 = 0$.\\
+En déduire les suites $\left(t_{n}\right)$ appartenant à l'ensemble (E).\\
+
+On admet que (E) est l'ensemble des suites $\left(u_{n}\right)$ définies sur $\N$ par une relation de la forme :
+\[u_{n} = \alpha(1,2)^n + \beta(-0,2)^n \quad  	\text{où}~ \alpha~ \text{et}~\beta~ \text{sont deux réels.}\]
+
+\item  On considère une suite $\left(u_{n}\right)$ de l'ensemble (E).\\
+Déterminer les valeurs de $\alpha$ et $\beta$ telles que $u_{0} = 6$ et $u_{1} =  6,6$.\\
+En déduire que, pour tout entier naturel $n,~ u_{n} = \dfrac{39}{7}(1,2)^n + \dfrac{3}{7}(-0,2)^n$.
+
+\item  Determiner $\displaystyle\lim_{n \to + \infty} u_{n}$.
+\end{enumerate}
+
+
+\noindent \textbf{Partie B}\\
+On considère la suite $\left(v_{n}\right)$ définie sur $\N$ par :
+\[v_{0} =  6~ \text{et, pour tout entier naturel}~ n,~v_{n+1} =  1,4v_{n} - 0,05v_{n}^2\]
+
+\begin{enumerate}
+\item  Soit $f$ la fonction définie sur $\R$ par $f(x) = 1,4x - 0,05x^2$.
+	\begin{enumerate}
+		\item  Étudier les variations de la fonction $f$ sur l'intervalle [0~;~8].
+		\item  Montrer par récurrence que, pour tout entier naturel $n$,\[
+ 0 \leqslant  v_{n} < v_{n+1} \leqslant  8.\] En déduire que la suite $\left(v_{n}\right)$ est convergente.
+	\end{enumerate}
+\item En déduire que la suite $(v_n)$ est convergente et déterminer sa limite $\ell$.
+\end{enumerate}
+\end{exercice}
+
+
+
+\end{document}

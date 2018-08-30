@@ -1,0 +1,82 @@
+\textbf{Partie\baremeexo{14} A}
+
+\medskip
+ 
+On considère la suite\index{suite} $\left(u_{n}\right)$ définie par : $u_{0} = 2$ et, pour tout entier nature $n$ : 
+
+\[u_{n+1} = \dfrac{1 + 3u_{n}}{3 + u_{n}}.\] 
+ 
+On admet que tous les termes de cette suite sont définis et strictement positifs.
+
+\medskip
+ 
+\begin{enumerate}
+\item Démontrer\baremeque{2} par récurrence que, pour tout entier naturel $n$, on a : $u_{n} > 1$. 
+\item  
+	\begin{enumerate}
+		\item Établir\baremeque{1} que, pour tout entier naturel $n$, on a : $u_{n+1}- u_{n} = \dfrac{\left(1 - u_{n} \right)\left(1 + u_{n} \right)}{3+ u_{n}}$.
+		\item Déterminer\baremeque{2} le sens de variation de la suite $\left(u_{n}\right)$. 
+
+En déduire que la suite $\left(u_{n}\right)$ converge. 
+	\end{enumerate}
+\end{enumerate}
+	
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+On considère la suite\index{suite} $\left(u_{n}\right)$ 	définie par : $u_{0} = 2$ et, pour tout entier nature $n$ :
+
+\[u_{n+1} = \dfrac{1 + 0,5u_{n}}{0,5 + u_{n}}.\]
+ 
+On admet que tous les termes de cette suite sont définis et strictement positifs.
+
+\medskip
+ 
+\begin{enumerate}
+\item On considère l'algorithme suivant :
+\begin{center}
+\begin{tabular}{|c |l|}\hline
+ Entrée& Soit un entier naturel non nul $n$\\ \hline 
+Initialisation &Affecter à $u$ la valeur 2\\ \hline 
+\multirow{4}{1.2cm}{Traitement et sortie }&POUR $i$ allant de 1 à $n$\\ 
+&\hspace{1cm}Affecter \`a $u$ la valeur $\dfrac{1 + 0,5u}{0,5 + u}$\\  
+&\hspace{1cm}Afficher $u$\\ \hline 
+&FIN POUR\\ \hline
+\end{tabular}
+\end{center}
+ 
+Compléter \baremeque{1}le tableau suivant, en faisant fonctionner cet algorithme pour $n = 3$. Les valeurs de $u$ seront arrondies au millième. 
+
+\begin{center}
+\begin{tabularx}{0.6\linewidth}{|*{4}{>{\centering \arraybackslash}X|}}\hline 
+$i$&1&2& 3\\ \hline 
+$u$&&&\\ \hline 
+\end{tabularx}
+\end{center} 
+\item Pour $n = 12$, on a prolongé le tableau précédent et on a obtenu : 
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{9}{>{\centering \arraybackslash}X|}}\hline 
+$i$&4&5&6&7&8&9&10&11&12\\ \hline
+$u$&\footnotesize\np{1,0083}&\footnotesize\np{0,9973}&\footnotesize\np{1,0009}&\footnotesize\np{0,9997}&\footnotesize\np{1,0001}&\footnotesize \np{0,99997}&\footnotesize\np{1,00001}&\footnotesize \np{0,999996}&\footnotesize \np{1,000001}\\ \hline
+\end{tabularx}
+\end{center}
+
+Conjecturer\baremeque{1} le comportement de la suite $\left(u_{n}\right)$ à l'infini. 
+\item On considère la suite $\left(v_{n}\right)$ définie, pour tout entier naturel $n$, par : $v_{n} = \dfrac{u_{n} - 1}{u_{n} + 1}$. 
+	\begin{enumerate}
+		\item Démontrer\baremeque{1} que la suite $\left(v_{n}\right)$ est géométrique de raison $- \dfrac{1}{3}$. 
+		\item Calculer\baremeque{2} $v_{0}$ puis écrire $v_{n}$ en fonction de $n$.
+	\end{enumerate} 
+\item
+	\begin{enumerate}
+		\item Montrer\baremeque{1} que, pour tout entier naturel $n$, on a : $v_{n} \neq 1$. 
+		\item montrer\baremeque{1} que, pour tout entier naturel $n$, on a : $u_{n} = \dfrac{1 + v_{n}}{1 - v_{n}}$.  
+		\item En déduire\baremeque{1} une expression de $u_n$ en fonction de $n$ pour tout entier
+		naturel $n$.
+		\item Déterminer\baremeque{1} la limite de la suite $\left(u_{n}\right)$. 
+	\end{enumerate}
+\end{enumerate}

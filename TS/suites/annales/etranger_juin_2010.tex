@@ -1,0 +1,62 @@
+\textbf{ \hfill 5 points}
+ 
+\textbf{Commun à tous les candidats}
+
+\medskip
+
+Soit $f$ la fonction définie sur l'intervalle $[0~;~+ \infty[$ par :
+
+\[ f(x) = 6 -  \dfrac{5}{x + 1}.\]
+ 
+Le but de cet exercice est d'étudier des suites $\left(u_{n}\right)$ définies par un premier terme positif ou nul $u_{0}$ et v\'erifiant pour tout entier naturel $n$ :
+ 
+\[u_{n+1} = f\left(u_{n}\right).\]
+ 
+\begin{enumerate}
+\item  Étude de propriétés de la fonction $f$ 
+	\begin{enumerate}
+		\item Étudier le sens de variation de la fonction $f$ sur l'intervalle $[0~;~+ \infty[$. 
+		\item Résoudre dans l'intervalle $[0~;~+ \infty[$ l'équation $f(x) = x$.
+		 
+On note $\alpha$ la solution. 
+		\item Montrer que si $x$ appartient à l'intervalle $[0~;~\alpha]$, alors $f(x)$ appartient à l'intervalle $[0~;~\alpha]$.
+		 
+De même, montrer que si $x$ appartient à l'intervalle $[\alpha, + \infty[$ alors $f(x)$ appartient à l'intervalle $[\alpha~;~ + \infty[$.
+	\end{enumerate}
+	 
+\item Étude de la suite $\left(u_{n}\right)$ pour $u_{0} = 0$
+ 
+Dans cette question, on considère la suite $\left(u_{n}\right)$ définie par $u_{0} = 0$ et pour tout entier naturel $n$ :
+
+\[u_{n + 1} = f\left(u_{n}\right) = 6 - \dfrac{5}{u_{n} + 1}.\] 
+
+	\begin{enumerate}
+		\item Sur le graphique représenté dans l'annexe 2, sont représentées les courbes d'équations $y = x$ et $y=f(x)$.
+		 
+Placer le point $A_{0}$ de coordonnées $\left(u_{0}~ ;~0\right)$, et, en utilisant ces courbes, construire à partir de $A_{0}$ les points $A_{1}$,~$A_{2}$,~$A_{3}$  et $A_{4}$ d'ordonnée nulle et d'abscisses respectives $u_{1},~u_{2},~u_{3}$ et $u_{4}$.
+ 
+Quelles conjectures peut-on émettre quant au sens de variation et à la convergence de la suite $\left(u_{n}\right)$ ? 
+		\item Démontrer, par récurrence, que, pour tout entier naturel $n,~ 0 \leqslant u_{n} \leqslant  u_{n+1} \leqslant \alpha$. 
+		\item En déduire que la suite $\left(u_{n}\right)$ est convergente et déterminer sa limite.
+	\end{enumerate} 
+\item Étude des suites $\left(u_{n}\right)$ selon les valeurs du réel positif ou nul $u_{0}$
+
+\emph{Dans cette question, toute trace d'argumentation, même incomplète, ou d'initiative, même non fructueuse, sera prise en compte dans l'évaluation.}
+
+\medskip
+ 
+Que peut-on dire du sens de variation et de la convergence de la suite $\left(u_{n}\right)$ suivant les valeurs du réel positif ou nul $u_{0}$ ?
+\end{enumerate} 
+\vfill
+\begin{center}
+
+
+\vspace{0.25cm} 
+
+\psset{unit=1cm}
+\begin{pspicture}(-0.5,-0.5)(9.5,10)
+\psaxes[linewidth=1.5pt]{->}(0,0)(-0.5,-0.5)(9.5,10)
+\psplot[linecolor=blue,linewidth=1.25pt,plotpoints=10000]{0}{10}{6 5 x 1 add div sub}
+\psplot[linecolor=green,linewidth=1.25pt,plotpoints=10000]{0}{10}{x}
+\end{pspicture} 
+\end{center}

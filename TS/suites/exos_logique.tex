@@ -1,0 +1,136 @@
+\documentclass[a4paper,11pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{hyperref}
+\rhead{Pour le lundi 22 septembre 2014}
+\chead{}
+\lhead{DM : suites, logique, rédaction}
+\lfoot{\tiny{vg}}
+\cfoot{
+%\thepage
+}
+\rfoot{\tiny{Julie-Victoire Daubié, Argenteuil, TS2}}
+\newcommand{\aconnaitre}[1]{{\tiny{À connaître : #1}\par}}
+\begin{document}
+\subsection*{Propositions}
+Un énoncé formel correctement construit est appelé une proposition.
+On dira qu'une proposition est vraie si on peut la démontrer, et qu'elle et fausse 
+lorsque sa négation (aussi appelée proposition contraire) est vraie.
+\begin{exercice}
+Soit $u$ la suite définie pour $n\in\N$ par $u_n=n^2-n+41$.
+Soit $v$ la suite définie par $v_0=1$ et pour tout $n\in\N$, $v_{n+1}=5v_n-1$,
+ et $w$ la suite définie pour $n\in\N$ par $w_n=v_n-\dfrac14$.
+
+ Formuler la négation des propositions suivantes, et dire (sans rédiger de preuve)
+laquelle des deux propositions, celle donnée ou sa négation, est vraie.
+\begin{description}
+ \item[$\mathcal{P}$ :]\og $u_3 = 45.$ \fg
+ \item[$\mathcal{Q}$ :]\og $v_3 < 45.$ \fg
+ \item[$\mathcal{R}$ :]\og Pour tout $n\in\N$, $u_n\geq40$.\fg
+ \item[$\mathcal{S}$ :]\og Pour tout $n\in\N$, $u_n$ est un nombre premier supérieur ou égal à 40.\fg
+ \item[$\mathcal{T}$ :]\og La suite $u$ est croissante.\fg
+ \item[$\mathcal{U}$ :]\og Il existe $n\in\N$ tel que $u_n>10^6.$ \fg
+ \item[$\mathcal{V}$ :]\og La suite $w$ est géométrique de raison 4.\fg
+ \item[$\mathcal{W}$ :]\og La suite $w$ est géométrique.\fg
+ \item[$\mathcal{X}$ :]\og $\mathcal{S}\implique\mathcal{R}$. \fg
+ \item[$\mathcal{Y}$ :]\og $\mathcal{V}\implique\mathcal{W}$. \fg
+ \item[$\mathcal{Z}$ :]\og Il existe $n\in\N$ tel que $u_{2n}$ est pair.\fg
+\end{description}
+\end{exercice}
+
+\aconnaitre{
+\begin{itemize}
+ 
+ \item la négation (le contraire) de \og Pour tout $n\in\N$, $\mathcal{P}(n)$\fg{}
+se calcule selon : \og Il existe $n\in\N$ tel que NON($\mathcal{P}(n)$)\fg{} ;
+ 
+ \item l'implication vu traditionnellement dans les petites classes sous la forme
+\og Si $\mathcal{P}$, alors $\mathcal{Q}$\fg{} se note \og$\mathcal{P}\implique\mathcal{Q}$\fg. Sa négation
+se calcule selon : \og$\mathcal{P}$ ET NON($\mathcal{Q}$)\fg. L'implication \og$\mathcal{P}\implique\mathcal{Q}$\fg{}
+n'affirme pas $\mathcal{P}$, ni $\mathcal{Q}$, elle ne doit donc pas être confondue avec la déduction
+\og $\mathcal{P}$ donc $\mathcal{Q}$\fg, qui est une abréviation pour le fameux et universel\footnote{C'est le \og
+On sait que \dots, or \dots, donc \dots\fg{} du collège.} \latin{modus ponens} : \og $\mathcal{P}$, or $\mathcal{P}\implique\mathcal{Q}$, donc $\mathcal{Q}$\fg.
+
+Prouver \og$\mathcal{P}\implique\mathcal{Q}$\fg, c'est produire un discours de la forme : \og Supposons $\mathcal{P}$. Alors on a \dots, donc \dots, \dots, donc $\mathcal{Q}$.
+
+
+\end{itemize}
+}
+
+\subsection*{Preuves}
+\begin{exercice}
+ Rédiger une preuve de NON($\mathcal{P}$) et de NON($\mathcal{Q}$).
+\end{exercice}
+
+\begin{exercice}
+ Reformuler $\mathcal{T}$ en utilisant la définition d'une suite croissante.
+Rédiger une preuve de $\mathcal{T}$. Rédiger une preuve de $\mathcal{R}$.
+\end{exercice}
+
+\aconnaitre{Prouver \og Pour tout $n\in\N,$ $\mathcal{P}(n)$\fg{},
+c'est produire un discours de la forme \og Soit $n\in\N$ (sous-entendu 
+n'importe lequel), Alors on a \dots, donc \dots, \dots, donc $\mathcal{P}(n)$\fg{}.
+}
+
+\begin{exercice}
+ Reformuler $\mathcal{V}$ en commençant par \og Pour tout $n\in\N$\fg, puis rédiger 
+une preuve de NON($\mathcal{V}$). Rédiger une preuve de $\mathcal{W}$.
+\end{exercice}
+
+\begin{exercice}
+ Rédiger une preuve de $\mathcal{U}$.
+\end{exercice}
+
+\aconnaitre{rédiger une preuve de \og il existe $n\in\N$ tel que $\mathcal{P}(n)$\fg{} consiste
+à donner (sans donner d'explication sur comment on le trouve) un entier $t$ comme témoin, et à prouver (souvent une simple vérification
+numérique) $\mathcal{P}(t)$.}
+
+\begin{exercice}
+ Rédiger une preuve de NON($\mathcal{S}$).
+\end{exercice}
+
+\begin{exercice}
+ Rédiger une preuve de $\mathcal{Y}$. Est-ce une preuve de $\mathcal{R}$ ?
+\end{exercice}
+
+\aconnaitre{pour rédiger une preuve de \og $\mathcal{P}\implique\mathcal{Q}$ \fg,
+on commence par \og Supposons $\mathcal{P}$. Alors ...\fg{} et on fait une 
+succession de déductions dont la conclusion est $\mathcal{Q}$.
+
+Difficulté : même si la conclusion de la preuve est $\mathcal{Q}$, on n'a pas produit une preuve de $Q$.
+C'est une preuve de \og $\mathcal{P}\implique\mathcal{Q}$ \fg, autrement dit
+de \og Si $\mathcal{P}$, alors $\mathcal{Q}$\fg. Et on ne s'est jamais prononcé sur $\mathcal{P}$.}
+
+
+\begin{exercice}[facultatif]
+ Rédiger une preuve de NON($\mathcal{Z}$).
+\end{exercice}
+
+\pagebreak
+
+\subsection*{Synthèse}
+
+\subsubsection*{Les trois types d'énoncés mathématiques}
+\begin{enumerate}
+	\item Les définitions, qui seulement des abréviations commodes.
+	Exemple : \og Soit $(u_n)_{n\in\N}$ une suite. Lorsque pour tout $n\in\N$,
+	$u_{n}\less u_{n+1}$, on dit que $(u_n)_{n\in\N}$ est croissante.\fg
+	
+	Une fois cette définition énoncée, on peut par exemple abréger
+	\og soit $(u_n)_{n\in\N}$ une suite telle que pour tout $n\in\N$,
+	$u_n\less u_{n+1}$ \fg{} en \og soit $(u_n)_{n\in\N}$ une suite croissante\fg. 
+	
+	D'un point de vue logique, les définitions affirment des équivalences vraies
+	\og par définition \fg{} :
+	\[
+	(u_n)_{n\in\N}\text{ est croissante} \ssi \forall n\in\N,\,u_n\less u_{n+1}
+	\]
+	Il est souvent utile de \og revenir à la définition \fg, c'est à dire de réécrire
+	le membre de gauche en le remplaçant par le membre de droite.
+	\item Les axiomes, qui sont des propositions dont on admet qu'elles sont vraies.
+	par exemple l'axiome de distributivité \og $\forall k,x,y\in\R,\,k(x+y)=kx+ky$ \fg.
+	\item Les théorèmes, qui sont des propositions démontrées à partir des axiomes.
+	Par exemple
+	 
+\end{enumerate}
+
+\end{document}

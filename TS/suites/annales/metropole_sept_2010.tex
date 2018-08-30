@@ -1,0 +1,52 @@
+\textbf{ \hfill 5 points}
+ 
+\textbf{Commun à tous les candidats}
+
+\medskip
+ 
+Soit $\left(u_{n}\right)$ la suite définie par $u_{0} = 5$ et pour tout nombre entier naturel $n$, par  $u_{n+1} = \dfrac{4u_{n} - 1}{u_{n} +2}$.
+
+\medskip
+ 
+Si $f$ est la fonction définie sur l'intervalle $]- 2~;~+ \infty[$ par $f(x) = \dfrac{4x - 1}{x + 2}$, alors on a, pour tout nombre entier naturel $n,~ u_{n+1} = f\left(u_{n}\right)$.
+ 
+On donne en annexe 2 (à rendre avec la copie) une partie de la courbe représentative $\mathcal{C}$ de la fonction $f$ ainsi que la droite $\Delta$ d'équation $y = x$.
+ 
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Sur l'axe des abscisses, placer $u_{0}$ puis construire $u_{1},~ u_{2}$ et $u_{3}$ en laissant apparents les traits de construction. 
+		\item Quelles conjectures peut-on émettre sur le sens de variation et sur la convergence de la suite $\left(u_{n}\right)$ ?
+	\end{enumerate} 
+\item
+	\begin{enumerate}
+		\item Démontrer par récurrence que, pour tout nombre entier naturel $n$, on a $u_{n} - 1 > 0.$
+		\item \emph{Dans cette question, toute trace de recherche, même incomplète, ou d'initiative même non fructueuse, sera prise en compte dans l'évaluation.}
+		 
+Valider par une démonstration les conjectures émises à la question 1. b.
+	\end{enumerate} 
+\item Dans cette question, on se propose d'étudier la suite $\left(u_{n}\right)$ par une autre méthode, en déterminant une expression de $u_{n}$ en fonction de $n$.
+ 
+Pour tout nombre entier naturel $n$, on pose $v_{n} = \dfrac{1}{u_{n} - 1}$. 
+	\begin{enumerate}
+		\item Démontrer que la suite $\left(v_{n}\right)$ est une suite arithmétique de raison $\dfrac{1}{3}$. 
+		\item  Pour tout nombre entier naturel $n$, exprimer $v_{n}$ puis $u_{n}$ en fonction de $n$. 
+		\item  En déduire la limite de la suite $\left(u_{n}\right)$. 
+	\end{enumerate}
+\end{enumerate}
+
+\vspace{1cm} 
+\begin{center}
+
+(à rendre avec la copie) 
+
+\vspace{2cm}
+
+\psset{unit=1.5cm}
+\begin{pspicture}(-2,-2.5)(7,4.25)
+\psaxes[linewidth=1.5pt]{->}(0,0)(-2,-2.5)(7,4.25)
+\psplot[linewidth=1.5pt]{-2}{4.25}{x}
+\psplot[linewidth=1.5pt,linecolor=blue,plotpoints=8000]{-0.62}{6.25}{4 x mul 1 sub x  2 add div}
+\uput[ul](0,0){O} \uput[ul](2,2){$\Delta$} \uput[u](3,2.2){$\mathcal{C}$}
+\end{pspicture}
+\end{center}

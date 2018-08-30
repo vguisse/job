@@ -1,0 +1,53 @@
+\documentclass[a4paper,10pt,DIV15,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{multirow}
+\rhead{\today}
+\chead{}
+\lhead{Contrôle sur les suites (1h)}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Lycée Julie-Victoire Daubié, Argenteuil, TS1}}
+\usepackage{pstricks,pst-plot,pstricks-add}
+\begin{document}
+
+
+\begin{exercice}
+Déterminer\baremeexo{3} la limite des suites $(u_n)$, $(v_n)$ et $(w_n)$, définies
+pour tout $n\in\N$ par :
+\begin{align*}
+u_n=2^n-\left(\dfrac12\right)^n&&v_n=\dfrac{n^2-1}{n+100}&&w_n=5+\dfrac{5}{10}+\dfrac{5}{10^2}+\dots+\dfrac{5}{10^n}
+\end{align*}
+\end{exercice}
+
+
+
+\begin{exercice}
+On \baremeexo{8}considère la suite\index{suite} $(u_n)$ définie par $u_0=\dfrac{1}{2}$ et telle que pour tout entier naturel~$n$, 
+
+\[u_{n+1} = \dfrac{3u_n}{1+2u_n}\]
+
+\begin{enumerate}
+\item
+  	\begin{enumerate}
+  		\item Calculer $u_1$ et $u_2$.
+  		\item Démontrer, par récurrence, que pour tout entier naturel $n$, $0 < u_n$.
+  	\end{enumerate}
+\item On admet que pour tout entier naturel $n$, $u_n<1$.
+  	\begin{enumerate}
+  		\item Démontrer que la suite $\left(u_n\right)$ est croissante.
+  		\item Démontrer que la suite $\left(u_n\right)$ converge.
+  	\end{enumerate}
+\item Soit $\left(v_n\right)$ la suite définie, pour tout entier naturel $n$, par $v_n = \dfrac{u_n}{1 - u_n}$.
+  	\begin{enumerate}
+  		\item Montrer que pour tout $n\in\N$, $v_{n+1}=3v_n$.
+  		\item En déduire pour tout $n\in\N$, une expression de $v_n$ en fonction de $n$.
+  		\item Montrer que, pour tout $n\in\N$, $u_n = \dfrac{3^n}{3^n+1}$.
+  		\item Déterminer la limite de la suite $(u_n)$.
+  	\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+
+\end{document}

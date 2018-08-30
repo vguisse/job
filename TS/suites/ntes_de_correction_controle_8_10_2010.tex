@@ -1,0 +1,96 @@
+\documentclass[a4paper,10pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\rhead{12 octobre 2010}
+\chead{}
+\lhead{Contrôle du 8 octobre 2010, morceaux choisis, à lire ou à relire}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Romain Rolland Argenteuil, TS2}}
+\usepackage{pstricks,pst-plot,pstricks-add}
+\begin{document}
+\newcommand{\auteur}[2]{\textbf{#1 : }\og #2\fg}
+{\small
+Apprenez (mémoire) et comprenez (seconde mémoire) les modèles de rédaction courants (raisonnement par récurrence, preuve de : \og Pour tout $X\in\dots$, \dots\fg, preuve d'une implication (Si A, alors B), preuve d'une équivalence). Surtout,
+soyez votre premier lecteur. Dédoublez-vous et : 
+\begin{enumerate}
+ \item[0.] Vérifiez que vous êtes lisibles.
+ \item Vérifiez que vous affirmez quelque chose : analyse lexicale (orthographe), analyse syntaxique (grammaire), analyse sémantique (signification).
+ \item Vérifiez que ce que vous affirmez est pertinent (est-ce que je réponds à la question mathématique posée, en démontrant avec le niveau de détail exigé
+en T\up{ale} S ? Vous ne devez pas expliquer, mais prouver des affirmations. Lors d'une preuve avec plusieurs étapes, et si vous en ressentez le besoin,
+ contentez-vous de les identifier avec des intitulés comme : Montrons que ... :).
+ \item Vérifiez en secret vos affirmations de manière empirique (calculatrice, vérification de cas particuliers, 
+recherche (souhaitée vaine) d'un contre exemple, etc.).
+\end{enumerate}
+Relisons-vous, arrêtez-moi lorsqu'une affirmation ne passe pas une vérification :
+}
+\begin{exercice}
+\auteur{P}{Soit $n\geq0$ et la suite $(u_n)$ définie par $U_{n+1}=5U_n-8$.}
+\begin{enumerate}
+ \item \auteur{M}{$U_1=5U_0-8=3$.}
+ \item \auteur{J}{$v_n=u_n-2$, si la suite $(v_n)$ est géométrique, $\displaystyle\frac{v_{n+1}}{v_n}$ aura pour résultat une constante,
+qui sera la raison de la suite $(v_n)$.} 
+
+      \auteur{C}{Soit $n\in\N$. On a : $\dfrac{V_{n+1}}{V_n}=\dots=5$. Donc $(V_n)$ est une suite géométrique de raison $q=5$.}
+
+
+      
+ \item \auteur{A}{$(V_n)$ est géométrique donc $V_n=aq^n$.}
+\end{enumerate}
+\end{exercice}
+
+
+\begin{exercice}
+ \textbf{PARTIE A :}
+
+\begin{enumerate}
+\item  \auteur{J}{On a : $P_n$ : $u_n=1+\frac{12}{5^n}$. 
+
+Initialisation : $u_0=1+\frac{12}{5^n}=13$ donc $P_0$ est vraie.}
+
+\auteur{T}{Hérédité : Pour tout $k\geq0$, supposons que $P_k$ est vraie. [...]. Donc $P{k+1}$ est vraie et l'hérédité est prouvée.} 
+
+\auteur{E}{$\displaystyle\lim_{x\to+\infty}U_n=\displaystyle\lim_{x\to+\infty}1+\frac{12}{5^n}=1$.}
+
+\auteur{N}{ ... donc $\displaystyle\lim_{n\to+\infty}1+\frac{12}{5^n}=1$.}
+\item  
+	\begin{enumerate}
+		\item \auteur{R}{(...) donc $u_{n+1}<u_n$. Donc la suite $S_n$ est décroissante.}
+		      
+		      \auteur{C}{Etant donné que $U_n$ est strictement positive car $U_0=13$ et $\lim (U_n)=1$, la suite $(S_n)$ est strictement croissante.}
+		\item \auteur{F (ou A ?)}{$\displaystyle S_n=\sum_{k=0}^n u_k=\sum_{k=0}^n 1+\frac{12}{5^{n\text{( ou $k$ ?)}}}=\sum_{k=0}^n 1+\sum_{k=0}^n \frac{12}{5^{n\text{( ou $k$ ?)}}}$.}
+		\item  \auteur{T}{$\displaystyle S_n=\sum_{k=0}^n u_k$. Or $u_n$ converge vers 1. Donc $\displaystyle\lim_{n\to+\infty}S_n=+\infty$.}
+	\end{enumerate}
+\end{enumerate}
+
+\medskip
+
+\textbf{PARTIE B : }
+ 
+\begin{itemize}
+\item[] \auteur{T}{faux car si par exemple $x_n=1+\frac{12}{5^n}$ alors $x^n$ converge mais $S_n$ tend vers $+\infty$.} 
+\item[] \auteur{C}{Faux : Tant que $x_n>0$, alors $(S_n)$ est strictement croissante.}
+\end{itemize}
+\end{exercice}
+
+\begin{exercice}[Cours]
+ On rapelle que dire qu'une suite tend vers $+\infty$ signifie :
+
+\emph{Pour tout nombre réel $A$, il existe un rang à partir duquel 
+tous les termes de la suite sont supérieurs
+à $A$.}
+
+\begin{enumerate}
+ \item \auteur{A}{Soit $(u_n)$ une suite croissante non majorée.}
+
+      \auteur{N}{Soit $M\in \R$. Comme la suite est non majorée, il existe un rang $n_0$ tel que $u_{n_0}>M$. De plus, comme 
+cette suite est croissante tout les nombres réels de $u_n$, la suite sont supérieurs à $u_{n_0}$ c'est à dire à $M$.}
+ \item \auteur{A}{$(-2)^n$ elle est décroissante, non majorée et ne tend pas vers $+\infty$.}
+ \item \auteur{Collectif}{Si une suite est croissante et majorée, alors elle tend vers un réel $\ell$, donc elle ne tend pas
+vers $+\infty$.}
+\end{enumerate}
+
+
+\end{exercice}
+
+
+\end{document}

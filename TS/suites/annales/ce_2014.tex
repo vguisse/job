@@ -1,0 +1,74 @@
+On considère la suite $\left(u_{n}\right)$ définie par 
+
+\[u_{0} = 0\quad  \text{et, pour tout entier naturel }\:n, u_{n+1} = u_{n} + 2n + 2.\]
+ 
+\begin{enumerate}
+\item Calculer $u_{1}$ et $u_{2}$. 
+\item On considère les deux algorithmes suivants :\index{algorithme} 
+
+\medskip
+
+\hspace*{-1cm}
+{\footnotesize
+\begin{tabularx}{1.1\linewidth}{|l X|l X|}\hline
+\textbf{Algorithme 1}&	&\textbf{Algorithme 2}&\\ \hline
+\textbf{Variables :}& 	$n$ est un entier naturel&\textbf{Variables :}& 	$n$ est un entier naturel\\  
+&$u$ est un réel &	&$u$ est un réel \\
+\textbf{Entrée :}&Saisir la valeur de $n$&\textbf{Entrée :}&Saisir la valeur de $n$\\
+\textbf{Traitement :}& 	$u$ prend la valeur 0&\textbf{Traitement :}& 	$u$ prend la valeur $0$\\
+ &Pour $i$ allant de $1$ à $n$: && Pour $i$ allant de $0$ à $n - 1$ :\\
+&\hspace{0,2cm} $u$ prend la valeur $u + 2i + 2$&&\hspace{0,2cm} $u$ prend la valeur $u + 2i + 2$\\
+& Fin Pour&	&Fin Pour\\
+\textbf{Sortie :}& 	Afficher $u$&\textbf{Sortie :}& 	Afficher $u$\\ \hline
+\end{tabularx}}
+ 
+\medskip
+ 
+De ces deux algorithmes, lequel permet d'afficher en sortie la valeur de $u_{n}$, la valeur de l'entier naturel $n$ étant entrée par l'utilisateur ? 
+\item À l'aide de l'algorithme, on a obtenu le tableau et le nuage de points ci-dessous où $n$ figure en abscisse et $u_{n}$ en ordonnée. 
+
+\medskip
+
+\parbox{0.3\linewidth}{$\begin{array}{|c|c|}\hline
+n &u_{n}\\ \hline 
+0& 0  \\ \hline 
+1& 2  \\ \hline  
+2& 6  \\ \hline  
+3& 12 \\ \hline  
+4& 20 \\ \hline  
+5& 30 \\ \hline  
+6& 42 \\ \hline  
+7& 56 \\ \hline  
+8& 72 \\ \hline  
+9& 90 \\ \hline  
+10& 110\\ \hline  
+11& 132\\ \hline  
+12& 156\\ \hline
+\end{array}$} \hfill
+\parbox{0.65\linewidth}{\psset{xunit=0.5cm,yunit=0.0375cm}
+\begin{pspicture}(-1,-10)(13,170)
+\psaxes[linewidth=1.25pt,Dy=20]{->}(0,0)(13,170)
+\multido{\n=0+1}{14}{\psline[linewidth=0.3pt,linecolor=orange](\n,0)(\n,170)}
+\multido{\n=0+20}{9}{\psline[linewidth=0.3pt,linecolor=orange](0,\n)(13,\n)}
+\psdots[dotstyle=+,dotangle=45,dotscale=1.5](0,0)(1,2)(2,6)(3,12)(4,20)(5,30)  (6,42)  (7,56)  (8,72)  (9,90)  (10,110)(11,132)(12,156)
+\end{pspicture}}
+
+\medskip 
+
+	\begin{enumerate}
+		\item Quelle conjecture peut-on faire quant au sens de variation de la suite $\left(u_{n}\right)$ ?
+		 
+Démontrer cette conjecture. 
+		\item La forme parabolique du nuage de points amène à conjecturer l'existence de trois réels $a, b$ et $c$ tels que, pour tout entier naturel $n$,\: $u_{n} = an^2 + bn + c$.
+		 
+Dans le cadre de cette conjecture, trouver les valeurs de $a, b$ et $c$ à l'aide des informations fournies. 
+	\end{enumerate}
+\item On définit, pour tout entier naturel $n$, la suite $\left(v_{n}\right)$ par : $v_{n} = u_{n+1} - u_{n}$. 
+	\begin{enumerate}
+		\item Exprimer $v_{n}$ en fonction de l'entier naturel $n$. Quelle est la nature de la suite $\left(v_{n}\right)$ ? 
+		\item On définit, pour tout entier naturel $n,\: S_{n} = \displaystyle\sum_{k=0}^{n} v_{k} = v_{0} + v_{1} + \cdots + v_{n}$. 
+
+Démontrer que, pour tout entier naturel $n,\: S_{n} = (n + 1)(n + 2)$. 
+		\item Démontrer que, pour tout entier naturel $n,\: S_{n} = u_{n+1} - u_{0}$, puis exprimer $u_{n}$ en fonction de $n$.
+	\end{enumerate}
+\end{enumerate}

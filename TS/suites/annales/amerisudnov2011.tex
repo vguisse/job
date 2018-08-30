@@ -1,0 +1,47 @@
+\textbf{Commun à  tous les candidats}
+
+\medskip
+
+Soit $f$ la fonction définie sur l'intervalle $]- 1~;~ +\infty[$ par :
+
+\[f(x) = 3 - \dfrac{4}{x + 1}.\]
+  
+On considère la suite définie pour tout $n \in \N$ par : 
+
+\[\left\{\begin{array}{l c l}
+u_{0}	&=&4\\
+u_{n+1} &=&f\left(u_{n}\right)
+\end{array}\right.\]
+
+\begin{enumerate}
+\item On a tracé, en annexe 1, la courbe $\mathcal{C}$ représentative de la fonction $f$ sur l'intervalle $[0~;~+\infty[$ et la droite $\mathcal{D}$ d'équation $y = x$. 
+	\begin{enumerate}
+		\item Sur le graphique en annexe 1, placer sur l'axe des abscisses, $u_{0},\:u_{1},\:u_{2}$ et $u_{3}$. Faire apparaître les traits de construction. 
+		\item Que peut-on conjecturer sur le sens de variation et la convergence de la suite $\left(u_{n}\right)$ ? 
+	\end{enumerate}
+\item Dans cette question, nous allons démontrer les conjectures formulées à la question 1. b. 
+	\begin{enumerate}
+		\item  Démontrer par un raisonnement par récurrence que $u_{n} \geqslant 1$ pour tout $n \in \N$. 
+		\item Montrer que la fonction $f$ est croissante sur $[0~;~+\infty[$. En déduire que pour tout entier naturel $n$, on a : $u_{n+1} \leqslant u_{n}$. 
+		\item Déduire des questions précédentes que la suite $\left(u_{n}\right)$ est convergente et calculer sa limite.
+	\end{enumerate}
+\end{enumerate}
+
+
+\begin{center}
+
+
+\vspace{0,5cm}
+
+
+\vspace{2cm}
+
+\psset{unit=2cm}
+\begin{pspicture}(-1,-1)(6,5)
+\psaxes[linewidth=1.5pt]{->}(0,0)(-1,-1)(6,5)
+\psgrid[gridlabels=0pt,subgriddiv=1,gridcolor=orange,gridwidth=0.25pt]
+\uput[dl](0,0){O}\uput[d](0.5,0){$\vect{\imath}$}\uput[l](0,0.5){$\vect{\jmath}$}\uput[ul](4.5,4.5){$\mathcal{D}$}\uput[d](5.5,2.3){$\mathcal{C}$}
+\psline(-1,-1)(5,5)
+\psplot[plotpoints=8000,linewidth=1.25pt,linecolor=blue]{0}{6}{3 4 x 1 add div sub}
+\end{pspicture}
+\end{center}

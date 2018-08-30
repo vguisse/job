@@ -1,0 +1,76 @@
+\documentclass[a4paper,11pt,DIV12,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\rhead{\today}
+\chead{}
+\lhead{Interrogation, suites et récurrence}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Romain Rolland Argenteuil, TS2}}
+\begin{document}
+\begin{exercice}
+ \textbf{Question de cours (Métropole, Nouvelle Calédonie novembre 2007) }
+\begin{enumerate}
+\item Soit\baremeque{0,5} $f$ une fonction r\'eelle d\'efinie sur $[a~;~+ \infty[$. Compl\'eter la phrase suivante :\\
+\og On dit que $f$ admet une limite finie $\ell$ en $+ \infty$ si \ldots \fg
+\item D\'emontrer\baremeque{1,5} le th\'eor\`eme \og des gendarmes \fg{}: soient $f,~g$ et $h$ trois fonctions d\'efinies sur $[a~;~+ \infty[$ et $\ell$ un nombre r\'eel. Si $g$ et $h$ ont pour limite commune $\ell$ quand $x$ tend vers $+ \infty$, et si pour tout $x$ assez grand $g(x) \leqslant f(x) \leqslant h(x)$, alors la limite de $f$ quand $x$ tend vers $+ \infty$ est \'egale \`a $\ell$.
+\end{enumerate}
+\end{exercice}
+
+
+\begin{exercice}[Antilles-Guyane septembre 2008]
+ Certains résultats de la PARTIE A pourront être utilisés dans la PARTIE B, mais les deux parties peuvent être traitées indépendamment l'une de l'autre. 
+
+\medskip
+
+\noindent \textbf{PARTIE A }
+  
+\noindent On définit :
+\begin{itemize}
+\item la suite $\left(u_{n}\right)$ par : $u_{0} = 13$ et, pour tout entier naturel $n,~ u_{n+1}  = \dfrac{1}{5}u_{n} +\dfrac{4}{5}$. 
+\item la suite $\left(S_{n}\right)$ par : pour tout entier naturel $n,~ S_{n} = \displaystyle\sum_{k=0}^n u_{k} =  u_{0} +u_{1} +u_{2} + \cdots + u_{n}$.
+\end{itemize}
+\begin{enumerate}
+\item  Montrer par récurrence\baremeque{1} que, pour tout entier naturel $n, u_{n} =  1 + \dfrac{12}{5^n}$.  
+
+En déduire la limite de la suite $\left(u_{n}\right)$. 
+\item  
+	\begin{enumerate}
+		\item  Déterminer\baremeque{1} le sens de variation de la suite $\left(S_{n}\right)$. 
+		\item Calculer\baremeque{1} $S_{n}$ en fonction de $n$. 
+		\item Déterminer\baremeque{1} la limite de la suite $\left(S_{n}\right)$. 
+	\end{enumerate}
+\end{enumerate}
+
+\medskip
+
+\noindent\textbf{PARTIE B }
+ 
+\noindent\'Etant donnée une suite $\left(x_{n}\right)$, de nombres réels, 
+définie pour tout entier naturel $n$, on considére la suite $\left(S_{n}\right)$ 
+définie par $S_{n} =  \displaystyle\sum_{k=0}^n x_{k}$.
+ 
+\noindent Indiquer pour chaque proposition suivante si elle est vraie ou fausse.
+ Justifier dans chaque cas. 
+
+\begin{itemize}
+\item[] Proposition 1\baremeque{1} : si la suite $\left(x_{n}\right)$ est convergente, alors la suite $\left(S_{n}\right)$ l'est aussi. 
+\item[] Proposition 2\baremeque{1} : les suites $\left(x_{n}\right)$ et $\left(S_{n}\right)$ ont le même sens de variation. 
+\end{itemize}
+\end{exercice}
+
+\begin{exercice}
+ On considère la suite $(u_n)$ définie par $u_0=2$ et $u_{n+1}=\sqrt{7u_n}$.
+\begin{enumerate}
+ \item Prouver\baremeque{1} que $(u_n)$ est croissante (on pourra raisonner par récurrence).
+ \item \emph{Dans cette question, toute trace de recherche, même incomplète, ou d'initiative
+     même non fructueuse, sera prise en compte dans l'évaluation.}
+
+
+La suite $(u_n)$ est-elle\baremeque{1} convergente?
+\end{enumerate}
+
+\end{exercice}
+
+
+
+\end{document}

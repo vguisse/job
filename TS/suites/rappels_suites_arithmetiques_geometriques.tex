@@ -1,0 +1,91 @@
+\documentclass[a4paper,10pt,DIV18,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\rhead{Septembre 2011}
+\chead{}
+\lhead{Suites, axiome de récurrence}
+\lfoot{\tiny{vg}}
+\cfoot{\thepage}
+\rfoot{\tiny{Julie-Victoire Daubié, Argenteuil, TS2}}
+\begin{document}
+\section{Suite numérique réelle}
+ \begin{definition}[Suite numérique réelle]
+ Une suite numérique réelle $(u_n)_{n\in\N}$ est une fonction de $\N$ dans $\R$, autrement dit
+elle fait correspondre à chaque nombre $n\in\N$ un unique réel $u(n)$, habituellement noté $u_n$.
+\end{definition}
+On peut être amené à considérer aussi des suites définies sur $\N^*$, voire sur des parties de $\N$ de
+la forme $\{n\in\N,\,n\geq p\}$, avec $p\in\N$.
+
+Dans la suite, on abrège $(u_n)_{n\in\N}$ en $(u_n)$, et \og suite numérique réelle\fg{} en \og suite\fg.
+
+
+
+
+\section{Suites arithmétiques, suites géométriques}
+\begin{definition}[Suite arithmétique]
+ Soit $(u_n)$ une suite. Lorsqu'il existe un réel $r$ tel que pour tout 
+$n\in\N$, $u_{n+1}=u_n+r$, on dit que $(u_n)$ est une suite arithmétique de 
+raison $r$.
+\end{definition}
+\begin{exemple}
+ Considérons la suite $(u_n)$ définie par
+$\left\{
+\begin{array}{rcl}
+ u_0&=&3\\
+ u_{n+1}&=&u_n+2\text{ pour tout $n\in\N$.}
+\end{array}
+\right.$ 
+On a :
+\begin{align*}
+ u_0&=3\\
+ u_1&=3+2=5\\
+ u_2&=3+2+2=7\\
+ u_3&=3+2+2+2=3+3\times2=9\\
+\dots
+\end{align*}
+\end{exemple}
+
+
+
+\begin{theoreme}[Caractérisation des suites arithmétiques par l'expression explicite du terme général]
+$(u_n)$ est la suite arithmétique de terme initial $u_0=a$ et de raison $r$ si et seulement si pour tout $n\in\N$, on a $u_n=a+nr$.
+\end{theoreme}
+
+\begin{demonstration}
+ Par récurrence (à suivre) pour le sens direct. Réciproquement, supposons que pour tout $n\in\N$, $u_n=a+nr$.
+Soit $n\in\N$, $u_{n+1}-u_n=a+(n+1)r-(a+nr)=a+nr+r-a-nr=r$, donc $u_{n+1}=u_n+r$, ce qui prouve que $(u_n)$ est 
+une suite arithmétique de raison $r$.
+\end{demonstration}
+
+
+\begin{definition}[Suite géométrique]
+ Soit $(u_n)$ une suite. Lorsqu'il existe un réel $q$ tel que pour tout 
+$n\in\N$, $u_{n+1}=qu_n$, on dit que $(u_n)$ est une suite géométrique de raison $q$.
+\end{definition}
+\begin{exemple}
+ On place un capital $K_0=\numprint{100}$ à 5\%. On note $K_n$ le capital acquis
+l'année $n$. $(K_n)_{n\in\N}$ est la suite géométrique de terme initial $K_0=100$
+et de raison 1,05. On a :
+\begin{align*}
+ K_0&=100\\
+ K_1&=1,05\times100=105\\
+ K_2&=1,05\times1,05\times100=110.25=1,05^2\times100\\
+ K_3&=1,05\times1,05\times1,05\times100=\numprint{115,7625}=1,05^3\times100\\
+\dots
+\end{align*}
+\end{exemple}
+
+\begin{theoreme}[Caractérisation des suites géométriques par l'expression explicite du terme général]
+ $(u_n)$ est la suite géométrique de terme initial $u_0=a$ et de raison $q$ si et seulement si pour tout $n\in\N$, on a $u_n=aq^n$.
+\end{theoreme}
+\begin{demonstration}
+Par récurrence (à suivre) pour le sens direct. Réciproquement, supposons que pour tout $n\in\N$, $u_n=aq^n$.
+Soit $n\in\N$. Si $q=0$, alors tous les termes sont nuls à partir du rang 1, et on a bien $u_{n+1}=0u_n$.
+Sinon, on peut former le quotient :
+\[
+ \frac{u_{n+1}}{u_n}=\frac{aq^{n+1}}{aq^n}=\frac{q^{n+1}}{q^n}=q,
+\]
+
+donc $u_{n+1}=qu_n$, ce qui prouve que $(u_n)$ est une suite géométrique de raison $q$.
+\end{demonstration}
+
+\end{document}

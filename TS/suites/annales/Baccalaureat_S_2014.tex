@@ -1,0 +1,3400 @@
+%!TEX encoding = UTF-8 Unicode
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[scaled=0.875]{helvet}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{makeidx}
+\usepackage{amsmath,amssymb}
+\usepackage{fancybox}
+\usepackage[normalem]{ulem}
+\usepackage{pifont}
+\usepackage{lscape}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{textcomp} 
+\newcommand{\euro}{\eurologo{}}
+%Tapuscrit : Denis Vergès 
+\usepackage{pst-plot,pst-tree,pstricks,pst-node}
+\usepackage{pst-eucl}
+\usepackage{pstricks-add}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\setlength{\textheight}{23.5cm}
+\setlength{\voffset}{-1.5cm}
+\def\e{\text{e}}
+\def\i{\text{i}}
+\newcommand{\vect}[1]{\mathchoice%
+{\overrightarrow{\displaystyle\mathstrut#1\,\,}}%
+{\overrightarrow{\textstyle\mathstrut#1\,\,}}%
+{\overrightarrow{\scriptstyle\mathstrut#1\,\,}}%
+{\overrightarrow{\scriptscriptstyle\mathstrut#1\,\,}}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\labelenumii}{\textbf{\theenumii.}}
+\def\Oij{$\left(\text{O},~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O},~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
+\def\Ouv{$\left(\text{O},~\vect{u},~\vect{v}\right)$}
+\makeindex
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,pdfstartview=FitV,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[frenchb]{babel}
+\usepackage[np]{numprint}
+\begin{document}
+\setlength\parindent{0mm}
+\rhead{A. P. M. E. P.}
+\lhead{\small{Baccalauréat S : l'intégrale 2014}}
+\renewcommand \footrulewidth{.2pt}
+\pagestyle{fancy}
+\thispagestyle{empty} 
+\begin{center}
+{\huge\textbf{\decofourleft~Baccalauréat S  
+2014~\decofourright\\ \vspace{1cm} L'intégrale d'avril  2014 à  juin 2014}}
+
+\vspace{1cm}
+
+Pour un accès direct cliquez sur les liens {\Large 
+\textcolor{blue}{bleus}}
+\end{center}
+
+\vspace{1cm}
+ 
+{\Large \hyperlink{Pondichery}{Pondichéry  8 avril 2014} \dotfill 3  \medskip
+
+\hyperlink{Liban}{Liban  28  mai 2014} \dotfill 10  \medskip
+
+\hyperlink{AmeriqueNord}{Amérique du Nord 30  mai 2014} \dotfill 17  \medskip
+
+\hyperlink{Centres etrangers}{Centres étrangers 12  juin 2014} \dotfill 25  \medskip
+
+\hyperlink{Polynesie}{Polynésie 13  juin 2014} \dotfill 32  \medskip
+
+\hyperlink{Antilles}{Antilles-Guyane 19 juin 2014} \dotfill 37  \medskip
+
+\hyperlink{Asie}{Asie 19  juin 2014} \dotfill 41  \medskip
+
+\hyperlink{Metropole}{Métropole  19 juin 2014} \dotfill 47  \medskip
+
+%\hyperlink{Polynesiesep}{Polynésie 7  juin 2014} \dotfill 21  \medskip
+
+%\hyperlink{Antillessep}{Antilles-Guyane  11 septembre 2014} \dotfill 54  \medskip
+
+%\hyperlink{Metropolesep}{Métropole  12 septembre 2014} \dotfill 60  \medskip
+
+%\hyperlink{Caledonienov}{Nouvelle-Calédonie   14 novembre 2014} \dotfill 66  \medskip
+
+%\hyperlink{AmeriSud}{Amérique du Sud  21 novembre 2013} \dotfill 71  \medskip
+
+
+%\hyperlink{Caledoniemars}{Nouvelle-Calédonie   7 mars 2014} \dotfill 76  \medskip
+}
+
+\vspace{1cm}\hyperlink{Index}{À la fin index des notions abordées}
+
+À la fin de chaque exercice cliquez sur * pour aller \`a l'index
+\newpage ~
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+\hypertarget{Pondichery}{}
+
+\rhead{\textbf{A. P. M. E. P.}}
+\lhead{\small Baccalauréat S}
+\lfoot{\small{Pondichéry}}
+\rfoot{\small{8 avril 2014}}
+\renewcommand \footrulewidth{.2pt}
+\pagestyle{fancy}
+\thispagestyle{empty}
+
+\begin{center}{\Large\textbf{\decofourleft~Baccalauréat S Pondichéry  8 avril 2014~\decofourright}}
+\end{center}
+
+\vspace{0,25cm}
+
+\textbf{\textsc{Exercice 1} \hfill 4 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+
+Dans cet exercice, sauf indication contraire, les résultats seront arrondis au centième.
+
+\medskip
+ 
+\begin{enumerate}
+\item La durée de vie, exprimée en années, d'un moteur pour automatiser un portail fabriqué par une entreprise A est une variable aléatoire $X$ qui suit une loi exponentielle de paramètre $\lambda$, où $\lambda$ est un réel strictement positif.\index{loi exponentielle} 
+
+On sait que $P(X \leqslant 2) = 0,15$.
+
+Déterminer la valeur exacte du réel $\lambda$.
+
+\medskip
+
+\end{enumerate}
+
+Dans la suite de l'exercice on prendra $0,081$ pour valeur de $\lambda$. 
+
+\medskip
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+
+\item  
+	\begin{enumerate}
+		\item Déterminer $P(X \geqslant 3)$. 
+		\item Montrer que pour tous réels positifs $t$ et $h,\: P_{X \geqslant t}(X \geqslant t + h) = P(X \geqslant  h)$. 
+		\item Le moteur a déjà fonctionné durant 3 ans. Quelle est la probabilité pour qu'il fonctionne encore 2 ans ? 
+		\item Calculer l'espérance de la variable aléatoire $X$ et donner une interprétation de ce résultat.
+	\end{enumerate} 
+\item \textbf{Dans la suite de cet exercice, on donnera des valeurs arrondies des résultats à \:} \boldmath $10^{-3}$\unboldmath
+  
+L'entreprise A annonce que le pourcentage de moteurs défectueux dans la production est égal à 1\,\%. Afin de vérifier cette affirmation $800$~moteurs sont prélevés au hasard. On constate que 15 moteurs sont détectés défectueux. 
+
+Le résultat de ce test remet-il en question l'annonce de l'entreprise A ? Justifier. On pourra s'aider d'un intervalle de fluctuation.\index{intervalle de fluctuation} 
+\end{enumerate}
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 2} \hfill 4 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+
+Pour chacune des propositions suivantes, indiquer si elle est vraie ou fausse et justifier la réponse choisie.\index{Vrai--Faux} 
+
+Il est attribué un point par réponse exacte correctement justifiée. 
+
+Une réponse non justifiée n'est pas prise en compte. 
+
+Une absence de réponse n'est pas pénalisée.
+
+\medskip
+ 
+\begin{enumerate}
+\item \textbf{Proposition 1}
+ 
+Toute suite positive croissante tend vers $+ \infty$.\index{suite} 
+\item  $g$ est la fonction définie sur $\left]- \dfrac{1}{2}~;~+ \infty\right[$ par 
+
+\[g(x) = 2x \ln (2x + 1).\]\index{fonction logarithme népérien}
+ 
+\textbf{Proposition 2}
+ 
+Sur $\left]- \dfrac{1}{2}~;~+ \infty\right[$, l'équation $g(x) = 2x$ a une unique solution : $\dfrac{\text{e} -  1}{2}$.
+ 
+\textbf{Proposition 3}
+ 
+Le coefficient directeur de la tangente à la courbe représentative de la fonction $g$ au point d'abscisse $\dfrac{1}{2}$ est :  $1 + \ln 4$. 
+\item  L'espace est muni d'un repère orthonormé \Oijk.
+ 
+$\mathcal{P}$ et $\mathcal{R}$ sont les plans d'équations respectives : $2x + 3y - z - 11 = 0$ et 
+
+$x + y + 5z - 11 = 0$.\index{géométrie dans l'espace}
+ 
+\textbf{Proposition 4}
+ 
+Les plans $\mathcal{P}$ et $\mathcal{R}$ se coupent perpendiculairement. 
+\end{enumerate} 
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 3} \hfill 5 points}
+ 
+\textbf{Candidats n'ayant pas suivi la spécialité }
+
+\medskip
+
+Le plan complexe est muni d'un repère orthonormé \Ouv.
+ 
+Pour tout entier naturel $n$, on note $A_{n}$ le point d'affixe $z_{n}$ défini par : \index{complexes}
+
+\[z_{0} = 1\quad  \text{et}\quad  z_{n+1} = \left(\dfrac{3}{4} + \dfrac{\sqrt{3}}{4}\text{i}\right)z_{n}.\]
+
+On définit la suite $\left(r_{n}\right)$ par $r_{n} = \left|z_{n}\right|$ pour tout entier naturel $n$.
+
+\medskip
+ 
+\begin{enumerate}
+\item Donner la forme exponentielle du nombre complexe $\dfrac{3}{4} + \dfrac{\sqrt{3}}{4}\text{i}$. 
+\item 
+	\begin{enumerate}
+		\item Montrer que la suite $\left(r_{n}\right)$ est géométrique de raison 
+$\dfrac{\sqrt{3}}{2}$.\index{suite géométrique}
+		\item En déduire l'expression de $r_{n}$ en fonction de $n$. 
+		\item Que dire de la longueur O$A_{n}$ lorsque $n$ tend vers $+ \infty$ ?
+	\end{enumerate} 
+\item On considère l'algorithme suivant :\index{algorithme}
+
+\begin{center}
+\begin{tabularx}{0.65\linewidth}{|l|X|}\hline 
+Variables& $n$ entier naturel\\  
+&$R$ réel\\ 
+&$P$ réel strictement positif\\ \hline 
+Entrée& Demander la valeur de $P$\\ \hline  
+Traitement &$R$ prend la valeur 1\\ 
+&$n$ prend la valeur 0\\ 
+&Tant que $R > P$\\ 
+&\hspace{0,5cm}$n$ prend la valeur $n + 1$\\ 
+&\hspace{0,5cm}$R$ prend la valeur $\dfrac{\sqrt{3}}{2}R$\\ 
+&Fin tant que\\ \hline 
+Sortie &Afficher $n$\\ \hline
+\end{tabularx}
+\end{center} 
+
+	\begin{enumerate}
+		\item Quelle est la valeur affichée par l'algorithme pour $P = 0,5$ ? 
+		\item Pour $P = 0,01$ on obtient $n = 33$. Quel est le rôle de cet algorithme ?
+	\end{enumerate} 
+\item 
+	\begin{enumerate}
+		\item Démontrer que le triangle O$A_{n}A_{n+1}$ est rectangle en $A_{n+1}$. 
+		\item On admet que $z_{n} = r_{n}\text{e}^{\text{\'i}\frac{n\pi}{6}}$.
+		 
+Déterminer les valeurs de $n$ pour lesquelles $A_{n}$ est un point de l'axe des ordonnées. 
+		\item Compléter la figure donnée en annexe, à rendre avec la copie, en représentant les points $A_{6}, A_{7}, A_{8}$ et $A_{9}$.
+		 
+Les traits de construction seront apparents.
+	\end{enumerate} 
+\end{enumerate}
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 3} \hfill 5 points}
+ 
+\textbf{Candidats ayant  suivi la spécialité }
+
+\medskip
+
+Chaque jeune parent utilise chaque mois une seule marque de petits pots pour bébé. Trois marques X, Y et Z se partagent le marché. Soit $n$ un entier naturel.\index{probabilités}
+ 
+\begin{tabular}{l l}
+On note :& $X_{n}$ l'évènement \og la marque X est utilisée le mois $n$ \fg,\\ 
+&$Y_{n}$ l'évènement \og la marque Y est utilisée le mois $n$ \fg,\\ 
+&$Z_{n}$ l'évènement \og la marque Z est utilisée le mois $n$ \fg.
+\end{tabular}
+ 
+Les probabilités des évènements $X_{n}, Y_{n}, Z_{n}$ sont notées respectivement $x_{n}, y_{n}, z_{n}$.
+ 
+La campagne publicitaire de chaque marque fait évoluer la répartition.
+
+Un acheteur de la marque X le mois $n$, a le mois suivant :
+
+\setlength\parindent{8mm}
+\begin{description}
+\item[ ] 50\,\% de chance de rester fidèle à cette marque,
+\item[ ] 40\,\% de chance d'acheter la marque Y, 
+\item[ ] 10\,\% de chance d'acheter la marque Z.
+\end{description}
+\setlength\parindent{0mm}
+ 
+Un acheteur de la marque Y le mois $n$, a le mois suivant :
+ 
+\setlength\parindent{8mm}
+\begin{description}
+\item[ ]30\,\% de chance de rester fidèle à cette marque,
+\item[ ]50\,\% de chance d'acheter la marque X, 
+\item[ ]20\,\% de chance d'acheter la marque Z.
+\end{description}
+\setlength\parindent{0mm}
+ 
+Un acheteur de la marque Z le mois $n$, a le mois suivant : 
+
+\setlength\parindent{8mm}
+\begin{description}
+\item[ ]70\,\% de chance de rester fidèle à cette marque,
+\item[ ]10\,\% de chance d'acheter la marque X, 
+\item[ ]20\,\% de chance d'acheter la marque Y.
+\end{description}
+\setlength\parindent{0mm}
+
+\medskip
+ 
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Exprimer $x_{n+1}$ en fonction de $x_{n}, y_{n}$ et $z_{n}$.
+		 
+On admet que : 
+
+$y_{n+1} = 0,4x_{n} + 0,3y_{n} + 0,2z_{n}$ et que $z_{n+1} = 0,1x_{n} + 0,2y_{n} + 0,7 z_{n}$.
+		\item Exprimer $z_{n}$ en fonction de $x_{n}$ et $y_{n}$. En déduire l'expression de $x_{n+1}$ et $y_{n+1}$ en fonction de $x_{n}$ et $y_{n}$.
+	\end{enumerate} 
+\item On définit la suite $\left(U_{n}\right)$ par $U_{n} = \begin{pmatrix}x_{n}\\y_{n}\end{pmatrix}$ pour tout entier naturel $n$.\index{matrices} 
+
+On admet que, pour tout entier naturel $n,\: U_{n+1} = A \times U_{n} + B$ où $A = \begin{pmatrix}0,4&0,4\\0,2&0,1\end{pmatrix}$	et $B = \begin{pmatrix}0,1\\0,2\end{pmatrix}$.
+
+Au début de l'étude statistique (mois de janvier 2014 : $n = 0$), on estime que $U_{0} = \begin{pmatrix}0,5\\0,3\end{pmatrix}$. 
+
+On considère l'algorithme suivant :\index{algorithme}
+
+\begin{center}
+\begin{tabularx}{0.85\linewidth}{|m{4cm}|X|}\hline 
+Variables& $n$ et $i$ des entiers naturels.\\
+		&$A$, $B$ et $U$ des matrices\\ \hline   
+Entrée et initialisation&Demander la valeur de $n$ \\   
+		&$i$ prend la valeur $0$\\ 
+		&$A$ prend la valeur $\begin{pmatrix}0,4&0,4\\0,2&0,1\end{pmatrix}$\\ 
+		&$B$ prend la valeur $\begin{pmatrix}0,1\\0,2\end{pmatrix}$\\ 
+		&$U$ prend la valeur $\begin{pmatrix}0,5\\0,3\end{pmatrix}$\\ \hline 
+Traitement &Tant que $i < n$\\ 
+		&\hspace{0,4cm}$U$ prend la valeur $A \times U + B$\\ 
+		&\hspace{0,4cm}$i$ prend la valeur $i + 1$\\
+		&Fin de Tant que \\ \hline 
+Sortie 	&Afficher $U$\\ \hline
+\end{tabularx}
+\end{center}  
+
+	\begin{enumerate}
+		\item Donner les résultats affichés par cet algorithme pour $n = 1$ puis pour 
+		
+		$n = 3$. 
+		\item Quelle est la probabilité d'utiliser la marque X au mois d'avril ? 
+
+Dans la suite de l'exercice, on cherche à déterminer une expression de $U_{n}$ en fonction de $n$. 
+
+On note $I$ la matrice $\begin{pmatrix}1&0\\0&1\end{pmatrix}$ et $N$ la matrice $I - A$.
+	\end{enumerate} 
+\item On désigne par $C$ une matrice colonne à deux lignes. 
+	\begin{enumerate}
+		\item Démontrer que $C = A \times C + B$ équivaut à $N \times C = B$.  
+		\item On admet que $N$ est une matrice inversible et que $N^{-1} = \begin{pmatrix}\dfrac{45}{23}&\dfrac{20}{23}\\[8pt]
+		\dfrac{10}{23}&\dfrac{30}{23}\end{pmatrix}$. 
+
+En déduire que $C = \begin{pmatrix}\dfrac{17}{46}\\[8pt]
+\dfrac{7}{23}\end{pmatrix}$.
+	\end{enumerate}
+\item On note $V_{n}$ la matrice telle que $V_{n} = U_{n} - C$ pour tout entier naturel $n$. 
+	\begin{enumerate}
+		\item Montrer que, pour tout entier naturel $n,\: V_{n+1} = A \times  V_{n}$. 
+		\item On admet que $U_{n} = A^n \times \left(U_{0} - C\right) + C$.
+		 
+Quelles sont les probabilités d'utiliser les marques X, Y et Z au mois de mai ? 
+	\end{enumerate}
+\end{enumerate}
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4} \hfill 7 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+
+\textbf{Partie A}
+  
+$f$ est une fonction définie et dérivable sur $\R$. $f'$ est la fonction dérivée de la fonction $f$.\index{fonction et dérivée}
+ 
+Dans le plan muni d'un repère orthogonal, on nomme $\mathcal{C}_{1}$ la courbe représentative de la fonction $f$ et $\mathcal{C}_{2}$ la courbe représentative de la fonction $f'$.
+ 
+Le point A de coordonnées (0~;~2) appartient à la courbe $\mathcal{C}_{1}$.
+ 
+Le point B de coordonnées (0~;~1) appartient à la courbe $\mathcal{C}_{2}$.
+
+\medskip
+ 
+\begin{enumerate}
+\item Dans les trois situations ci-dessous, on a dessiné la courbe représentative $\mathcal{C}_{1}$ de la fonction $f$. Sur l'une d'entre elles, la courbe $\mathcal{C}_{2}$ de la fonction dérivée $f'$ est tracée convenablement. Laquelle ? Expliquer le choix effectué.
+
+\begin{multicols}{2}
+\begin{center}
+\textbf{\small Situation 1}
+\end{center}
+
+\psset{xunit=0.7cm,yunit=0.35cm}
+\begin{pspicture*}(-3,-3)(5,11)
+\def\pshlabel#1{\footnotesize $#1$}
+\def\psvlabel#1{\footnotesize $#1$}
+\psaxes[linewidth=1.5pt]{->}(0,0)(-3,-2.9)(5,11)
+%\psaxes[linewidth=1.5pt](0,0)(-3,-2.9)(5,10)
+\psgrid[gridlabels=0,subgriddiv=1,gridwidth=0.2pt]%(0,0)(-3,-3)(5,10)
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=blue]{-3}{5}{x 2 mul 1 add  2.71828 x neg exp add}
+%\pscurve[linewidth=1.25pt,linecolor=blue](-2.5,8)(-2,4.4)(-1.5,2.5)(-1,1.7)(-0.75,1.6)(-0.5,1.65)(0,2)(1,3.3)(2,5.15)(3,7)(4,9) 
+\uput[ur](-2.5,8){\blue $\mathcal{C}_{1}$}
+\pscurve[linewidth=1.25pt,linecolor=red](-1.5,-2.2)(-1,-0.8)(0,1)(1,1.6)(2,1.85)(3,1.95)(4,2)(4.5,1.98)
+\uput[d](3,2){\red $\mathcal{C}_{2}$}
+%\rput(1,10.5){Situation 1 }
+\uput[dl](0,0){O}
+\end{pspicture*}
+
+\columnbreak
+
+\begin{center}
+\textbf{\small Situation 2 ($\mathcal{C}_{2}$ est une droite)}
+\end{center}
+ 
+\psset{xunit=0.7cm,yunit=0.35cm}
+\begin{pspicture*}(-3,-3)(5,11)
+\def\pshlabel#1{\footnotesize $#1$}
+\def\psvlabel#1{\footnotesize $#1$}
+\psaxes[linewidth=1.5pt]{->}(0,0)(-3,-2.9)(5,11)
+%\psaxes[linewidth=1.5pt](0,0)(-3,-2.9)(5,10)
+\psgrid[gridlabels=0,subgriddiv=1,gridwidth=0.2pt]%(0,0)(-3,-3)(5,10)
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=blue]{-3}{5}{x 2 mul 1 add  2.71828 x neg exp add}
+%\pscurve[linewidth=1.25pt,linecolor=blue](-2.5,8)(-2,4.4)(-1.5,2.5)(-1,1.7)(-0.75,1.6)(-0.5,1.65)(0,2)(1,3.3)(2,5.15)(3,7)(4,9) 
+\uput[ur](-2.5,8){\blue $\mathcal{C}_{1}$}
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=red]{-3}{4.5}{x 1 add}
+\uput[dr](4,5){\red $\mathcal{C}_{2}$}\uput[dl](0,0){O}
+\end{pspicture*}
+
+ \end{multicols}
+
+\newpage
+
+\begin{center}
+\textbf{\small Situation 3}\\
+\ 
+
+\psset{unit=0.7cm}
+\begin{pspicture*}(-3,-1)(4.5,10)
+\def\pshlabel#1{\footnotesize $#1$}
+\def\psvlabel#1{\footnotesize $#1$}
+\psaxes[linewidth=1.5pt]{->}(0,0)(-3,-0.9)(4.5,10)
+%\psaxes[linewidth=1.5pt](0,0)(-3,-0.9)(4.5,10)
+\psgrid[gridlabels=0,subgriddiv=1,gridwidth=0.2pt](0,0)(-3,-3)(5,10)
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=blue]{-3}{5}{x 2 mul 1 add  2.71828 x neg exp add} \uput[ur](-2.5,8){\blue $\mathcal{C}_{1}$}
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=red]{-3}{5}{x 2 mul   2.71828 x neg exp add}
+%\pscurve[linewidth=1.25pt,linecolor=red](-2.5,7)(-2,3.4)(-1.5,1.5)(-1,0.7)(-0.75,0.6)(-0.5,0.65)(0,1)(1,2.3)(2,4.15)(3,6)(4,8) 
+\uput[dr](3,6){\red $\mathcal{C}_{2}$}
+\uput[dl](0,0){O}
+\end{pspicture*} 
+\end{center}
+
+\item Déterminer l'équation réduite de la droite $\Delta$ tangente à la courbe $\mathcal{C}_{1}$ en A. 
+
+\item On sait que pour tout réel $x,\: f(x) = \text{e}^{-x} + ax + b$ où $a$ et $b$ sont deux nombres réels. 
+	\begin{enumerate}
+		\item Déterminer la valeur de $b$ en utilisant les renseignements donnés par l'énoncé. 
+		\item Prouver que $a = 2$.
+	\end{enumerate}	 
+\item Étudier les variations de la fonction $f$ sur $\R$. 
+\item Déterminer la limite de la fonction $f$ en $+ \infty$.
+\end{enumerate}
+
+\bigskip
+ 
+\textbf{Partie B}
+
+\medskip
+ 
+Soit $g$ la fonction définie sur $\R$ par $g(x) = f(x) - (x + 2)$.
+
+\medskip
+ 
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Montrer que la fonction $g$ admet $0$ comme minimum sur $\R$. 
+		\item En déduire la position de la courbe $\mathcal{C}_{1}$ par rapport à la droite $\Delta$.
+
+	\end{enumerate}
+\end{enumerate}
+		 
+La figure 2 ci-dessous représente le logo d'une entreprise. Pour dessiner ce logo, son créateur s'est servi de la courbe $\mathcal{C}_{1}$ et de la droite $\Delta$, comme l'indique la figure ci-dessous. Afin d'estimer les coûts de peinture, il souhaite déterminer l'aire de la partie colorée en gris.\index{aire et intégrale}
+
+\begin{center}
+\begin{tabular}{l l}
+\psset{xunit=0.8cm,yunit=0.8cm}
+\begin{pspicture*}(-2,-1)(5,6)
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=cyan]{-2}{2}{x 2 mul 1 add  2.71828 x neg exp add}
+\pspolygon(-2,0)(2,4)(2,5.135)(-2,4.389)
+\rput(1,10.5){figure 2}
+\psline(-2,0)(2,0)(2,4)
+\pscustom[fillstyle=solid,fillcolor=lightgray]{
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=cyan]{-2}{2}{x 2 mul 1 add  2.71828 x neg exp add}
+\psline(2,4)(-2,0)}
+\end{pspicture*}&\psset{xunit=0.8cm,yunit=0.8cm}
+\begin{pspicture*}(-2.5,-1)(3.5,6)
+\psaxes[linewidth=1.5pt,Dx=20,Dy=20](0,0)(-2.5,-1)(3.5,6)
+\psaxes[linewidth=1.5pt,Dx=20,Dy=20]{->}(0,0)(1,1)
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=cyan]{-2}{2}{x 2 mul 1 add  2.71828 x neg exp add}
+\uput[ur](-1.8,3.3){$\mathcal{C}_{1}$}
+\uput[dr](1.3,3.5){$\Delta$}
+\uput[d](0.5,0){$\vect{\imath}$}\uput[l](0,0.5){$\vect{\jmath}$}
+\uput[dl](0,0){O}
+\psline(-2,0)(2,0)(2,4)
+\uput[d](-2,0){D}\uput[d](2,0){E}\uput[ul](-2,4.389)G \uput[ur](2,5.135){F}
+\pspolygon(-2,0)(2,4)(2,5.135)(-2,4.389)
+\rput(1,10.5){figure 3}
+\pscustom[fillstyle=solid,fillcolor=lightgray]{
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=cyan]{-2}{2}{x 2 mul 1 add  2.71828 x neg exp add}
+\psline(2,4)(-2,0)}
+\end{pspicture*}
+\end{tabular}
+\end{center}
+ 
+Le contour du logo est représenté par le trapèze DEFG où :
+ 
+- D est le point de coordonnées $(-2~;~0)$,
+ 
+- E est le point de coordonnées (2~;~0),
+ 
+- F est le point d'abscisse 2 de la courbe $\mathcal{C}_{1}$,
+ 
+- G est le point d'abscisse $- 2$ de la courbe $\mathcal{C}_{2}$.
+ 
+La partie du logo colorée en gris correspond à la surface située entre la droite $\Delta$, la courbe $\mathcal{C}_{1}$, la droite d'équation $x = - 2$ et la droite d'équation $x = 2$.
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+	 
+\item Calculer, en unités d'aire, l'aire de la partie du logo colorée en gris (on donnera la valeur exacte puis la valeur arrondie à $10^{-2}$ du résultat). 
+\end{enumerate} 
+\hyperlink{Index}{*}
+\newpage
+\begin{center}
+{\large \textbf{ANNEXE EXERCICE 3}}
+
+\vspace{1cm}
+ 
+À compléter et à rendre avec la copie 
+
+\vspace{1.5cm}
+
+\psset{unit=8cm}
+\begin{pspicture}(-0.6,-0.3)(1.1,0.8)
+\psaxes[linewidth=1.5pt,Dx=20,Dy=20](0,0)(-0.6,-0.3)(1.1,0.8)
+\psdots(1;0)(0.866;30)(0.75;60)(0.6495;90)(0.5625;120)(0.487139;150)
+\psline(1;0)(0.866;30)(0;0)(0.75;60)(0.866;30)
+\psline(0.75;60)(0.6495;90)(0;0)(0.5625;120)(0.6495;90)
+\psline(0.5625;120)(0.487139;150)(0;0)
+\uput[ur](1;0){$A_{0}$} \uput[ur](0.866;30){$A_{1}$} \uput[ur](0.75;60){$A_{2}$} 
+\uput[ur](0.6495;90){$A_{3}$} \uput[ul](0.5625;120){$A_{4}$} \uput[ul](0.487139;150){$A_{5}$} \uput[dl](0,0){O}
+\psline[arrowsize=3pt 4]{->}(0,0)(1,0) 
+\end{pspicture}
+\end{center}
+%%%%%%%%%%%%   fin Pondichéry avril 2014
+\newpage
+%%%%%%%%%%%%   Liban 27 mai 2014
+\hypertarget{Liban}{}
+
+\lfoot{\small{Liban}}
+\rfoot{\small{27 mai 2014}}
+\renewcommand \footrulewidth{.2pt}
+\pagestyle{fancy}
+\thispagestyle{empty}
+
+\begin{center}{\Large\textbf{\decofourleft~Baccalauréat S Liban  27 mai 2014~\decofourright}}
+\end{center}
+
+\vspace{0,25cm}
+
+\textbf{\textsc{Exercice 1} \hfill 5 points}
+ \medskip
+ 
+\emph{Les trois parties A, B et C peuvent être traitées de façon indépendante.\\
+Les probabilités seront arrondies au dix millième.}
+\smallskip
+
+Un élève doit se rendre à son lycée chaque matin pour 8~h~00. Pour cela, il utilise, selon les jours, deux moyens de transport : le vélo ou le bus.
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip
+
+L'élève part tous les jours à 7~h~40 de son domicile et doit arriver à 8~h~00 à son lycée. Il prend le vélo 7 jours sur 10 et le bus le reste du temps.
+
+Les jours où il prend le vélo, il arrive à l'heure dans $\np{99,4}\,\%$ des cas et lorsqu'il prend le bus, il arrive en retard dans $5\,\%$ des cas.
+
+On choisit une date au hasard en période scolaire et on note $V$ l'évènement 
+\og L'élève se rend au lycée à vélo \fg, $B$ l'évènement \og l'élève se rend au lycée en bus \fg{} et $R$ l'évènement \og L'élève arrive en retard au lycée\fg.
+
+\medskip
+
+\begin{enumerate}
+\item Traduire la situation par un arbre de probabilités.\index{probabilités}\index{arbre}
+\item Déterminer la probabilité de l'évènement $V \cap R$.
+\item Démontrer que la probabilité de l'évènement $R$ est $\np{0,0192}$
+\item Un jour donné, l'élève est arrivé en retard au lycée. Quelle est la probabilité qu'il s'y soit rendu en bus?
+\end{enumerate}
+\medskip
+
+\textbf{Partie B : le vélo}
+
+\medskip
+
+On suppose dans cette partie que l'élève utilise le vélo pour se rendre à son lycée.
+
+Lorsqu'il utilise le vélo, on modélise son temps de parcours, exprimé en minutes, entre son domicile et son lycée par une variable aléatoire $T$ qui suit le loi normale d'espérance $\mu = 17$ et d'écart-type $\sigma = \np{1,2}$.\index{loi normale}
+
+\medskip
+
+\begin{enumerate}
+\item Déterminer la probabilité que l'élève mette entre 15 et 20 minutes pour se rendre à son lycée.
+\item Il part de son domicile à vélo à 7~h~40. Quelle est la probabilité qu'il soit en retard au lycée?
+\item L'élève part à vélo. Avant quelle heure doit-il partir pour arriver à l'heure au lycée avec une probabilité de $\np{0,9}$ ? Arrondir le résultat à la minute près.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C : le bus}
+
+\medskip
+
+Lorsque l'élève utilise le bus, on modélise son temps de parcours, exprimé en minutes, entre son domicile et son lycée par une variable aléatoire $T'$ qui suit la loi normale d'espérance $\mu' = 15$ et d'écart-type $\sigma'$.\index{loi normale}
+
+On sait que la probabilité qu'il mette plus de 20 minutes pour se rendre à son lycée en bus est de $\np{0,05}$.
+
+On note $Z'$ la variable aléatoire égale à $\dfrac{T'-15}{\sigma'}$
+
+\medskip
+
+\begin{enumerate}
+\item Quelle loi la variable aléatoire $Z'$ suit-elle ?
+\item Déterminer une valeur approchée à $\np{0,01}$ près de l'écart-type $\sigma'$ de la variable aléatoire $T'$.
+\end{enumerate}
+\hyperlink{Index}{*}
+
+\newpage
+
+\textbf{\textsc{Exercice 2} \hfill 5 points}
+
+\medskip
+
+Pour chacune des propositions suivantes, indiquer si elle est vraie ou fausse et justifier chaque réponse. Une réponse non justifiée ne sera pas prise en compte
+\medskip \index{Vrai--Faux}
+
+On se place dans l'espace muni d'un repère orthonormé.\index{géométrie dans l'espace}
+
+On considère le plan $\mathcal{P}$ d'équation $x - y + 3z + 1 = 0$
+
+et la droite $\mathcal{D}$ dont une représentation paramétrique est
+ 
+$\begin{cases}
+x=2t\\
+y=1+t\quad,\quad t\in\R \\
+z=-5+3t
+\end{cases}$
+
+On donne les points $A(1~;~1;~0),\;B(3~;0~;~-1)$ et $C(7~;1~;~-2)$
+\medskip
+
+\textbf{Proposition 1 :}
+
+Une représentation paramétrique de la droite $(AB)$ est \index{equation paramétrique de droite@équation paramétrique de droite}
+$\begin{cases}
+x=5-2t\\
+y=-1+t\quad,\quad t\in\R \\
+z=-2+t
+\end{cases}$
+\medskip
+
+\textbf{Proposition 2 :}
+
+Les droites $\mathcal{D}$ et $(AB)$ sont orthogonales.
+\bigskip
+
+\textbf{Proposition 3 :}
+
+Les droites $\mathcal{D}$ et $(AB)$ sont coplanaires.
+\bigskip
+
+\textbf{Proposition 4 :}
+
+La droite $\mathcal{D}$ coupe le plan $\mathcal{P}$ au point $E$ de coordonnées $(8;~-3;~-4)$.
+\bigskip
+
+\textbf{Proposition 5 :}
+
+Les plans $\mathcal{P}$ et $(ABC)$ sont parallèles.
+
+\hyperlink{Index}{*}
+\newpage
+
+\textbf{\textsc{Exercice 3}\hfill 5 points}
+
+\medskip
+
+Soit $f$ la fonction définie sur l'intervalle $[0~;~+\infty[$ par 
+
+\[f(x) = x\,\mathrm{e}^{-x}.\]\index{fonction exponentielle}
+
+On note $\mathcal{C}$ la courbe représentative de $f$ dans un repère orthogonal.
+\medskip
+
+\textbf{Partie A}
+
+\begin{enumerate}
+\item On note $f'$ la fonction dérivée de la fonction $f$ sur l'intervalle $[0;~+\infty[$.
+
+Pour tout réel $x$ de l'intervalle $[0~;~+\infty[$, calculer $f'(x)$. En déduire les variations de la fonction $f$ sur l'intervalle $[0~;~+\infty[$.
+\item Déterminer la limite de la fonction $f$ en $+ \infty$. Quelle interprétation graphique peut-on faire de ce résultat?
+\end{enumerate}
+
+\medskip
+
+\textbf{Partie B}
+
+\medskip
+
+Soit $\mathcal{A}$ la fonction définie sur l'intervalle 
+$[0~;~+\infty[$ de la façon suivante : pour tout réel $t$ de l'intervalle $[0~;~+\infty[\,,\,\mathcal{A}(t)$ est l'aire, en unités d'aire, du domaine délimité par l'axe des abscisses, la courbe $\mathcal{C}$ et les droites d'équations $x = 0$ et $x = t$.\index{aire et intégrale}
+
+\medskip
+
+\begin{enumerate}
+\item Déterminer le sens de variation de la fonction $\mathcal{A}$.
+\item On admet que l'aire du domaine délimité par la courbe $\mathcal{C}$ et l'axe des abscisses est égale à 1 unité d'aire. Que peut-on en déduire pour la fonction $\mathcal{A}$?
+\item On cherche à prouver l'existence d'un nombre réel $\alpha$ tel que la droite d'équation $x =\alpha$ partage le domaine compris entre l'axe des abscisses et la courbe $\mathcal{C}$, en deux parties de même aire, et à trouver une valeur approchée de ce réel.
+	\begin{enumerate}
+		\item Démontrer que l'équation $\mathcal{A}(t)=\dfrac12$ admet une unique solution sur l'intervalle $[0~;~+\infty[$
+		\item Sur le graphique fourni en \textbf{annexe (\emph{à rendre avec la copie})} sont tracées la courbe $\mathcal{C}$, ainsi que la courbe $\Gamma$ représentant la fonction $\mathcal{A}$.
+		
+Sur le graphique de l'\textbf{annexe}, identifier les courbes $\mathcal{C}$ et $\Gamma$, puis tracer la droite d'équation $y=\dfrac12$. En déduire une valeur approchée du réel $\alpha$. Hachurer le domaine correspondant à $\mathcal{A}(\alpha)$.
+	\end{enumerate}
+\item On définit la fonction $g$ sur l'intervalle $[0;~+\infty[$ par 
+
+\[g(x) = (x + 1)\,\mathrm{e}^{-x}.\]
+
+	\begin{enumerate}
+		\item  On note $g'$ la fonction dérivée de la fonction $g$ sur l'intervalle $[0~;~+\infty[$.
+		
+Pour tout réel $x$ de l'intervalle $[0~;~+\infty[$, calculer $g'(x)$. 
+		\item En déduire, pour tout réel $t$ de l'intervalle $[0~;~+\infty[$, \mbox{une expression de $\mathcal{A}(t)$.}
+		\item Calculer une valeur approchée à $10^{-2}$ près de $\mathcal{A}(6)$.
+	\end{enumerate}
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\newpage
+
+\textbf{\textsc{Exercice 4} \hfill  5 points}
+
+\medskip
+
+\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité}
+
+\medskip
+
+On considère la suite de nombres complexes $\left(z_n\right)$ définie par $z_0=\sqrt{3}-\mathrm{i}$ et pour tout entier naturel $n$:\index{complexes et suite}
+
+\[z_{n+1} = (1 + \mathrm{i})z_n.\]
+
+\emph{Les parties A et B peuvent être traitées de façon indépendante.}
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip
+
+Pour tout entier naturel $n$, on pose $u_n = \left|z_{n}\right|$.
+
+\medskip
+
+
+\begin{enumerate}
+\item Calculer $u_0$.
+\item Démontrer que $\left(u_n\right)$ est la suite géométrique de raison $\sqrt{2}$ et de premier terme 2.\index{suite géométrique}
+\item Pour tout entier naturel $n$, exprimer $u_n$ en fonction de $n$.
+\item Déterminer la limite de la suite $\left(u_n\right)$.
+\item Étant donné un réel positif $p$, on souhaite déterminer, à l'aide d'un algorithme, la plus petite valeur de l'entier naturel $n$ telle que $u_n > p$.
+
+Recopier l'algorithme ci-dessous et le compléter par les instructions de traitement et de sortie, de façon à afficher la valeur cherchée de l'entier $n$.
+\begin{center}\index{algorithme}
+\fbox{
+\begin{tabular}{lcl}
+\textbf{Variables}&: &$u$ est un réel\\
+&&$p$ est un réel\\
+&& $n$ est un entier\\
+\textbf{Initialisation}&:& Affecter à $n$ la valeur 0\\
+&& Affecter à $u$ la valeur 2\\
+\textbf{Entrée}&:&  Demander la valeur de $p$ \\
+\textbf{Traitement}&:&\\
+\\
+\textbf{Sortie}&:& \\
+\end{tabular}
+}
+\end{center}
+\end{enumerate}
+
+\textbf{Partie B}
+
+\medskip
+
+\begin{enumerate}
+\item Déterminer la forme algébrique de $z_1$.
+\item Déterminer la forme exponentielle de $z_0$ et de $1+\mathrm{i}$.
+
+En déduire la forme exponentielle de $z_1$.
+\item Déduire des questions précédentes la valeur exacte de $\cos\left(\dfrac{\pi}{12}\right)$
+\end{enumerate}\hyperlink{Index}{*}
+\newpage
+
+\textbf{\textsc{Exercice 4} \hfill 5 points}
+\medskip
+
+\textbf{Candidats ayant  suivi l'enseignement de spécialité}
+\medskip
+
+Un laboratoire étudie la propagation d'une maladie sur une population.\index{probabilités}
+
+Un \emph{individu sain} est un individu n'ayant jamais été touché par la maladie.
+
+Un \emph{individu malade} est un individu qui a été  touché par la maladie et non guéri.
+
+Un \emph{individu guéri} est un individu qui a été  touché par la maladie et qui a guéri.
+
+Une fois guéri, un individu est immunisé et ne peut plus tomber malade.
+
+Les premières observations nous montrent  que, d'un jour au jour suivant:
+
+\begin{description}
+\item[\textbullet] $5\,\%$ des individus tombent malades;
+\item[\textbullet] $20\,\%$ des individus guérissent.
+\end{description}
+
+Pour tout entier naturel $n$, on note $a_n$ la proportion d'individus sains $n$ jours après le début de l'expérience, $b_n$ la proportion d'individus malades $n$ jours après le début de l'expérience, et $c_n$ celle d'individus guéris $n$ jours après le début de l'expérience.
+
+On suppose qu'au début de l'expérience, tous les individus sont sains, c'est à dire que $a_0=1$, $b_0 = 0$ et $c_0 = 0$
+
+\medskip
+
+\begin{enumerate}
+\item Calculer $a_1$, $b_1$ et $c_1$.
+\item
+	\begin{enumerate}
+		\item Quelle est la proportion d'individus sains qui restent sains d'un jour au jour suivant ? En déduire $a_{n+1}$ en fonction de $a_n$.
+		\item Exprimer $b_{n+1}$ en fonction de $a_n$ et de $b_n$.
+	\end{enumerate}
+On admet que $c_{n+1} = \np{0,2}b_n + c_n$.
+
+Pour tout entier naturel $n$, on définit\index{matrices}
+$U_n=\begin{pmatrix}
+a_n\\b_n\\c_n
+\end{pmatrix}$
+
+On définit les matrices
+$A=\begin{pmatrix}
+\np{0,95}&0&0\\
+\np{0,05}&\np{0,8}&0\\
+0&\np{0,2}&1
+\end{pmatrix}$
+et $D=\begin{pmatrix}
+\np{0,95}&0&0\\
+0&\np{0,8}&0\\
+0&0&1
+\end{pmatrix}$
+
+On admet qu'il existe une matrice inversible $P$ telle que
+$D=P^{-1}\times A\times P$ et que, pour tout entier naturel $n$ supérieur ou égal à 1, $A^n=P\times D^{n}\times P^{-1}$.
+\item 
+	\begin{enumerate}
+		\item Vérifier que, pour tout entier naturel $n$,
+ $U_{n+1}= A\times U_n$.
+
+ \medskip
+ 
+ On admet que, pour tout entier naturel $n$, $U_n=A^n\times U_0$.
+ 
+\item Démontrer par récurrence que, pour tout entier naturel $n$ non nul,
+ 
+$D^n=\begin{pmatrix}
+ \np{0,95}^n&0&0\\
+ 0&\np{0,8}^n&0\\
+ 0&0&1
+\end{pmatrix}$
+	\end{enumerate}
+
+On admet que $A^n =\begin{pmatrix}
+\np{0,95}^n&0&0\\
+\dfrac13\left(\np{0,95}^n-\np{0,8}^n\right)&\np{0,8}^n&0\\
+\dfrac13\left(3-4\times\np{0,95}^n+\np{0,8}^n\right)&1-\np{0,8}^n&1
+\end{pmatrix}$
+
+\item 
+	\begin{enumerate}
+		\item Vérifier que pour tout entier naturel $n$, $b_n=\dfrac13\left(\np{0,95}^n-\np{0,8}^n\right)$
+		\item Déterminer la limite de la suite $\left(b_n\right)$.
+		\item On admet que la proportion d'individus malades croît pendant plusieurs jours, puis décroit.
+
+On souhaite déterminer le pic épidémique, c'est à dire le moment où la proportion d'individus malades est à son maximum.
+
+À cet effet, on utilise l'algorithme\index{algorithme} donné en \textbf{annexe 2 (\emph{à rendre avec la copie})}, dans lequel on compare les termes successifs de la suite $(b_n)$.
+
+Compléter l'algorithme de façon qu'il affiche le rang du jour où le pic épidémique est atteint et compléter le tableau fourni en \textbf{annexe 2}.
+
+Conclure.
+	\end{enumerate}
+\end{enumerate}
+
+\hyperlink{Index}{*}
+
+\newpage
+\textbf{Annexe 1}
+
+\textbf{\emph{À rendre avec la copie}}
+
+\begin{center}
+\textbf{\bsc{Exercice 3}}
+
+\textbf{Représentations graphiques des fonctions $f$ et $\mathcal{A}$}
+\end{center}
+\vspace{1cm}
+
+%\psset{xunit=2.3cm,yunit=4.6cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25,comma=true}
+\psset{xunit=2.3cm,yunit=4.6cm,comma=true}
+\begin{pspicture}(-0.2,-1)(5,1)
+\multips(0,0)(0,0.1){11}
+{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(5,0)}
+\multips(0,0)(0.2,0){26}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(0,1)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=0.2,Dy=0.1,labels=y,ticks=y,ticksize=-2pt 0]{->}(0,0)(5,1.1)
+%\psplot[plotpoints=2000,linewidth=1.25pt,linecolor=blue]{0}{5}{x*2.718281828^(-x)}
+\psplot[plotpoints=4000,linewidth=1.25pt,linecolor=blue]{0}{5}{x 2.718281828 x exp div}
+%\psplot[linestyle=dashed,dash=1pt 1pt,plotpoints=2000,linewidth=1.25pt]{0.0}{5}{1-2.718281828^(-x)*(x+1)}
+\psplot[linestyle=dashed,dash=1pt 1pt,plotpoints=4000,linewidth=1.25pt]{0}{5}{1 x 1 add 2.718281828 x exp div sub}
+\begin{scriptsize}
+\rput[b](1,-0.05){1}
+\rput[b](2,-0.05){2}
+\rput[b](3,-0.05){3}
+\rput[b](4,-0.05){4}
+\end{scriptsize}
+\rput[b](5,-0.05){$x$}
+\rput[l](-0.15,1.1){$y$}
+
+\end{pspicture}
+
+\newpage
+\textbf{Annexe 2}
+
+\textbf{\emph{À rendre avec la copie}}
+\bigskip
+
+\begin{center}
+\textbf{\bsc{Exercice 4}}
+
+\textbf{Algorithme et tableau à compléter}
+
+\end{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{center}
+
+\begin{tabular}{|lcl|}\hline
+\textbf{Variables}& : &$b,~b',~x,~y$ sont des réels\\
+&& $k$ est un entier naturel\\
+\textbf{Initialisation}&:& Affecter à $b$ la valeur 0\\
+&& Affecter à $b'$ la valeur $\np{0,05}$\\
+&& Affecter à $k$ la valeur $0$\\
+&& Affecter à $x$ la valeur $\np{0,95}$\\
+&& Affecter à $y$ la valeur $\np{0,8}$\\
+\textbf{Traitement}&:& Tant que $b < b'$ faire :\\
+&&\hspace{0.5cm}\begin{tabular}{|l}
+Affecter à $k$ la valeur $k+1$\\
+Affecter à $b$ la valeur $b'$\\
+Affecter à $x$ la valeur $\np{0,95} x$\\
+Affecter à $y$ la valeur $\np{0,80} y$\\
+Affecter à $b'$ la valeur $\cdots\cdots$
+\end{tabular}\\
+&&Fin Tant que\\
+\textbf{Sortie}&:& Afficher $\cdots\cdots$ \\\hline
+\end{tabular}
+\end{center}
+\bigskip
+
+\begin{center}
+% \usepackage{array} is required
+\begin{tabular}{|>{\centering\arraybackslash}p{3.5cm}|>{\centering}c|c|c|c|c|c|}
+\hline 
+ & $k$ & $b$ & $x$ & $y$ & $b'$ & Test: $b < b'$ ? \tabularnewline
+\hline 
+Après le $7\up{e}$ passage \newline dans la boucle Tant que &  7 & $\np{0,1628}$ & $\np{0,6634}$ & $\np{0,1678}$ & $\np{0,1652}$ & \bsc{Vrai} \tabularnewline 
+\hline 
+Après le $8\up{e}$ passage éventuel dans la boucle Tant que &  & &  &  &  &  \tabularnewline 
+\hline 
+Après le $9\up{e}$ passage éventuel dans la boucle Tant que &  &  &  &  &  &  \tabularnewline
+\hline 
+\end{tabular} 
+\end{center}
+%%%%%%%%%  fin Liban 27 mai 2014
+\newpage
+%%%%%%%%%   Amérique du Nord 30 mai 2014
+\hypertarget{AmeriqueNord}{}
+
+\lfoot{\small{Amérique du Nord}}
+\rfoot{\small 30  mai 2014}
+\pagestyle{fancy}
+\thispagestyle{empty}
+\begin{center}\textbf{Durée : 4 heures }
+
+\vspace{0,5cm}
+
+{\Large \textbf{\decofourleft~Baccalauréat S Amérique du Nord
+~\decofourright\\30  mai 2014}}
+\end{center}
+
+\vspace{0,5cm}
+
+\textbf{Exercice 1 \hfill  5 points}
+
+\textbf{Commun à  tous les candidats}
+
+\medskip
+
+\textbf{Dans cet exercice, tous les résultats demandés seront arrondis à \boldmath $10^{-3}$ \unboldmath près.}
+
+\medskip
+ 
+Une grande enseigne de cosmétiques lance une nouvelle crème hydratante.
+
+\medskip
+ 
+\textbf{Partie A : Conditionnement des pots}
+
+\medskip
+ 
+Cette enseigne souhaite vendre la nouvelle crème sous un conditionnement de 50 mL et dispose pour ceci de pots de contenance maximale 55~mL.
+ 
+On dit qu'un pot de crème est non conforme s'il contient moins de 49~mL de crème.
+
+\medskip
+ 
+\begin{enumerate}
+\item Plusieurs séries de tests conduisent à modéliser la quantité de crème, exprimée en mL, contenue dans chaque pot par une variable aléatoire $X$ qui suit la loi normale d'espérance $\mu  = 50$ et d'écart-type $\sigma =  1,2$.\index{loi normale} 
+
+Calculer la probabilité qu'un pot de crème soit non conforme. 
+\item La proportion de pots de crème non conformes est jugée trop importante. En modifiant la viscosité de la crème, on peut changer la valeur de l'écart-type de la variable aléatoire $X$, sans modifier son espérance $\mu =  50$. On veut réduire à $0,06$ la probabilité qu'un pot choisi au hasard soit non conforme. 
+ 
+On note $\sigma'$ le nouvel écart-type, et $Z$ la variable aléatoire égale à $\dfrac{X - 50}{\sigma'}$ 
+	\begin{enumerate}
+		\item Préciser la loi que suit la variable aléatoire $Z$. 
+		\item Déterminer une valeur approchée du réel $u$ tel que $p(Z \leqslant u) = 0, 06$.
+		\item En déduire la valeur attendue de $\sigma'$.
+	\end{enumerate} 
+\item Une boutique commande à son fournisseur 50 pots de cette nouvelle crème. 
+
+On considère que le travail sur la viscosité de la crème a permis d'atteindre l'objectif fixé et donc que la proportion de pots non conformes dans l'échantillon est $0,06$.
+ 
+Soit $Y$ la variable aléatoire égale au nombre de pots non conformes parmi les 50 pots reçus. 
+	\begin{enumerate}
+		\item On admet que $Y$ suit une loi binomiale. En donner les paramètres.\index{loi binomiale} 
+		\item Calculer la probabilité que la boutique reçoive deux pots non conformes ou moins de deux pots non conformes.
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+ 
+\textbf{Partie B : Campagne publicitaire}
+
+\medskip
+ 
+Une association de consommateurs décide d'estimer la proportion de personnes satisfaites par l'utilisation de cette crème.
+ 
+Elle réalise un sondage parmi les personnes utilisant ce produit. Sur $140$~ personnes interrogées, $99$ se déclarent satisfaites.
+ 
+Estimer, par intervalle de confiance au seuil de $95$\,\%, la proportion de personnes satisfaites parmi les utilisateurs de la crème.\index{intervalle de confiance}
+
+\hyperlink{Index}{*} 
+
+\vspace{0,5cm}
+
+\textbf{Exercice 2 \hfill  6 points}
+
+\textbf{Commun à  tous les candidats}
+
+\medskip
+
+On considère la fonction $f$ définie sur $[0~;~+\infty[$ par 
+
+\[f(x) = 5 \text{e}^{-x} - 3\text{e}^{-2x} + x - 3.\]\index{fonction exponentielle}
+ 
+On note $\mathcal{C}_{f}$ la représentation graphique de la fonction $f$ et $\mathcal{D}$ la droite d'équation $y = x - 3$  dans un repère orthogonal du plan.
+
+\medskip
+ 
+\textbf{Partie A : Positions relatives de \boldmath$\mathcal{C}_{f}$ et $\mathcal{D}$\unboldmath}
+
+\medskip
+ 
+Soit $g$ la fonction définie sur l'intervalle $[0~;~+\infty[$ par $g(x) = f(x) - (x - 3)$.
+
+\medskip
+ 
+\begin{enumerate}
+\item Justifier que, pour tout réel $x$ de l'intervalle $[0~;~+\infty[$, \:$g(x) > 0$. 
+\item La courbe $\mathcal{C}_{f}$ et la droite $\mathcal{D}$ ont-elles un point commun ? Justifier.
+\end{enumerate}
+
+\bigskip
+ 
+\textbf{Partie B : Étude de la fonction }\boldmath $g$ \unboldmath
+
+\medskip
+ 
+On note $M$ le point d'abscisse $x$ de la courbe $\mathcal{C}_{f}$,  $N$ le point d'abscisse $x$ de la droite $\mathcal{D}$ et on s'intéresse à l'évolution de la distance $MN$.
+
+\medskip
+ 
+\begin{enumerate}
+\item Justifier que, pour tout $x$ de l'intervalle $[0~;~+\infty[$, la distance $MN$ est égale à $g(x)$. 
+\item On note $g'$ la fonction dérivée de la fonction $g$ sur l'intervalle $[0~;~+\infty[$.
+ 
+Pour tout $x$ de l'intervalle $[0~;~+\infty[$, calculer $g'(x)$. 
+\item Montrer que la fonction $g$ possède un maximum sur l'intervalle $[0~;~+\infty[$ que l'on déterminera.
+ 
+En donner une interprétation graphique.
+\end{enumerate}
+
+\bigskip
+ 
+\textbf{Partie C : Étude d'une aire}
+
+\medskip
+ 
+On considère la fonction $\mathcal{A}$ définie sur l'intervalle $[0~;~+\infty[$ par 
+
+\[\mathcal{A}(x) = \displaystyle\int_{0}^x [f(t) - (t - 3)]\: \text{d}t.\]
+
+\medskip
+ 
+\begin{enumerate}
+\item Hachurer sur le graphique donné en \textbf{annexe 1 (à rendre avec la copie)} le domaine dont l'aire est donnée par $\mathcal{A}(2)$. \index{aire et intégrale}
+\item Justifier que la fonction $\mathcal{A}$ est croissante sur l'intervalle $[0~;~+\infty[$. 
+\item Pour tout réel $x$ strictement positif, calculer $\mathcal{A}(x)$. 
+\item Existe-t-il une valeur de $x$ telle que $\mathcal{A}(x) = 2$ ? 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{Exercice 3 \hfill  4 points}
+
+\textbf{Commun à  tous les candidats}
+
+\medskip
+
+On considère un cube ABCDEFCH donné en annexe 2 (à rendre avec la copie).\index{géométrie dans l'espace} 
+ 
+On note M le milieu du segment [EH], N celui de [FC] et P le point tel que $\vect{\text{HP}}  = \dfrac{1}{4} \vect{\text{HG}}$. 
+
+\medskip
+ 
+\textbf{Partie A : Section du cube par le plan (MNP)}\index{section plane}
+
+\medskip
+ 
+\begin{enumerate}
+\item Justifier que les droites (MP) et (FG) sont sécantes en un point L.
+ 
+Construire le point L 
+\item On admet que les droites (LN) et (CG) sont sécantes et on note T leur point d'intersection.
+ 
+On admet que les droites (LN) et (BF) sont sécantes et on note Q leur point d'intersection. 
+	\begin{enumerate}
+		\item Construire les points T et Q en laissant apparents les traits de construction. 
+		\item Construire l'intersection des plans (MNP) et (ABF).
+	\end{enumerate} 
+\item En déduire une construction de la section du cube par le plan (MNP).
+\end{enumerate}
+
+\bigskip
+ 
+\textbf{Partie B}
+
+\medskip
+ 
+L'espace est rapporté au repère $\left(\text{A}~;~\vect{\text{AB}}, \vect{\text{AD}}, \vect{\text{AE}}\right)$.
+
+\medskip
+ 
+\begin{enumerate}
+\item Donner les coordonnées des points M, N et P dans ce repère. 
+\item Déterminer les coordonnées du point L. 
+\item On admet que le point T a pour coordonnées $\left(1~;~1~;~\frac{5}{8}\right)$.
+ 
+Le triangle TPN est-il rectangle en T ? 
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{Exercice 4 \hfill  5 points}
+
+\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité}
+
+\medskip 
+ 
+Un volume constant de \np{2200}~m$^3$ d'eau est réparti entre deux bassins A et B.
+ 
+Le bassin A refroidit une machine. Pour des raisons d'équilibre thermique on crée un courant d'eau entre les deux bassins à l'aide de pompes.
+ 
+On modélise les échanges entre les deux bassins de la façon suivante :
+ 
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] au départ, le bassin A contient 800~m$^3$ d'eau et le bassin B contient \np{1400}~m$^3$ d'eau ; 
+\item[$\bullet~~$] tous les jours, 15\,\% du volume d'eau présent dans le bassin B au début de la journée est transféré vers le bassin A ; 
+\item[$\bullet~~$] tous les jours, 10\,\% du volume d'eau présent dans le bassin A au début de la journée est transféré vers le bassin B.
+\end{itemize}
+\setlength\parindent{0mm}
+ 
+Pour tout entier naturel $n$, on note :\index{suite} 
+
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] $a_{n}$ le volume d'eau, exprimé en m$^3$, contenu dans le bassin A à la fin du $n$-ième jour de fonctionnement ; 
+\item[$\bullet~~$] $b_{n}$ le volume d'eau, exprimé en m$^3$, contenu dans le bassin B à la fin du $n$-ième jour de fonctionnement.
+\end{itemize}
+\setlength\parindent{0mm}
+
+\medskip
+ 
+On a donc $a_{0} = 800$ et $b_{0} = \np{1400}$.
+
+\medskip
+ 
+\begin{enumerate}
+\item Par quelle relation entre $a_{n}$ et $b_{n}$ traduit-on la conservation du volume total d'eau du circuit ? 
+\item Justifier que, pour tout entier naturel $n,\: a_{n+1} = \dfrac{3}{4} a_{n} + 330$. 
+\item L'algorithme ci-dessous permet de déterminer la plus petite valeur de $n$ à partir de laquelle $a_{n}$ est supérieur ou égal à \np{1100}.\index{algorithme} 
+
+Recopier cet algorithme en complétant les parties manquantes.
+
+\begin{center}
+
+\begin{tabular}{|l l l|}\hline 
+\textbf{Variables}&:& 	$n$ est un entier naturel\\ 
+&&$a$ est un réel\\ 
+\textbf{Initialisation}&:&Affecter à $n$ la valeur $0$\\
+&& Affecter à $a$ la valeur 800\\
+\textbf{Traitement}&:& Tant que $a < \np{1100}$, faire :\\ 
+&&\hspace{0.3cm}\begin{tabular}{|l}
+Affecter à $a$ la valeur \ldots\\ 
+Affecter à $n$ la valeur \ldots\\
+\end{tabular}\\
+&& Fin Tant que\\  
+\textbf{Sortie}&:&Afficher $n$\\ \hline
+\end{tabular}
+\end{center} 
+ 
+\item Pour tout entier naturel $n$, on note $u_{n} = a_{n} - \np{1320}$. 
+	\begin{enumerate}
+		\item Montrer que la suite $\left(u_{n}\right)$ est une suite géométrique dont on précisera le premier terme et la raison.\index{suite géométrique} 
+		\item Exprimer $u_{n}$ en fonction de $n$. 
+
+En déduire que, pour tout entier naturel $n,\: a_{n} = \np{1320} - 520 \times \left(\dfrac{3}{4}\right)^n$.
+	\end{enumerate} 
+\item On cherche à savoir si, un jour donné, les deux bassins peuvent avoir, au mètre cube près, le même volume d'eau.
+ 
+Proposer une méthode pour répondre à ce questionnement. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+
+\vspace{0,5cm}
+
+\textbf{Exercice 4 \hfill  5 points}
+
+\textbf{Candidats ayant  suivi l'enseignement de spécialité}
+
+\medskip 
+
+Un volume constant de \np{2200}~m$^3$ d'eau est réparti entre deux bassins A et B.
+ 
+Le bassin A refroidit une machine. Pour des raisons d'équilibre thermique on crée un courant d'eau entre les deux bassins à l'aide de deux pompes.
+ 
+On modélise les échanges entre les deux bassins de la façon suivante :
+
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] au départ, le bassin A contient \np{1100}~m$^3$ d'eau et le bassin B contient \np{1100}~m$^3$ d'eau ; 
+\item[$\bullet~~$] tous les jours, 15\,\% du volume d'eau présent en début de journée dans le bassin B est transféré vers le bassin A ; 
+\item[$\bullet~~$] tous les jours, 10\,\% du volume d'eau présent en début de journée dans le bassin du bassin A est transféré vers le bassin B, et pour des raisons de maintenance, on transfère également 5~m$^3$ du bassin A vers le bassin B.
+\end{itemize}
+\setlength\parindent{0mm}
+
+\medskip
+ 
+Pour tout entier naturel $n$, on note :\index{suite}
+
+\medskip
+ 
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] $a_{n}$ le volume d'eau, exprimé en m$^3$, contenu dans le bassin A à la fin du $n$-ième jour de fonctionnement ; 
+\item[$\bullet~~$] $b_{n}$ le volume d'eau, exprimé en m$^3$, contenu dans le bassin B à la fin du $n$-ième jour de fonctionnement.
+\end{itemize}
+\setlength\parindent{0mm}
+ 
+On a donc $a_{0} =  \np{1100}$  et $b_{0} = \np{1100}$.
+ 
+\emph{Les parties A et B peuvent être traitées de manière indépendante}
+
+\medskip
+ 
+\textbf{Partie A}
+
+\medskip
+ 
+\begin{enumerate}
+\item Traduire la conservation du volume total d'eau du circuit par une relation liant $a_{n}$ et $b_{n}$. 
+\item On utilise un tableur pour visualiser l'évolution du volume d'eau dans les bassins.
+ 
+Donner les formules à écrire et à recopier vers le bas dans les cellules B3 et C3 permettant d'obtenir la feuille de calcul ci-dessous : \index{tableur}
+
+\begin{center}
+\begin{tabularx}{0.75\linewidth}{|c|*{3}{>{\centering \arraybackslash}X|}}\hline
+&A &B &C \\ \hline
+1& Jour $n$& Volume bassin A& Volume bassin B\\ \hline 
+2 	&0 	&1100,00 	&1100,00\\ \hline 
+3 	&1	&			&\\ \hline
+4	& 2 &\np{1187,50}	&\np{1012,50}\\ \hline 
+5 	&3 	&\np{1215,63} 	&984,38\\ \hline 
+6 	&4	&\np{1236,72} 	&963,28\\ \hline 
+7 	&5	&\np{1252,54}	&947,46\\ \hline 
+8	& 6	&\np{1264,40} 	&935,60\\ \hline 
+9 	&7 	&\np{1273,30} 	&926,10 \\ \hline
+10 	&8 	&\np{1279,98} 	&920,02 \\ \hline
+11 	&9 	&\np{1234,98}	&915,02\\ \hline 
+12 	&10 &\np{1288,74} 	&911,26\\ \hline 
+13 	&11 &\np{1291,55}	&908,45\\ \hline 
+14 	&12 &\np{1293,66} 	&906,34\\ \hline 
+15 	&13 &\np{1295,25} 	&904,75\\ \hline 
+16 	&14	&\np{1296,44} 	&903,56\\ \hline 
+17 &15 	&\np{1297,33} 	&902,67\\ \hline 
+18 &16 	&\np{1298,00} 	&902,00\\ \hline 
+19 &17 	&\np{1298,50} 	&901,50\\ \hline 
+20 &18	&\np{1298,87} 	&901,13\\ \hline
+\end{tabularx}
+\end{center}
+ 
+\item Quelles conjectures peut-on faire sur l'évolution du volume d'eau dans chacun des bassins ? 
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+ 
+On considère la matrice carrée $M = \begin{pmatrix}0,9& 0,15\\0,1&0,85
+\end{pmatrix}$ et les matrices colonnes $R = \begin{pmatrix}-5\\5 \end{pmatrix}$ et  $X_{n} = \begin{pmatrix}a_{n}\\b_{n}\end{pmatrix}$.\index{matrices}
+ 
+On admet que, pour tout entier naturel $n,\: X_{n+1} = M X_{n} + R$. 
+ 
+\medskip
+
+\begin{enumerate}
+\item On note $S = \begin{pmatrix} \np{1300}\\ 900\end{pmatrix}$. 
+
+Vérifier que $S = MS + R$.
+ 
+En déduire que, pour tout entier naturel $n,\: X_{n+1} - S = M\left(X_{n} - S\right)$.
+
+\medskip
+ 
+Dans la suite, on admettra que, pour tout entier naturel $n,\: X_{n} - S = M^n\left(X_{0} - S\right)$ et que $M^n = \begin{pmatrix} 0,6 + 0,4 \times 0,75^n& 0,6 - 0,6 \times  0,75^n\\ 
+0,4 - 0,4 \times 0,75^n& 0,4 + 0,6 \times 0,75^n \end{pmatrix}$. 
+
+\item Montrer que, pour tout entier naturel $n,\: X_{n} = \begin{pmatrix}\np{1300} - 200 \times 0,75^n\\900 + 200 \times 0,75^n \end{pmatrix}$. 
+\item Valider ou invalider les conjectures effectuées à la question 3. de la partie A. 
+\item On considère que le processus est stabilisé lorsque l'entier naturel $n$ vérifie 
+
+\[\np{1300} - a_{n} < 1,5\quad  \text{et} \quad  b_{n} - 900 < 1,5.\]
+ 
+Déterminer le premier jour pour lequel le processus est stabilisé.
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\newpage
+
+{\large \textbf{Annexe 1}}
+
+\vspace{0,5cm}
+
+\textbf{À rendre avec la copie}
+
+\vspace{1.5cm}
+
+\begin{center} 
+
+{\textsc{\textbf{EXERCICE 2}}}
+
+\vspace{1cm}
+
+\psset{xunit=2.5cm,yunit=2cm,comma=true}
+\begin{pspicture}(-0.25,-3.2)(4.5,1.5) 
+\psaxes[linewidth=1.5pt,Dy=0.5]{->}(0,0)(-0.25,-3.2)(4.5,1.5) 
+\multido{\n=0+1}{5}{\psline[linewidth=0.2pt,linecolor=orange](\n,-3.2)(\n,1.25)}
+\multido{\n=-3.00+0.25}{18}{\psline[linewidth=0.2pt,linecolor=orange](0,\n)(4.5,\n)}
+\psline[linestyle=dashed](0,-3)(4.5,1.5)
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=blue]{0}{4.4}{5 2.71828 x exp div 3 2.71828 x 2 mul exp div sub x add 3 sub}
+\uput[ul](4,1.15){$\mathcal{C}_{f}$}
+\uput[dr](4,1){$\mathcal{D}$}\uput[dl](0,0){O}
+\end{pspicture}
+\end{center}
+
+\newpage
+
+{\large \textbf{Annexe 2}}
+
+\vspace{0,5cm}
+ 
+\textbf{À rendre avec la copie}
+
+\begin{center} 
+ 
+\textbf{EXERCICE 3}
+
+\vspace{4cm}
+
+\psset{unit=1cm}
+\begin{pspicture}(7,8.5) 
+\psframe(0.3,0.3)(6.3,6.3)%ABFE
+\psline(6.3,0.3)(8,2.8)(8,8.8)(6.3,6.3)%BCGF
+\psline(8,8.8)(2,8.8)(0.3,6.3)%GHE
+\psline[linestyle=dashed](0.3,0.3)(2,2.8)(8,2.8)%ADC
+\psline[linestyle=dashed](2,2.8)(2,8.8)%DH
+\psdots[dotstyle=+,dotangle=45,dotscale=1.4](1.15,7.55)(7.15,4.55)(3.5,8.8)
+\uput[dl](0.3,0.3){A} \uput[dr](6.3,0.3){B} \uput[r](8,2.8){C} 
+\uput[ur](2,2.8){D} \uput[ul](0.3,6.3){E} \uput[ul](6.3,6.3){F} 
+\uput[ur](8,8.8){G} \uput[ul](2,8.8){H} \uput[ul](1.15,7.55){M} 
+\uput[dr](7.15,4.55){N} \uput[u](3.5,8.8){P} 
+\end{pspicture}
+\end{center}
+%%%%%%%%%   fin Amérique du Nord 30 mai 2014
+\newpage
+%%%%%%%%%   Centres étrangers 12 juin 2014
+\hypertarget{Centres etrangers}{}
+
+\lfoot{\small Centres étrangers}
+\rfoot{\small 12 juin 2014}
+
+\begin{center}\textbf{Durée  : 4 heures }
+
+\vspace{0,25cm}
+
+{\Large\textbf{\decofourleft~Baccalauréat S Centres étrangers
+~\decofourright\\12 juin 2014}}
+\end{center}
+
+\vspace{0,25cm}
+
+\emph{Dans l'ensemble du sujet, et pour chaque question, toute trace de recherche même incomplète, ou d'initiative même non fructueuse, sera prise en compte dans l'évaluation.}
+
+\subsection*{Exercice 1 \hfill 4 points}
+
+\textbf{\emph{Commun à tous les candidats}}
+
+\medskip
+
+\emph{Cet exercice est un questionnaire à choix multiples comportant quatre questions indépendantes.\\ Pour chaque question, une seule des quatre affirmations proposées est exacte.\\ 
+Le candidat indiquera sur sa copie le numéro de la question et la lettre correspondant à l'affirmation exacte. Aucune justification n'est demandée. Une réponse exacte rapporte un point ; une réponse fausse ou une absence de réponse ne rapporte ni n'enlève de point.}\index{Q. C. M.}
+
+\medskip
+ 
+\textbf{Question 1}\index{probabilités}
+ 
+Dans un hypermarché, 75\,\% des clients sont des femmes. Une femme sur cinq achète un article au rayon bricolage, alors que sept hommes sur dix le font.
+ 
+Une personne, choisie au hasard, a fait un achat au rayon bricolage. 
+La probabilité que cette personne soit une femme a pour valeur arrondie au millième :
+
+\medskip
+\begin{tabularx} {\linewidth}{*{4}{X}}
+\textbf{a.~~} 0,750& \textbf{b.~~} 0,150& \textbf{c.~~} 0,462& \textbf{d.~~} 0,700 
+\end{tabularx}
+\medskip
+
+\textbf{Question 2}\index{loi binomiale}
+ 
+Dans cet hypermarché, un modèle d'ordinateur est en promotion. Une étude statistique a permis d'établir que, chaque fois qu'un client s'intéresse à ce modèle, la probabilité qu'il l'achète est égale à $0,3$. On considère un échantillon aléatoire de dix clients qui se sont intéressés à ce modèle.
+ 
+La probabilité qu'exactement trois d'entre eux aient acheté un ordinateur de ce modèle a pour valeur arrondie au millième :
+
+\medskip
+\begin{tabularx} {\linewidth}{*{4}{X}}
+\textbf{a.~~} 0,900& 
+\textbf{b.~~} 0,092& 
+\textbf{c.~~} 0,002& 
+\textbf{d.~~} 0,267
+\end{tabularx}
+\medskip
+ 
+\textbf{Question 3}\index{loi exponentielle}
+ 
+Cet hypermarché vend des téléviseurs dont la durée de vie, exprimée en année, peut être modélisée par une variable aléatoire réelle qui suit une loi exponentielle de paramètre $\lambda$. La durée de vie 
+moyenne d'un téléviseur est de huit ans, ce qui se traduit par : $\lambda = \dfrac{1}{8}$. 
+ 
+La probabilité qu'un téléviseur pris au hasard fonctionne encore au bout de six ans a pour valeur arrondie au millième :
+
+\medskip
+\begin{tabularx} {\linewidth}{*{4}{X}}
+\textbf{a.~~} 0,750& 
+\textbf{b.~~} 0,250& 
+\textbf{c.~~} 0,472& 
+\textbf{d.~~} 0,528
+\end{tabularx}
+\medskip
+ 
+\textbf{Question 4}\index{loi normale}
+ 
+Cet hypermarché vend des baguettes de pain dont la masse, exprimée en gramme, est une variable aléatoire réelle qui suit une loi normale de moyenne $200$~g. 
+
+La probabilité que la masse d'une baguette soit comprise entre 184 g et 216 g est égale à $0,954$. 
+
+La probabilité qu'une baguette prise au hasard ait une masse inférieure à 192 g a pour valeur arrondie au centième :
+
+\medskip
+\begin{tabularx} {\linewidth}{*{4}{X}} 
+\textbf{a.~~} 0,16& 
+\textbf{b.~~} 0,32& 
+\textbf{c.~~} 0,84& 
+\textbf{d.~~} 0,48 
+\end{tabularx}
+\medskip 
+
+\hyperlink{Index}{*}
+\subsection*{Exercice 2 \hfill 4 points}
+
+\textbf{Commun à tous les candidats}
+
+\medskip
+ 
+On définit, pour tout entier naturel $n$, les nombres complexes $z$ par : 
+
+\[\left\{\begin{array}{l c l}
+z_{0}&=& 16\\ 
+z_{n+1}&=&\dfrac{1 + \text{i}}{2}z_{n},\: \text{pour tout entier naturel} \: n.
+\end{array}\right.\]
+ 
+On note $r_{n}$ le module du nombre complexe $z_{n}\: : r_{n} =\left|z_{n}\right|$.
+ 
+Dans le plan muni d'un repère orthonormé direct d'origine O, on considère les points $A_{n}$ d'affixes $z_{n}$.
+
+\medskip\index{complexes et suite}
+ 
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Calculer $z_{1}, z_{2}$ et $z_{3}$. 
+		\item Placer les points $A_{1}$ et $A_{2}$ sur le graphique de l'\textbf{annexe, à rendre avec la copie}. 
+		\item Écrire le nombre complexe $\dfrac{1 + \text{i}}{2}$ sous forme trigonométrique. 
+		\item Démontrer que le triangle O$A_{0}A_{1}$ est isocèle rectangle en $A_{1}$. 
+	\end{enumerate}
+\item Démontrer que la suite $\left(r_{n}\right)$ est géométrique, de raison $\dfrac{\sqrt{2}}{2}$.\index{suite géométrique}
+ 
+La suite $\left(r_{n}\right)$ est-elle convergente ?
+ 
+Interpréter géométriquement le résultat précédent. 
+
+On note $L_{n}$ la longueur de la ligne brisée qui relie le point $A_{0}$ au point $A_{n}$ en passant successivement par les points $A_{1}, A_{2},  A_{3}$,  etc. 
+ 
+Ainsi $L_{n} = \displaystyle\sum_{i=0}^{n-1} A_{i}A_{i+1} =  A_{0}A_{1} + A_{1}A_{2} + \ldots + A_{n-1}A_{n}.$
+\item
+	\begin{enumerate}
+		\item Démontrer que pour tout entier naturel $n \::\: A_{n}A_{n+1} = r_{n+1}$. 
+		\item Donner une expression de $L_{n}$ en fonction de $n$. 
+		\item Déterminer la limite éventuelle de la suite $\left(L_{n}\right)$.
+	\end{enumerate}
+\end{enumerate}
+
+\hyperlink{Index}{*}
+
+\subsection*{Exercice 3 \hfill 7 points}
+
+\textbf{Commun à tous les candidats}
+
+\medskip 
+
+\textbf{Les parties A et B sont indépendantes}
+
+\medskip
+ 
+Une image numérique en noir et blanc est composée de petits carrés (pixels) dont la couleur va du blanc au noir en passant par toutes les nuances de gris. Chaque nuance est codée par un réel $x$ de la façon suivante : 	
+
+r
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] $x = 0$ pour le blanc ; 
+\item[$\bullet~~$] $x = 1$ pour le noir; 
+\item[$\bullet~~$] $x = 0,01 \:;\: x = 0,02$ et ainsi de suite jusqu'à $x = 0,99$ par pas de $0,01$ pour toutes les nuances intermédiaires (du clair au foncé).
+\end{itemize}
+\setlength\parindent{0mm}
+ 
+L'image A, ci-après, est composée de quatre pixels et donne un échantillon de ces nuances avec leurs codes.
+ 
+Un logiciel de retouche d'image utilise des fonctions numériques dites \og fonctions de retouche \fg.
+ 
+Une fonction $f$ définie sur l'intervalle [0~;~1] est dite \og fonction de retouche \fg{} si elle possède les quatre propriétés suivantes : 
+
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] $f(0) = 0$ ; 
+\item[$\bullet~~$] $f(1) = 1$ ; 
+\item[$\bullet~~$] $f$ est continue sur l'intervalle [0~;~1] ; 
+\item[$\bullet~~$] $f$ est croissante sur l'intervalle [0~;~1].
+\end{itemize}
+\setlength\parindent{0mm}
+ 
+Une nuance codée $x$ est dite assombrie par la fonction $f$ si $f(x) > x$, et éclaircie, si $f(x) < x$.
+ 
+Ainsi, si $f(x) = x^2$, un pixel de nuance codée $0,2$ prendra la nuance codée
+
+ $0,2^2 = 0,04$. L'image A sera transformée en l'image B ci-dessous. 
+ 
+Si $f(x) = \sqrt{x}$, la nuance codée $0,2$ prendra la nuance codée $\sqrt{0,2} \approx 0,45$. L'image A sera transformée en l'image C ci-dessous. 
+
+\begin{center}
+\begin{tabularx}{\linewidth}{*{3}{>{\centering\arraybackslash}X}}
+\psset{unit=1cm}\begin{pspicture}(2,2)
+\psframe[fillstyle=solid,fillcolor=gray!20](0,1)(1,2)\rput(0.5,1.5){0,20}
+\psframe[fillstyle=solid,fillcolor=gray!40](1,1)(2,2)\rput(1.5,1.5){0,40}
+\psframe[fillstyle=solid,fillcolor=gray!60](0,0)(1,1)\rput(0.5,0.5){0,60}
+\psframe[fillstyle=solid,fillcolor=gray!80](1,0)(2,1)\rput(1.5,0.5){0,80}
+\end{pspicture}&
+\psset{unit=1cm}\begin{pspicture}(2,2)
+\psframe[fillstyle=solid,fillcolor=gray!4](0,1)(1,2)\rput(0.5,1.5){0,04}
+\psframe[fillstyle=solid,fillcolor=gray!16](1,1)(2,2)\rput(1.5,1.5){0,16}
+\psframe[fillstyle=solid,fillcolor=gray!36](0,0)(1,1)\rput(0.5,0.5){0,36}
+\psframe[fillstyle=solid,fillcolor=gray!64](1,0)(2,1)\rput(1.5,0.5){0,64}
+\end{pspicture}
+&\psset{unit=1cm}\begin{pspicture}(2,2)
+\psframe[fillstyle=solid,fillcolor=gray!45](0,1)(1,2)\rput(0.5,1.5){0,45}
+\psframe[fillstyle=solid,fillcolor=gray!63](1,1)(2,2)\rput(1.5,1.5){0,63}
+\psframe[fillstyle=solid,fillcolor=gray!77](0,0)(1,1)\rput(0.5,0.5){0,77}
+\psframe[fillstyle=solid,fillcolor=gray!89](1,0)(2,1)\rput(1.5,0.5){0,89}
+\end{pspicture}\\
+Image A& 
+Image B& 
+Image C
+\end{tabularx}
+\end{center}
+ 
+\textbf{Partie A}
+
+\medskip
+ 
+\begin{enumerate}
+\item On considère la fonction $f_{1}$ définie sur l'intervalle [0~;~1] par : 
+
+\[f_{1}(x) = 4x^3 - 6x^2 + 3x.\]
+ 
+	\begin{enumerate}
+		\item Démontrer que la fonction $f_{1}$ est une fonction de retouche. 
+		\item Résoudre graphiquement l'inéquation $f_{1}(x) \leqslant x$, à l'aide du graphique donné en annexe, à rendre avec la copie, en faisant apparaître les pointillés utiles. 
+
+Interpréter ce résultat en termes d'éclaircissement ou d'assombrissement.
+	\end{enumerate} 
+\item On considère la fonction $f_{2}$ définie sur l'intervalle [0~;~1] par : 
+
+\[f_{2}(x) = \ln [1 + (\text{e} - 1)x].\]
+ 
+On admet que $f_{2}$ est une fonction de retouche. 
+
+On définit sur l'intervalle [0~;~1] la fonction $g$ par : $g(x) = f_{2}(x) - x$. 
+		
+	\begin{enumerate}
+		\item Établir que, pour tout $x$ de l'intervalle [0~;~1] : $g'(x) = \dfrac{(\text{e} - 2) - (\text{e} - 1)x}{1 + (\text{e} - 1)x}$ ;  
+		\item Déterminer les variations de la fonction $g$ sur l'intervalle [0~;~1]. 
+\index{maximum d'une fonction}
+Démontrer que la fonction $g$ admet un maximum en $\dfrac{\text{e} - 2}{\text{e} - 1}$, maximum dont une valeur arrondie au centième est $0,12$. 
+		\item Établir que l'équation $g(x) = 0,05$ admet sur l'intervalle [0~;~1] deux solutions $\alpha$ et $\beta$, 
+avec $\alpha < \beta$.
+ 
+On admettra que : $0,08 < \alpha < 0,09$ et que : $0,85 < \beta < 0,86$.
+	\end{enumerate} 
+\end{enumerate}
+
+\bigskip
+ 
+\textbf{Partie B}
+
+\medskip
+ 
+On remarque qu'une modification de nuance n'est perceptible visuellement que si la valeur absolue de l'écart entre le code de la nuance initiale et le code de la nuance modifiée est supérieure ou égale 
+à $0,05$.
+
+\medskip
+ 
+\begin{enumerate}
+\item Dans l'algorithme décrit ci-dessous, $f$ désigne une fonction de retouche.
+ 
+Quel est le rôle de cet algorithme ?\index{algorithme}
+
+\begin{center}
+\begin{tabularx}{0.78\linewidth}{|l X|} \hline
+\textbf{Variables :}& 	$x$ (nuance initiale)\\ 
+&$y$ (nuance retouchée) \\
+&$E$ (écart)\\ 
+&$c$ (compteur)\\
+& $k$\\ 
+\textbf{Initialisation :}& 	$c$ prend la valeur $0$\\ 
+\textbf{Traitement :}& 	Pour $k$ allant de 0 à 100, faire\\
+&\hspace{1cm}\begin{tabular}{l}
+$x$ prend la valeur $\frac{k}{100}$\\ 
+$y$ prend la valeur $f(x)$\\ 
+$E$ prend la valeur $|y - x|$
+\end{tabular}\\
+	&\hspace{2cm}\begin{tabular}{l} 
+	Si $E \geqslant 0,05$, faire\\ 
+\quad $c$ prend la valeur $c + 1$\\
+Fin si
+\end{tabular}\\ 
+&Fin pour\\
+\textbf{Sortie :}& Afficher $c$ \\ \hline
+\end{tabularx}
+\end{center}
+ 
+\item Quelle valeur affichera cet algorithme si on l'applique à la fonction $f_{2}$ définie dans la deuxième question de la \textbf{partie A} ?
+\end{enumerate}
+
+\bigskip
+ 
+\textbf{Partie C}
+
+\medskip
+ 
+\parbox{0.6\linewidth}{Dans cette partie, on s'intéresse à des fonctions de retouche $f$ dont l'effet est d'éclaircir l'image dans sa globalité, c'est-a-dire telles que, 
+pour tout réel $x$ de l'intervalle [0~;~1], $f(x) \leqslant  x$.
+ 
+On décide de mesurer l'éclaircissement global de l'image en calculant l'aire $\mathcal{A}_{f}$ de la portion de plan comprise entre l'axe des abscisses, la 
+courbe représentative de la fonction $f$, et les droites d'équations  respectives $x = 0$ et $x = 1$.
+
+\index{intégrale et aire} 
+Entre deux fonctions, celle qui aura pour effet d'éclaircir le plus l'image ~ celle correspondant à la plus petite aire. 
+On désire comparer l'effet des deux fonctions suivantes, dont on admet 
+qu'elles sont des fonctions de retouche :} \hfill
+\parbox{0.36\linewidth}{\psset{unit=4cm,comma=true}
+\begin{pspicture}(-0.15,-0.15)(1.1,1.1)
+\psaxes[linewidth=1.25pt,Dx=0.5,Dy=0.5](0,0)(-0.15,-0.15)(1.1,1.1)
+\psplot[plotpoints=4000,linewidth=1.25pt,linecolor=blue]{0}{1}{x dup mul}
+\pscustom[fillstyle=solid,fillcolor=lightgray]{
+\psplot[plotpoints=4000,linewidth=1.25pt,linecolor=blue]{0}{1}{x dup mul}
+\psline(1,0)(0,0)}
+\uput[dl](0,0){0}
+\end{pspicture}
+}
+ 
+\[f_{1}(x) = x \text{e}^{\left(x^2 - 1 \right)}\qquad  
+f_{2}(x) = 4x - 15 + \dfrac{60}{x+4}.\]
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Calculer $\mathcal{A}_{f_{1}}$.
+		\item Calculer $\mathcal{A}_{f_{2}}$
+	\end{enumerate} 
+\item De ces deux fonctions, laquelle a pour effet d'éclaircir le plus l'image ? 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+
+\subsection*{Exercice 4 \hfill 5 points}
+
+\textbf{Candidats n'ayant pas choisi l'enseignement de spécialité}
+
+\medskip
+
+Dans l'espace muni d'un repère orthonormé, on considère les points :
+
+\index{géométrie dans l'espace} 
+\[\text{A}(1~;~2~;~7),\quad \text{B}(2~;~0~;~2),\quad \text{C}(3~;~1~;~3),\quad \text{D}(3~;~ -6~;~1) \:\:\text{et E}(4~;~-8~;~-4).\]
+ 
+\begin{enumerate}
+\item Montrer que les points A, B et C ne sont pas alignés. 
+\item Soit $\vect{u}(1~;~b~;~c)$ un vecteur de l'espace, où $b$ et $c$ désignent deux nombres réels. 
+	\begin{enumerate}\index{vecteur normal}
+		\item Déterminer les valeurs de $b$ et $c$ telles que $\vect{u}$ soit un vecteur normal au plan (ABC). 
+		\item En déduire qu'une équation cartésienne du plan (ABC) est : 
+
+\index{equation de plan@équation de plan}		
+		$x - 2 y + z - 4 = 0$. 
+		\item Le point D appartient-il au plan (ABC) ?
+	\end{enumerate} 
+\item On considère la droite $\mathcal{D}$ de l'espace dont une représentation paramétrique est :
+ 
+\[\left\{\begin{array}{l c l}
+x& =& \phantom{-}2t+3\\ 
+y& =& - 4t + 5\\  
+z& =&\phantom{-}2t-1
+\end{array}\right. \: \text{où}\: t\: \text{est un nombre réel.}\]
+
+	\begin{enumerate}
+		\item La droite $\mathcal{D}$ est-elle orthogonale au plan (ABC) ? 
+		\item Déterminer les coordonnées du point H, intersection de la droite $\mathcal{D}$ et du plan (ABC).
+	\end{enumerate} 
+\item Étudier la position de la droite (DE) par rapport au plan (ABC). 
+\end{enumerate}
+
+\subsection*{Exercice 4 \hfill 5 points}
+
+\textbf{Candidats ayant choisi l'enseignement de spécialité}
+
+\medskip
+
+\textbf{Partie A : préliminaires}
+
+\medskip
+ 
+\begin{enumerate}\index{arithmétique}
+\item 
+	\begin{enumerate}
+		\item Soient $n$ et $N$ deux entiers naturels supérieurs ou égaux à 2, tels  que :
+		
+\[n^2 \equiv  N -1\quad  \text{modulo}\: N.\]
+ 
+Montrer que : $n \times  n^3 \equiv 1 \quad  \text{modulo}\:\: N$. 
+		\item Déduire de la question précédente un entier $k_{1}$ tel que: $5k_{1} \equiv 1\quad  \text{modulo}\:\: 26$. 
+
+On admettra que l'unique entier $k$ tel que : $ 0 \leqslant k \leqslant   25$ et $5k \equiv 1 \quad  \text{modulo}\:\: 26$ vaut 21.  
+	\end{enumerate}
+	\index{matrices}
+\item On donne les matrices : $A = \begin{pmatrix}4&1\\3&2\end{pmatrix},\: B = \begin{pmatrix}\phantom{-}2&- 1\\- 3&\phantom{-}4\end{pmatrix},\: X = \begin{pmatrix}x_{1}\\x_{2}\end{pmatrix}$ et $Y = \begin{pmatrix}y_{1}\\y_{2}\end{pmatrix}$.
+	\begin{enumerate}
+		\item Calculer la matrice $6A - A^2$. 
+		\item En déduire que $A$ est inversible et que sa matrice inverse, notée $A^{- 1}$, peut s'écrire sous la  forme $A^{-1} = \alpha I + \beta A$, ou $\alpha$ et $\beta$ sont deux réels que l'on  déterminera. 
+		\item Vérifier que : $B = 5A^{-1}$. 
+		\item Démontrer que si $A X = Y$, alors $5X = B Y$.
+	\end{enumerate}
+\end{enumerate}	
+
+\bigskip
+	 
+\textbf{Partie B : procédure de codage}
+
+\medskip
+ 
+Coder le mot \og ET \fg, en utilisant la procédure de codage décrite ci-dessous.
+
+\setlength\parindent{5mm}
+\begin{itemize}
+\item[$\bullet~~$] Le mot à coder est remplacé par la matrice $X = \begin{pmatrix}x_{1}\\x_{2}\end{pmatrix}$, où $x_{1}$ est l'entier représentant la première lettre du mot et $x_{2}$ l'entier représentant la deuxième, selon le tableau de correspondance ci-dessous :
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|*{13}{>{\centering \arraybackslash}X|}}\hline
+A&B&C&D&E&F&G&H&I&J&K&L&M\\ \hline
+0&1&2&3&4&5&6&7&8&9&10&11&12\\ \hline \hline
+N&O&P&Q&R&S&T&U&V&W&X&Y&Z\\ \hline
+13&14&15&16&17&18&19&20&21&22&23&24&25\\ \hline
+\end{tabularx}
+\end{center} 
+
+\item[$\bullet~~$] La matrice $X$ est transformée en la matrice $Y = \begin{pmatrix}y_{1}\\ y_{2}
+\end{pmatrix}$  telle que : $Y  = AX$. 
+\item[$\bullet~~$] La matrice $Y$ est transformée en la matrice $R = \begin{pmatrix}r_{1}\\r_{2}\end{pmatrix}$, où $r_{1}$ est le reste de la division euclidienne de $y_{1}$ par 26 et $r_{2}$ le reste de la division euclidienne de $y_{2}$ par  26. 
+\item[$\bullet~~$] Les entiers $r_{1}$ et $r_{2}$ donnent les  lettres du mot codé, selon  le tableau de correspondance ci-dessus. 
+\end{itemize}
+\setlength\parindent{0mm}
+\medskip
+
+\textbf{Exemple :} \og  OU \fg (mot à coder) $\to  X \begin{pmatrix}14\\20\end{pmatrix} \to Y = \begin{pmatrix}76\\82\end{pmatrix} \to R = \begin{pmatrix}24\\4 \end{pmatrix} \to $ \og YE \fg{} (mot codé). 
+
+\bigskip
+ 
+\textbf{Partie C : procédure de décodage (on conserve les mêmes notations que pour le codage)}
+
+\medskip
+ 
+Lors du codage, la matrice $X$ a été transformée en la matrice  $Y = \begin{pmatrix}y_{1}\\y_{2}\end{pmatrix}$  telle que : $Y = A X$.
+
+\medskip
+ 
+
+\begin{enumerate}
+\item Démontrer que : $\left\{\begin{array}{l c l}
+5x_{1} &=& \phantom{-}2y_{1} - y_{2}\\ 
+5x_{2} &=&- 3y_{1} + 4y_{2}
+\end{array}\right..$ 
+\item En utilisant la question 1. b. de la \textbf{partie A}, établir que:
+
+\[\left\{\begin{array}{l c l}
+x_{1}&\equiv&16y_{1} + 5y_{2}\\
+x_{2}&\equiv&15y_{1} + 6y_{2}
+\end{array}\right. \quad \text{modulo}\:\: 26\]
+ 
+\item Décoder le mot \og QP \fg. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\newpage
+\begin{center}
+A4 
+\textbf{Annexe à rendre avec la copie}
+
+\bigskip
+ 
+\textbf{Annexe relative à l'exercice 2}
+
+\bigskip
+
+\psset{unit=0.5cm}
+\begin{pspicture}(-5,-2.5)(18,9) 
+\psaxes[linewidth=1.25pt,Dx=2,Dy=2]{->}(0,0)(-5,-2.5)(18,9) 
+\multido{\n=-4+2}{11}{\psline[linestyle=dashed](\n,-2.5)(\n,9)}
+\multido{\n=-2+2}{6}{\psline[linestyle=dashed](-5,\n)(18,\n)}
+\psdots(-4,0)(-4,4)(-2,-2)(0,-2)(16,0)
+\uput[ur](16,0){$A_{0}$}\uput[ur](-4,4){$A_{3}$}\uput[ur](-4,0){$A_{4}$}
+\uput[ur](-2,-2){$A_{5}$}\uput[ur](0,-2){$A_{6}$}
+\uput[ur](0,0){0}
+\end{pspicture}
+
+\vspace{1cm}
+
+\textbf{Annexe relative à l'exercice 3}
+
+\bigskip
+ 
+\textbf{Courbe représentative de la fonction}\:\boldmath $f_{1}$ \unboldmath
+
+\medskip
+
+\psset{unit=6.5cm,comma=true}
+\begin{pspicture}(-0.4,-0.2)(1.25,1.2) 
+\psaxes[linewidth=1.25pt,Dx=0.5,Dy=0.5]{->}(0,0)(-0.4,-0.2)(1.25,1.2)
+\psframe(1,1)
+\psplot[plotpoints=5000,linewidth=1.25pt,linecolor=blue]{0}{1}{x 3 exp 4 mul x dup mul 6 mul sub 3 x mul add}
+\end{pspicture} 
+\end{center}
+%%%%%%%%%%%   fin Centres étrangers 12 juin 2014
+\newpage
+%%%%%%%%%%%   Polynésie 13 juin 2014
+\hypertarget{Polynesie}{}
+
+\lfoot{\small{Polynésie}}
+\rfoot{\small{13 juin 2014}}
+\renewcommand \footrulewidth{.2pt}
+\pagestyle{fancy}
+\thispagestyle{empty} 
+
+\begin{center} {\Large{\textbf{\decofourleft~Baccalauréat S  Polynésie~\decofourright\\13 juin 2014}}}
+\end{center}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 1} \hfill 5 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+\index{géométrie dans l'espace}
+Dans un repère orthonormé de l'espace, on considère les points 
+
+\[\text{A}(5~;~-5~;~2), \text{B} (-1~;~1~;~0), \text{C}(0~;~1~;~2)\quad  \text{et D}(6~;~6~;~-1).\]
+ 
+\begin{enumerate}
+\item Déterminer la nature du triangle BCD et calculer son aire. 
+\item 
+	\begin{enumerate}\index{vecteur normal}
+		\item Montrer que le vecteur $\vect{n}\begin{pmatrix}- 2\\3\\1\end{pmatrix}$  est un vecteur normal au plan (BCD). 
+		\item Déterminer une équation cartésienne du plan (BCD).\index{equation de plan@équation de plan}
+	\end{enumerate}\index{equation paramétrique de droite@équation paramétrique de droite} 
+\item Déterminer une représentation paramétrique de la droite $\mathcal{D}$ orthogonale au plan (BCD) et passant par le point A. 
+\item Déterminer les coordonnées du point H, intersection de la droite $\mathcal{D}$ et du plan (BCD). 
+\item Déterminer le volume du tétraèdre ABCD. 
+
+\emph{On rappelle que le volume d'un tétraèdre est donné par la formule  $\mathcal{V} = \dfrac{1}{3}\mathcal{B} \times  h$, où $\mathcal{B}$ est  
+l'aire d'une base du tétraèdre et $h$ la hauteur correspondante.} 
+\item On admet que AB = $\sqrt{76}$ et AC $= \sqrt{61}$.
+ 
+Déterminer une valeur approchée au dixième de degré près de l'angle 
+$\widehat{\text{BAC}}$. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 2} \hfill 5 points}
+ 
+\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité}
+
+\medskip\index{suite de naturels}
+ 
+On considère la suite $\left(u_{n}\right)$ définie par 
+
+\[u_{0} = 0\quad  \text{et, pour tout entier naturel }\:n, u_{n+1} = u_{n} + 2n + 2.\]
+ 
+\begin{enumerate}
+\item Calculer $u_{1}$ et $u_{2}$. 
+\item On considère les deux algorithmes suivants :\index{algorithme} 
+
+\medskip
+
+\hspace*{-1cm}
+{\footnotesize
+\begin{tabularx}{1.1\linewidth}{|l X|l X|}\hline
+\textbf{Algorithme 1}&	&\textbf{Algorithme 2}&\\ \hline
+\textbf{Variables :}& 	$n$ est un entier naturel&\textbf{Variables :}& 	$n$ est un entier naturel\\  
+&$u$ est un réel &	&$u$ est un réel \\
+\textbf{Entrée :}&Saisir la valeur de $n$&\textbf{Entrée :}&Saisir la valeur de $n$\\
+\textbf{Traitement :}& 	$u$ prend la valeur 0&\textbf{Traitement :}& 	$u$ prend la valeur $0$\\
+ &Pour $i$ allant de $1$ à $n$: && Pour $i$ allant de $0$ à $n - 1$ :\\
+&\hspace{0,2cm} $u$ prend la valeur $u + 2i + 2$&&\hspace{0,2cm} $u$ prend la valeur $u + 2i + 2$\\
+& Fin Pour&	&Fin Pour\\
+\textbf{Sortie :}& 	Afficher $u$&\textbf{Sortie :}& 	Afficher $u$\\ \hline
+\end{tabularx}}
+ 
+\medskip
+ 
+De ces deux algorithmes, lequel permet d'afficher en sortie la valeur de $u_{n}$, la valeur de l'entier naturel $n$ étant entrée par l'utilisateur ? 
+\item À l'aide de l'algorithme, on a obtenu le tableau et le nuage de points ci-dessous où $n$ figure en abscisse et $u_{n}$ en ordonnée. 
+
+\medskip
+
+\parbox{0.3\linewidth}{$\begin{array}{|c|c|}\hline
+n &u_{n}\\ \hline 
+0& 0  \\ \hline 
+1& 2  \\ \hline  
+2& 6  \\ \hline  
+3& 12 \\ \hline  
+4& 20 \\ \hline  
+5& 30 \\ \hline  
+6& 42 \\ \hline  
+7& 56 \\ \hline  
+8& 72 \\ \hline  
+9& 90 \\ \hline  
+10& 110\\ \hline  
+11& 132\\ \hline  
+12& 156\\ \hline
+\end{array}$} \hfill
+\parbox{0.65\linewidth}{\psset{xunit=0.5cm,yunit=0.0375cm}
+\begin{pspicture}(-1,-10)(13,170)
+\psaxes[linewidth=1.25pt,Dy=20]{->}(0,0)(13,170)
+\multido{\n=0+1}{14}{\psline[linewidth=0.3pt,linecolor=orange](\n,0)(\n,170)}
+\multido{\n=0+20}{9}{\psline[linewidth=0.3pt,linecolor=orange](0,\n)(13,\n)}
+\psdots[dotstyle=+,dotangle=45,dotscale=1.5](0,0)(1,2)(2,6)(3,12)(4,20)(5,30)  (6,42)  (7,56)  (8,72)  (9,90)  (10,110)(11,132)(12,156)
+\end{pspicture}}
+
+\medskip 
+
+	\begin{enumerate}
+		\item Quelle conjecture peut-on faire quant au sens de variation de la suite $\left(u_{n}\right)$ ?
+		 
+Démontrer cette conjecture. 
+		\item La forme parabolique du nuage de points amène à conjecturer l'existence de trois réels $a, b$ et $c$ tels que, pour tout entier naturel $n$,\: $u_{n} = an^2 + bn + c$.
+		 
+Dans le cadre de cette conjecture, trouver les valeurs de $a, b$ et $c$ à l'aide des informations fournies. 
+	\end{enumerate}
+\item On définit, pour tout entier naturel $n$, la suite $\left(v_{n}\right)$ par : $v_{n} = u_{n+1} - u_{n}$. 
+	\begin{enumerate}
+		\item Exprimer $v_{n}$ en fonction de l'entier naturel $n$. Quelle est la nature de la suite $\left(v_{n}\right)$ ? 
+		\item On définit, pour tout entier naturel $n,\: S_{n} = \displaystyle\sum_{k=0}^{n} v_{k} = v_{0} + v_{1} + \cdots + v_{n}$. 
+
+Démontrer que, pour tout entier naturel $n,\: S_{n} = (n + 1)(n + 2)$. 
+		\item Démontrer que, pour tout entier naturel $n,\: S_{n} = u_{n+1} - u_{0}$, puis exprimer $u_{n}$ en fonction de $n$.
+	\end{enumerate}
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 2} \hfill 5 points}
+ 
+\textbf{Candidats ayant suivi l'enseignement de spécialité }
+
+\medskip\index{arithmétique}
+
+Dans cet exercice, on appelle numéro du jour de naissance le rang de ce jour dans le mois et numéro du mois de naissance, le rang du mois dans l'année.
+ 
+Par exemple, pour une personne née le 14 mai, le numéro du jour de naissance est 14 et le numéro du mois de naissance est 5.
+
+\bigskip
+ 
+\textbf{Partie A}
+
+\medskip
+ 
+Lors d'une représentation, un magicien demande aux spectateurs d'effectuer le programme de calcul (A) suivant :
+ 
+\og Prenez le numéro de votre jour de naissance et multipliez-le par 12. Prenez le numéro de votre mois de naissance et multipliez-le par 37. Ajoutez les deux nombres obtenus. Je pourrai alors vous donner la date de votre anniversaire \fg.
+ 
+Un spectateur annonce $308$ et en quelques secondes, le magicien déclare : \og Votre anniversaire tombe le 1\up{er} août ! \fg.
+
+\medskip
+ 
+\begin{enumerate}
+\item Vérifier que pour une personne née le 1\up{er} août, le programme de calcul (A) donne effectivement le nombre $308$. 
+\item  
+	\begin{enumerate}
+		\item Pour un spectateur donné, on note $j$ le numéro de son jour de naissance, $m$ celui de son mois de naissance et $z$ le résultat obtenu en appliquant le programme de calcul (A). 
+
+Exprimer $z$ en fonction de $j$ et de $m$ et démontrer que $z$ et $m$ sont congrus modulo 12. 
+		\item Retrouver alors la date de l'anniversaire d'un spectateur ayant obtenu le nombre $474$ en appliquant le programme de calcul (A).
+	\end{enumerate} 
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+ 
+Lors d'une autre représentation, le magicien décide de changer son programme de calcul. Pour un spectateur dont le numéro du jour de naissance est $j$ et le numéro du mois de naissance est $m$, le magicien demande de calculer le nombre $z$ défini par $z = 12j + 31m$.
+ 
+\emph{Dans les questions suivantes, on étudie différentes méthodes permettant de retrouver la date d'anniversaire du spectateur.}
+
+\medskip
+ 
+\begin{enumerate}
+\item Première méthode :
+ 
+On considère l'algorithme suivant :\index{algorithme}
+
+\begin{center}
+\begin{tabular}{|l l|}\hline
+\textbf{Variables :}&$j$ et $m$ sont des entiers naturels\\
+\textbf{Traitement :}& Pour $m$ allant de 1 à 12 faire :\\ 
+& \hspace{0.2cm}\begin{tabular}{|l}
+Pour $j$ allant de 1 à 31 faire :\\
+	\hspace{0.2cm}\begin{tabular}{|l}
+	$z$ prend la valeur $12j + 31m$\\ 
+	Afficher $z$\\
+	\end{tabular}\\ 
+Fin Pour\\
+\end{tabular}\\ 
+&Fin Pour\\ \hline
+\end{tabular}
+\end{center}
+ 
+Modifier cet algorithme afin qu'il affiche toutes les valeurs de $j$ et de $m$ telles que $12j + 31m = 503$. 
+\item Deuxième méthode :
+	\begin{enumerate}
+		\item Démontrer que $7m$ et $z$ ont le même reste dans la division euclidienne par 12. 
+		\item Pour $m$ variant de 1 à 12, donner le reste de la division euclidienne de $7m$ par 12. 
+		\item En déduire la date de l'anniversaire d'un spectateur ayant obtenu le nombre $503$ avec le programme de calcul (B).
+	\end{enumerate} 
+\item Troisième méthode : 
+	\begin{enumerate}
+		\item Démontrer que le couple $(-2~;~17)$ est solution de l'équation $12x + 31y = 503$. 
+		\item En déduire que si un couple d'entiers relatifs $(x~;~y)$ est solution de l'équation $12x + 31y = 503$, alors $12(x + 2) = 31 (17 - y)$. 
+		\item Déterminer l'ensemble de tous les couples d'entiers relatifs 
+		$(x~;~y)$, solutions de l'équation $12x + 31y = 503$. 
+		\item Démontrer qu'il existe un unique couple d'entiers relatifs $(x~;~y)$ tel que $1 \leqslant y \leqslant 12$.
+		 
+En déduire la date d'anniversaire d'un spectateur ayant obtenu le nombre $503$ avec le programme de calcul (B).
+	\end{enumerate}
+\hyperlink{Index}{*}	 
+\end{enumerate} 
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 3} \hfill 5 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+
+\emph{Pour chacune des cinq affirmations suivantes, indiquer si elle est vraie ou fausse et justifier la réponse. \\
+Une réponse non justifiée n'est pas prise en compte. Une absence de réponse n'est pas pénalisée.}
+
+\medskip
+ 
+\begin{enumerate}\index{probabilités}
+\item Zoé se rend à son travail à pied ou en voiture. Là où elle habite, il pleut un jour sur quatre.
+ 
+Lorsqu'il pleut, Zoé se rend en voiture à son travail dans 80\,\% des cas.
+ 
+Lorsqu'il ne pleut pas, elle se rend à pied à son travail avec une probabilité égale à $0,6$.
+ 
+\textbf{Affirmation \no 1 :}
+ 
+\og Zoé utilise la voiture un jour sur deux. \fg 
+\item Dans l'ensemble $E$ des issues d'une expérience aléatoire, on considère deux évènements $A$ et $B$.
+ 
+\textbf{Affirmation \no 2 :}
+ 
+\og Si $A$ et $B$ sont indépendants, alors $A$ et $\overline{B}$ sont aussi indépendants. \fg \index{loi exponentielle}
+\item On modélise le temps d'attente, exprimé en minutes, à un guichet, par une variable aléatoire $T$ qui suit la loi exponentielle de paramètre $0,7$.
+ 
+\textbf{Affirmation \no 3 :}
+ 
+\og La probabilité qu'un client attende au moins cinq minutes à ce guichet est $0,7$ environ. \fg
+ 
+\textbf{Affirmation \no 4 :}
+ 
+\og Le temps d'attente moyen à ce guichet est de sept minutes.\fg 
+\item On sait que 39\,\% de la population française est du groupe sanguin A+.
+ 
+On cherche à savoir si cette proportion est la même parmi les donneurs de sang.
+
+On interroge $183$ donneurs de sang et parmi eux, 34\,\% sont du groupe sanguin A+.
+ 
+\textbf{Affirmation \no 5 :}
+ 
+\og On ne peut pas rejeter, au seuil de 5\,\%, l'hypothèse selon laquelle la proportion de personnes du groupe sanguin A+ parmi les donneurs de sang est de 39\,\% comme dans l'ensemble de la population. \fg \index{intervalle de fluctuation} 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4} \hfill 5 points}
+ 
+\textbf{Commun  à tous les candidats}
+
+\medskip
+Soient $f$ et $g$ les fonctions définies sur $\R$ par 
+
+\[f(x) = \text{e}^x \quad  \text{et} \quad  g(x) = 2\text{e}^{\frac{x}{2}} - 1.\]
+ 
+On note $\mathcal{C}_{f}$ et $\mathcal{C}_{g}$ les courbes représentatives des fonctions $f$ et $g$ dans un repère orthogonal.
+
+\medskip
+ 
+\begin{enumerate}
+\item Démontrer que les courbes $\mathcal{C}_{f}$ et $\mathcal{C}_{g}$ ont un point commun d'abscisse $0$ et qu'en ce point, elles ont la même tangente 
+$\Delta$ dont on déterminera une équation. 
+\item Étude de la position relative de la courbe $\mathcal{C}_{g}$ et de la droite $\Delta$
+ 
+Soit $h$ la fonction définie sur $\R$ par $h(x) = 2\text{e}^{\frac{x}{2}} - x - 2$. 
+	\begin{enumerate}
+		\item Déterminer la limite de la fonction $h$ en $- \infty$. 
+		\item Justifier que, pour tout réel $x, h(x) = x\left(\dfrac{\text{e}^{\frac{x}{2}}}{\frac{x}{2}} - 1 - \dfrac{2}{x}\right)$. 
+
+En déduire la limite de la fonction $h$ en $+ \infty$. 
+		\item On note $h'$ la fonction dérivée de la fonction $h$ sur $\R$.
+		 
+Pour tout réel $x$, calculer $h'(x)$ et étudier le signe de $h'(x)$ suivant les valeurs de $x$.
+\index{variations de fonctions} 
+		\item Dresser le tableau de variations de la fonction $h$ sur $\R$. 
+		\item En déduire que, pour tout réel $x,\:\: 2\text{e}^{\frac{x}{2}} - 1 \geqslant x + 1$. 
+		\item Que peut-on en déduire quant à la position relative de la courbe $\mathcal{C}_{g}$ et de la droite $\Delta$ ?
+	\end{enumerate} 
+\item Étude de la position relative des courbes $\mathcal{C}_{f}$ et $\mathcal{C}_{g}$ 
+	\begin{enumerate}
+		\item Pour tout réel $x$, développer l'expression $\left(\text{e}^{\frac{x}{2}} - 1\right)^2$. 
+		\item Déterminer la position relative des courbes $\mathcal{C}_{f}$ et $\mathcal{C}_{g}$.
+	\end{enumerate}\index{position relative de deux courbes} 
+\item Calculer, en unité d'aire, l'aire du domaine compris entre les courbes $\mathcal{C}_{f}$ et $\mathcal{C}_{g}$ et les droites d'équations respectives $x = 0$ et $x = 1$.\index{intégrale et aire}
+\end{enumerate}
+
+\hyperlink{Index}{*}
+%%%%%%%%%%%%   fin Polynésie 13 juin 2014
+\newpage
+%%%%%%%%%%%%   Antilles-Guyane 9 juin 2014
+\hypertarget{Antilles}{}
+
+\lfoot{\small{Antilles-Guyane}}
+\rfoot{\small{19 juin 2014}}
+\renewcommand \footrulewidth{.2pt}
+\pagestyle{fancy}
+\thispagestyle{empty}
+\begin{center}\textbf{Durée : 4 heures}
+
+\vspace{0,5cm}
+
+
+{\Large \textbf{Baccalauréat S Antilles-Guyane 19 juin 2014}}
+\end{center}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 1} \hfill 5 points}
+ 
+\textbf{Commun à tous les candidats}
+
+\medskip
+
+\emph{Les parties A et B sont indépendantes}
+
+\medskip
+ 
+\emph{Les résultats seront arrondis à $10^{-4}$ près}
+
+\medskip
+ 
+\textbf{Partie A}
+
+\medskip
+ 
+Un ostréiculteur élève deux espèces d'huîtres : \og la plate \fg{} et \og la japonaise \fg. Chaque année, les huîtres plates représentent 15\,\% de sa production.\index{probabilités}
+ 
+Les huîtres sont dites de calibre \no 3 lorsque leur masse est comprise entre 66~g et 85~g.
+ 
+Seulement 10\,\% des huîtres plates sont de calibre \no 3, alors que 80\,\% des huîtres japonaises le sont.
+
+\medskip
+ 
+\begin{enumerate}
+\item Le service sanitaire prélève une huître au hasard dans la production de l'ostréiculteur. On suppose que toutes les huitres ont la même chance d'être choisies.
+ 
+On considère les évènements suivants : 
+
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] $J$ : \og l'huître prélevée est une huître japonaise \fg, 
+\item[$\bullet~~$] $C$ : \og l'huître prélevée est de calibre \no 3 \fg.
+\end{itemize}
+\setlength\parindent{0mm}
+ 
+	\begin{enumerate}
+		\item Construire un arbre pondéré complet traduisant la situation.\index{arbre} 
+		\item Calculer la probabilité que l'huître prélevée soit une huître plate de calibre \no 3. 
+		\item Justifier que la probabilité d'obtenir une huître de calibre \no 3 est $0,695$. 
+		\item Le service sanitaire a prélevé une huître de calibre \no 3. 
+Quelle est la probabilité que ce soit une huître plate ?
+	\end{enumerate} 
+\item La masse d'une huître peut être modélisée par une variable aléatoire $X$ suivant la loi normale de moyenne $\mu = 90$ et d'écart-type $\sigma = 2$. \index{loi normale}
+	\begin{enumerate}
+		\item Donner la probabilité que l'huître prélevée dans la production de l'ostréiculteur ait une masse comprise entre 87~g et 89~g. 
+		\item Donner $P(X \geqslant 91)$.
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+	 
+\textbf{Partie B}
+
+\medskip
+ 
+Cet ostréiculteur affirme que 60\,\% de ses huîtres ont une masse supérieure à 91~g.
+ 
+Un restaurateur souhaiterait lui acheter une grande quantité d'huîtres mais il voudrait, auparavant, vérifier l'affirmation de l'ostréiculteur.
+
+\medskip
+ 
+Le restaurateur achète auprès de cet ostréiculteur 10 douzaines d'huîtres qu'on considèrera comme un échantillon de $120$~huîtres tirées au hasard. Sa production est suffisamment importante pour qu'on l'assimile à un tirage avec remise.
+ 
+Il constate que $65$ de ces huîtres ont une masse supérieure à 91~g.
+
+\medskip
+ 
+\begin{enumerate}
+\item Soit $F$ la variable aléatoire qui à tout échantillon de $120$~huîtres associe la fréquence de celles qui ont une masse supérieure à 91~g. 
+
+Après en avoir vérifié les conditions d'application, donner un intervalle de fluctuation asymptotique au seuil de 95\,\% de la variable aléatoire $F$.\index{intervalle de fluctuation} 
+\item Que peut penser le restaurateur de l'affirmation de l'ostréiculteur ?
+\hyperlink{Index}{*} 
+\end{enumerate} 
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 2} \hfill 6 points}
+ 
+\textbf{Commun à tous les candidats}
+
+\medskip 
+
+On considère la fonction $f$ définie et dérivable sur l'ensemble $\R$ des nombres réels par 
+
+\[f(x) = x + 1 + \dfrac{x}{\text{e}^x}.\]
+
+On note $\mathcal{C}$ sa courbe représentative dans un repère orthonormé \Oij. 
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip
+
+\begin{enumerate}
+\item Soit $g$ la fonction définie et dérivable sur l'ensemble $\R$ par 
+\index{fonction exponentielle}
+\[g(x) = 1 - x + \text{e}^x.\]
+ 
+Dresser, en le justifiant, le tableau donnant les variations de la fonction $g$ sur $\R$ (les limites de $g$ aux bornes de son ensemble de définition ne sont pas attendues).
+ 
+En déduire le signe de $g(x)$. 
+\item Déterminer la limite de $f$ en $- \infty$ puis la limite de $f$ en $+ \infty$. 
+\item On appelle $f'$ la dérivée de la fonction $f$ sur $\R$. 
+
+Démontrer que, pour tout réel $x$, 
+
+\[f'(x) = \text{e}^{- x}g(x).\]
+ 
+\item En déduire le tableau de variation de la fonction $f$ sur $\R$. 
+\item Démontrer que l'équation $f(x) = 0$ admet une unique solution réelle $\alpha$ sur $\R$.
+ 
+Démontrer que $- 1 < \alpha < 0$.  
+\item 
+	\begin{enumerate}
+		\item Démontrer que la droite $T$ d'équation $y = 2x + 1$ est tangente à la courbe $\mathcal{C}$  au point d'abscisse $0$.
+		\item Étudier la position relative de la courbe $\mathcal{C}$ et de la droite $T$.
+	\end{enumerate} 
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+ 
+\begin{enumerate}
+\item Soit $H$ la fonction définie et dérivable sur $\R$ par 
+
+\[H(x) = (- x - 1)\text{e}^{- x}.\]
+ 
+Démontrer que $H$ est une primitive sur $\R$ de la fonction $h$ définie par $h(x) = x\text{e}^{- x}$.\index{primitive} 
+\item On note $\mathcal{D}$ le domaine délimité par la courbe $\mathcal{C}$, la droite $T$ et les droites d'équation $x = 1$ et $x = 3$.
+ 
+Calculer, en unité d'aire, l'aire du domaine $\mathcal{D}$. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 3} \hfill 4 points}
+ 
+\textbf{Commun à tous les candidats}
+
+\medskip 
+
+\emph{Pour chacune des quatre propositions suivantes, indiquer si elle est vraie ou fausse en justifiant la réponse.\\ 
+Il est attribué un point par réponse exacte correctement justifiée. Une réponse non justifiée n'est pas prise en compte. Une absence de réponse n'est pas pénalisée.}
+
+\medskip
+ 
+L'espace est muni d'un repère orthonormé \Oijk.\index{géométrie dans l'espace}
+ 
+On considère les points A(1~;~2~;~5), B$(-1~;~6~;~4)$, C$(7~;~- 10~;~8)$ et D$(-1~;~3~;~4)$.
+
+\medskip
+ 
+\begin{enumerate}
+\item \textbf{Proposition 1 :} Les points A, B et C définissent un plan. 
+\item On admet que les points A, B et D définissent un plan. 
+
+\textbf{Proposition 2 :} Une équation cartésienne du plan (ABD) est $x - 2z + 9 = 0$. 
+\item \textbf{Proposition 3 :} Une représentation paramétrique de la droite (AC) est 
+\index{equation paramétrique de droite@équation paramétrique de droite}
+\[\left\{\begin{array}{l c l} 
+x &=& \dfrac{3}{2}t - 5\\ 
+y &=& - 3t + 14\\
+z &=&- \dfrac{3}{2}t + 2
+\end{array}\right. \quad  t \in \R\]
+ 
+\item Soit $\mathcal{P}$ le plan d'équation cartésienne $2x - y + 5z + 7 = 0$ et $\mathcal{P}'$ le plan d'équation cartésienne $- 3x - y + z + 5 = 0$.
+ 
+\textbf{Proposition 4 :} Les plans $\mathcal{P}$ et $\mathcal{P}'$ sont parallèles. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4} \hfill 5 points}
+ 
+\textbf{Candidats n'ayant pas choisi l'enseignement de spécialité}
+
+\medskip 
+
+Soit la suite numérique $\left(u_{n}\right)$ définie sur l'ensemble des entiers naturels $\N$ par \index{suite}
+
+\[\left\{\begin{array}{r c l}
+u_{0}& =& 2\\ 
+\text{et pour tout entier naturel }\:n,\: u_{n+1} &=& \dfrac{1}{5} u_{n} + 3 \times 0,5^n.
+\end{array}\right.\] 
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Recopier et, à l'aide de la calculatrice, compléter le tableau des valeurs de la suite $\left(u_{n}\right)$ approchées à $10^{-2}$ près: 
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|*{10}{>{\centering \arraybackslash}X|}}\hline
+$n$& 0&1&2&3&4&5&6&7&8\\ \hline 
+$u_{n}$&2&&&&&&&&\\ \hline
+\end{tabularx}
+\end{center} 
+ 
+		\item D'après ce tableau, énoncer une conjecture sur le sens de variation de la suite $\left(u_{n}\right)$.
+	\end{enumerate} 
+\item
+	\begin{enumerate}
+		\item Démontrer, par récurrence, que pour tout entier naturel $n$ non nul on a 
+		
+		\[u_{n} \geqslant  \dfrac{15}{4} \times 0,5^n.\] 
+ 
+		\item En déduire que, pour tout entier naturel $n$ non nul, $u_{n+1} - u_{n} \leqslant  0$. 
+		\item Démontrer que la suite $\left(u_{n}\right)$ est convergente.
+	\end{enumerate} 
+\item \emph{On se propose, dans cette question de déterminer la limite de la suite } \:$\left(u_{n}\right)$.
+ 
+Soit $\left(v_{n}\right)$ la suite définie sur $\N$ par $v_{n} = u_{n} - 10 \times  0,5^n$. 
+	\begin{enumerate}
+		\item Démontrer que la suite $\left(v_{n}\right)$ est une suite géométrique de raison $\dfrac{1}{5}$. On précisera le  
+premier terme de la suite $\left(v_{n}\right)$. \index{suite géométrique}
+		\item En déduire, que pour tout entier naturel $n$,
+ 
+\[u_{n} = - 8 \times  \left(\dfrac{1}{5}\right)^n + 10 \times  0,5^n.\]
+ 
+		\item Déterminer la limite de la suite $\left(u_{n}\right)$
+	\end{enumerate} 
+\item Recopier et compléter les lignes (1), (2) et (3) de l'algorithme suivant, afin qu'il affiche la plus petite valeur de $n$ telle que $u_{n} \leqslant  0,01$.
+\index{algorithme}
+\begin{center}
+\begin{tabularx}{0.6\linewidth}{|l X|} \hline
+\textbf{Entrée :}& $n$ et $u$ sont des nombres\\ 
+\textbf{Initialisation :}& $n$ prend la valeur 0\\
+& $u$ prend la valeur 2\\  
+\textbf{Traitement :}&Tant que ...\hfill (1)\\  
+	&\hspace{0,5cm} $n$ prend la valeur ... 	\hfill(2)\\ 
+	&\hspace{0,5cm} $u$ prend la valeur ... 	\hfill(3)\\ 
+&Fin Tant que\\ 
+\textbf{Sortie :}&Afficher $n$\\ \hline 
+\end{tabularx}
+\end{center}
+\end{enumerate}
+
+\hyperlink{Index}{*}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4} \hfill 5 points}
+ 
+\textbf{Candidats ayant  choisi l'enseignement de spécialité}
+
+\medskip 
+
+En montagne, un randonneur a effectué des réservations dans deux types d'hébergements:
+
+L'hébergement A et l'hébergement B.
+
+Une nuit en hébergement A coûte 24 \euro{} et une nuit en  hébergement B coûte 45 ~\euro{}.
+
+Il se rappelle que le coût  total de sa réservation est de 438\euro{}.
+ 
+\emph{On souhaite retrouver les nombres $x$ et $y$ de nuitées passées respectivement en hébergement A et en  hébergement B}
+
+\medskip
+ 
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Montrer que les nombres $x$ et $y$ sont respectivement inférieurs ou égaux à 18 et 9.		
+		\item Recopier et complèter les lignes (1), (2) et (3) de l'algorithme suivant afin qu'il affiche les couples ($x$ ; $y$) possibles.
+
+\begin{center}
+\fbox{
+\begin{minipage}{8.5cm}
+\begin{tabular}{ll}
+\textbf{Entrée :} & $x$ et $y$ sont des nombres\\
+\textbf{Traitement :} & Pour $x$ variant de $0$  \ldots\hfill~~(1)\\
+&\phantom{XXX} Pour $y$ variant de 0   \ldots\hfill~~(2)\\
+&\phantom{XXXXXX} Si \ldots\hfill~~(3)\\
+&\phantom{XXXXXXXXX}Afficher $x$ et $y$\\
+&\phantom{XXXXXX}Fin Si\\
+&\phantom{XXX}Fin Pour\\
+&Fin Pour\\
+\textbf{Fin traitement}
+\end{tabular}
+\end{minipage}
+}
+\end{center}
+%
+%\begin{center}
+%\begin{tabular}{|l l|}\hline
+%\textbf{Entre :}&$x$ et $y$ sont deux nombres \\
+%\textbf{Traitement :}& Pour $x$ variant de 0  \ldots \hfill (1)\\ 
+%& \hspace{0.2cm}\begin{tabular}{|l}
+%Pour $y$ allant de 0  \ldots \hfill (2)\\
+%	\hspace{0.2cm}\begin{tabular}{|l}
+%	Si \ldots \hfill (3)\\ 
+%	Afficher $x$ et $y$\\
+%		\end{tabular}\\ 
+%	Fin si\\
+%Fin Pour\\
+%\end{tabular}\\ 
+%&Fin Pour\\ \hline
+%\end{tabular}
+%\end{center}
+		
+	\end{enumerate}
+\item Justifier que le coût total de la réservation est un multiple de 3.
+\item 
+	\begin{enumerate}
+	\item Justifier que l'équation $8x + 15y = 1$ admet pour solution au moins un couple d'entiers relatifs.\index{equation diophantienne@équation diophantienne}
+	\item Déterminer une telle solution.
+	\item Résoudre l'équation (E) : $8x + 15y = 146$ où $x$ et $y$ sont des nombres entiers relatifs.
+	\end{enumerate}
+\item Le randonneur se souvient avoir passé au maximum 13 nuits en hébergement A.
+
+Montrer alors qu'il peut retrouver le nombre exact de nuits passées en hébergement A et celui des nuits passées en hébergement B.
+
+Calculer ces nombres.
+\end{enumerate}
+
+\hyperlink{Index}{*}
+%%%%%%%%%%%%   fin Antilles-Guyane 19 juin 2014
+\newpage
+%%%%%%%%%%%%   Asie 19 juin 2014
+\hypertarget{Asie}{}
+
+\lfoot{\small{Asie}}
+\rfoot{\small{19 juin 2014}}
+\renewcommand \footrulewidth{.2pt}
+\pagestyle{fancy}
+\thispagestyle{empty}
+
+\begin{center}{\Large{\textbf{\decofourleft~Baccalauréat S Asie 
+19 juin 2014~\decofourright}}} \end{center}
+
+\vspace{0,25cm}
+
+\textbf{Exercice 1 \hfill 4 points}
+
+\textbf{Commun à tous les candidats}
+
+\medskip
+
+\emph{Cet exercice est un questionnaire à choix multiples comportant quatre questions indépendantes.\\
+Pour chaque question, une seule des quatre affirmations proposées est exacte.\\
+Le candidat indiquera sur sa copie le numéro de la question et la lettre correspondant à l'affirmation exacte. Aucune justification n'est demandée. Une réponse exacte rapporte un point ; une réponse fausse ou une absence de réponse ne rapporte ni n'enlève de point.}
+
+\smallskip
+\index{géométrie dans l'espace}
+Dans l'espace, rapporté à un repère orthonormal, on considère les points A$(1~;~- 1~;~- 1)$, B(1~;~1~;~1), C(0~;~3~;~1) et le plan $\mathcal{P}$ d'équation $2x + y - z + 5 = 0$. 
+
+\medskip
+
+\textbf{Question  1}
+ 
+Soit $\mathcal{D}_{1}$ la droite de vecteur directeur $\vect{u}(2~;~-1~;~1)$ passant par A.
+ 
+Une représentation  paramétrique de la droite $\mathcal{D}_{1}$ est :
+
+\index{equation paramétrique de droite@équation paramétrique de droite}
+
+\medskip
+\begin{tabularx}{\linewidth}{X X}
+\textbf{a.~~}$\left\{\begin{array}{l cl}
+x&=&2+t \\
+y&=&- 1 - t\\ 
+z&=&1 - t
+\end{array}\right. \quad (t \in \R)$&
+\textbf{b.~~}$\left\{\begin{array}{l cl}
+x&=&- 1 + 2t \\
+y&=&1 - t\\ 
+z&=&1 + t
+\end{array}\right. \quad (t \in \R)$\\
+\textbf{c.~~}$\left\{\begin{array}{l cl}
+x&=&5 + 4t \\
+y&=&- 3 - 2t\\ 
+z&=&1 +  2t
+\end{array}\right. \quad (t \in \R)$&
+\textbf{d.~~}$\left\{\begin{array}{l cl}
+x&=&4 -  2t \\
+y&=&- 2 + t\\ 
+z&=&3 - 4 t
+\end{array}\right. \quad (t \in \R)$\\
+\end{tabularx}
+\medskip
+ 
+\textbf{Question 2}
+
+Soit $\mathcal{D}_{2}$ la droite de représentation paramétrique $\left\{\begin{array}{l cl}
+x&=&1 +  t \\
+y&=&- 3 - t\\ 
+z&=&2 - 2 t
+\end{array}\right. \quad (t \in \R)$.
+ 
+\textbf{a.~~} La droite $\mathcal{D}_{2}$ et le plan $\mathcal{P}$ ne sont pas sécants 
+
+\textbf{b.~~} La droite $\mathcal{D}_{2}$ est incluse dans le plan $\mathcal{P}$. 
+
+\textbf{c.~~} La droite $\mathcal{D}_{2}$ et le plan $\mathcal{P}$ se coupent au point E$\left(\dfrac{1}{3}~;~- \dfrac{7}{3}~;~\dfrac{10}{3} \right)$.
+
+\textbf{d.~~} La droite $\mathcal{D}_{2}$ et le plan $\mathcal{P}$ se coupent au point F$\left(\dfrac{4}{3}~;~- \dfrac{1}{3}~;~\dfrac{22}{3} \right)$.
+
+\medskip
+
+\textbf{Question 3}
+
+\textbf{a.~~} L'intersection du plan $\mathcal{P}$ et du plan (ABC) est réduite à un point. 
+
+\textbf{b.~~} Le plan $\mathcal{P}$ et le plan (ABC) sont confondus. 
+
+\textbf{c.~~} Le plan $\mathcal{P}$ coupe le plan (ABC) selon une droite. 
+
+\textbf{d.~~} Le plan $\mathcal{P}$ et le plan (ABC) sont strictement parallèles. 
+
+\medskip
+
+\textbf{Question 4}
+
+Une mesure de l'angle $\widehat{\text{BAC}}$ arrondie au dixième de degré est égale à :
+
+\medskip
+\begin{tabularx}{\linewidth}{*{4}{X}} 
+\textbf{a.~~} 22,2~\degres&\textbf{b.~~} 0,4~\degres&\textbf{c.~~} 67,8~\degres &\textbf{d.~~} 1,2~\degres
+\end{tabularx}
+\medskip
+
+\hyperlink{Index}{*}
+\vspace{0,25cm}
+
+\textbf{Exercice 2 \hfill 6 points}
+
+\textbf{Commun à tous les candidats}
+
+\medskip
+\index{loi normale}
+Le taux d'hématocrite est le pourcentage du volume de globules rouges par rapport au volume total du sang. On note $X$ la variable aléatoire donnant le taux d'hématocrite d'un adulte choisi au hasard dans la population française. On admet que cette variable suit une loi normale de moyenne $\mu = 45,5$ et d'écart-type $\sigma$.
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip
+
+On note $Z$ la variable aléatoire $Z = \dfrac{X - \mu}{\sigma} =  \dfrac{X - 45,5}{\sigma}$.
+
+\medskip
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Quelle est la loi de la variable aléatoire $Z$ ?
+		\item Déterminer $P(X \leqslant \mu)$.		
+	\end{enumerate}
+\item En prenant $\sigma = 3,8$, déterminer $P(37,9 \leqslant X \leqslant 53,1)$. Arrondir le résultat au centième.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+Une certaine maladie V est présente dans la population française avec la fréquence 1\,\%. On sait d'autre part que 30\,\% de la population française a plus de 50 ans, et que 90\,\% des porteurs de la maladie V dans la population française ont plus de 50 ans.
+
+\smallskip
+
+On choisit au hasard un individu dans la population française.
+
+On note $\alpha$ l'unique réel tel que $P(X \leqslant \alpha) = 0,995$, où $X$ est la variable aléatoire  définie au début de l'exercice. On ne cherchera pas à calculer $\alpha$.
+
+\smallskip
+
+On définit les évènements :
+
+\setlength\parindent{10mm}
+\begin{description}
+\item[ ] \og l'individu est porteur de la maladie V \fg ;
+\item[ ] \og l'individu a plus de 50 ans \fg{} ; 
+\item[ ] \og l'individu a un taux d'hématocrite supérieur à $\alpha$ \fg. 
+\end{description}
+\setlength\parindent{0mm}
+
+Ainsi $P(M) = 0,01, \quad P_{M}(S) = 0,9$ et $P(H) = P(X > \alpha)$.
+
+D'autre part, une étude statistique a révélé que 60\,\% des individus ayant un taux d'hématocrite supérieur à $\alpha$
+sont porteurs de la maladie V.
+
+\medskip
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}\index{probabilités}
+		\item Déterminer $P(M \cap S)$. 
+		\item On choisit au hasard un individu ayant plus de 50 ans. Montrer que la probabilité qu'il soit porteur de la maladie V est égale à $0,03$.
+	\end{enumerate} 
+\item
+	\begin{enumerate}
+		\item Calculer la probabilité $P(H)$. 
+		\item L'individu choisi au hasard a un taux d'hématocrite inférieur ou égal à $\alpha$. Calculer la probabilité qu'il soit porteur de la maladie V. Arrondir au millième. 
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C}
+
+\medskip
+	
+Le but de cette partie est d'étudier  l'influence d'un gène sur la maladie V. 
+
+\medskip
+
+\begin{enumerate}
+\item Déterminer l'intervalle de fluctuation asymptotique au seuil de 95\,\% de la fréquence de la maladie V dans les échantillons de taille \np{1000}, prélevés au hasard et avec remise dans l'ensemble de la population française. On arrondira les bornes de l'intervalle au millième.
+\item Dans un échantillon aléatoire de \np{1000} personnes possédant le gène, on a trouvé 14~personnes porteuses de la maladie V.
+
+Au regard de ce résultat, peut-on décider, au seuil de 95\,\%, que le gène a une influence sur la maladie ?
+\end{enumerate}
+
+\hyperlink{Index}{*}
+
+\vspace{0,5cm}
+
+\textbf{Exercice 3 \hfill 6 points}
+
+\textbf{Commun à tous les candidats}
+
+\medskip
+
+Une chaîne, suspendue entre deux points d'accroche de même hauteur peut être modélisée par la représentation graphique d'une fonction $g$ définie sur $[-1~;~1]$ par 
+
+\[g(x) = \dfrac{1}{2a} \left(\text{e}^{ax} +  \text{e}^{- ax}\right)\]
+
+où $a$ est   un paramètre réel strictement positif. On ne cherchera pas à étudier la fonction $g$. 
+
+\smallskip
+
+On montre en sciences physiques que, pour que cette chaîne ait une tension minimale aux extrémités,  il faut et il suffit que le réel $a$ soit une solution strictement positive de l'équation \index{fonction exponentielle}
+
+\[(x - 1)\text{e}^{2x} - 1 - x = 0.\]
+ 
+Dans la suite, on définit sur $[0~;~+ \infty[$ 
+la fonction $f$ par $f(x) = (x - 1)\text{e}^{2x} - 1 - x$ pour tout réel $x \geqslant 0$. 
+
+\medskip
+
+\begin{enumerate}
+\item Déterminer la fonction dérivée de la fonction $f$.
+
+Vérifier que $f'(0) = - 2$ et que $\displaystyle\lim_{x \to + \infty} f'(x) = + \infty$. 
+\item  On note $f''$ la fonction dérivée de $f'$.
+ 
+Vérifier que, pour tout réel $x \geqslant 0,\:\: f''(x) = 4x\text{e}^{2x}$. 
+\item Montrer que, sur l'intervalle $[0~;~+ \infty[$ la fonction $f'$ s'annule pour une unique valeur, notée $x_{0}$. 
+\item
+	\begin{enumerate}
+		\item Déterminer le sens de variation de la fonction $f$ sur l'intervalle $[0~;~+ \infty[$, puis montrer que $f(x)$ est négatif pour tout réel $x$ appartenant à l'intervalle $\left[0~;~x_{0}\right]$. 
+		\item  Calculer $f(2)$.
+
+En déduire que sur l'intervalle $[0~;~+ \infty[$, la fonction $f$ s'annule pour une unique valeur.
+
+Si l'on note $a$ cette valeur, déterminer à l'aide de la calculatrice la valeur de $a$ arrondie au centième. 		
+	\end{enumerate} 
+\item On admet sans démonstration que la longueur $L$ de la chaîne est donnée par l'expression
+ 
+\[L = \displaystyle\int_{0}^1 \left(\text{e}^{ax} +  \text{e}^{- ax}\right)\:\text{d}x.\] 
+
+Calculer la longueur de la chaîne ayant une tension minimale aux extrémités, en prenant $1,2$ comme valeur  approchée du nombre $a$. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+
+\vspace{0,5cm}
+
+\textbf{Exercice 4 \hfill 5 points}
+
+\textbf{Candidats n'ayant pas choisi la spécialité mathématique}
+
+\medskip
+
+Soit $n$ un entier naturel supérieur ou égal à 1.
+ 
+On note $f_{n}$ la fonction définie pour tout réel $x$ de l'intervalle [0~;~1] par 
+
+\[f_{n}(x) = \dfrac{1}{1 + x^n}.\] 
+
+Pour tout entier $n \geqslant 1$, on définit le nombre $I_{n}$ par 
+
+\[I_{n} = \int_{0}^1 f_{n}(x)\:\text{d}x = \int_{0}^1 \dfrac{1}{1 + x^n}\:\text{d}x.\] 
+ 
+\begin{enumerate}
+\item 
+
+Les représentations graphiques de certaines fonctions $f_{n}$ obtenues à l'aide d'un logiciel sont tracées ci-après. 
+
+\begin{figure}
+\begin{center}
+\psset{unit=8cm,comma=true}
+\begin{pspicture}(-0.1,-0.1)(1.1,1.1)
+\psaxes[linewidth=1.25pt,Dx=0.2,Dy=0.2]{->}(0,0)(1.1,1.1)
+\psgrid[gridlabels=0,subgriddiv=5,gridcolor=orange,subgridcolor=orange](0,0)(1,1)
+\uput[u](1.05,0){$x$}\uput[r](0,1.05){$y$}
+\psplot[plotpoints=4000,linewidth=1.25pt]{0}{1}{1 x 1 exp 1 add div}
+\psplot[plotpoints=4000,linewidth=1.25pt]{0}{1}{1 x 2 exp 1 add div}
+\psplot[plotpoints=4000,linewidth=1.25pt]{0}{1}{1 x 3 exp 1 add div}
+\psplot[plotpoints=4000,linewidth=1.25pt]{0}{1}{1 x 4 exp 1 add div}
+\psplot[plotpoints=4000,linewidth=1.25pt]{0}{1}{1 x 5 exp 1 add div}
+\psplot[plotpoints=4000,linewidth=1.25pt]{0}{1}{1 x 10 exp 1 add div}
+\psplot[plotpoints=4000,linewidth=1.25pt]{0}{1}{1 x 50 exp 1 add div}
+\psplot[plotpoints=4000,linewidth=1.25pt]{0}{1}{1 x 200 exp 1 add div}
+\uput[d](0.3,0.77){$f_{1}$}
+\uput[d](0.4,0.86){$f_{2}$}
+\uput[d](0.5,0.9){$f_{3}$}
+\uput[l](0.96,0.9){$f_{50}$}
+\uput[r](0.98,0.93){$f_{200}$}
+
+\end{pspicture}
+\end{center}
+\end{figure}
+\index{intégrales}
+En expliquant soigneusement votre démarche, conjecturer, pour la suite $\left(I_{n}\right)$ l'existence et la valeur éventuelle de la limite, lorsque $n$ tend vers $+ \infty$. 
+\item Calculer la valeur exacte de $I_{1}$. 
+\item  
+	\begin{enumerate}
+		\item Démontrer que, pour tout réel $x$ de l'intervalle [0~;~1] et pour tout entier naturel $n \geqslant 1$, on a : 
+
+\[\dfrac{1}{1 + x^n} \leqslant 1.\] 
+
+		\item En déduire que, pour tout entier naturel $n \geqslant 1$, on a : $I_{n} \leqslant 1$.
+	\end{enumerate} 
+\item Démontrer que, pour tout réel $x$ de l'intervalle [0~;~1] et pour tout entier naturel $n \geqslant 1$, on a : 
+ 
+\[1 - x^n \leqslant \dfrac{1}{1 + x^n}.\] 
+
+\item  Calculer l'intégrale $\displaystyle\int_{0}^1 \left( 1 - x^n\right)\:\text{d}x$. 
+\item À l'aide des questions précédentes, démontrer que la suite $\left(I_{n}\right)$ est convergente et déterminer sa limite. 
+\item On considère l'algorithme suivant :
+\index{algorithme}
+\begin{center}
+\begin{tabularx}{0.75\linewidth}{|l X|}\hline 
+\textbf{Variables :}&  $n,\:p$ et $k$ sont des entiers naturels\\
+					& $x$ et $I$ sont des réels\\
+					&\\ 
+\textbf{Initialisation :}& $I$ prend la valeur $0$\\
+					&\\ 
+\textbf{Traitement :}& 	Demander un entier $n \geqslant 1$\\
+					& Demander un entier $p \geqslant 1$\\ 
+					&Pour $k$ allant de 0 à $p - 1$ faire :\\ 
+					&\hspace{0,5cm}$x$ prend la valeur $\dfrac{k}{p}$\\ 
+					&\hspace{0,5cm} $I$ prend la valeur $I + \dfrac{1}{1 + x^n} \times \dfrac{1}{p}$\\ 
+					&Fin Pour \\
+					&Afficher $I$\\ \hline
+\end{tabularx}
+\end{center}
+ 
+	\begin{enumerate}
+		\item Quelle valeur, arrondie au centième, renvoie cet algorithme si l'on entre les valeurs $n = 2$ et $p = 5$ ?
+		 
+On justifiera la réponse en reproduisant et en complétant le tableau suivant avec les différentes valeurs prises par les variables, à chaque étape de l'algorithme. Les valeurs de $I$ seront arrondies au millième. 
+
+\begin{center}
+\begin{tabularx}{0.7\linewidth}{|*{3}{>{\centering \arraybackslash}X|}}\hline 
+$k$& $x$&$I$\\ \hline 
+0&&\\ \hline
+&&\\ \hline
+&&\\ \hline
+&&\\ \hline
+4&&\\ \hline
+\end{tabularx}
+\end{center} 
+		\item Expliquer pourquoi cet algorithme permet d'approcher l'intégrale $I_{n}$.
+	\end{enumerate}
+\end{enumerate} 
+
+\hyperlink{Index}{*}
+
+\vspace{0,5cm}
+
+\textbf{Exercice 4 \hfill 5 points}
+
+\textbf{Candidats ayant choisi la spécialité mathématique}
+
+\medskip
+
+\textbf{Partie A}
+
+\medskip 
+
+Le but de celle partie est de démontrer que l'ensemble des nombres premiers est infini en raisonnant par l'absurde.
+\index{nombres premiers}
+\medskip
+ 
+\begin{enumerate}
+\item 
+
+On suppose qu'il existe un nombre fini de nombres premiers notés $p_{1},\:  p_{2}, \ldots,\: p_{n}$. 
+
+On considère le nombre $E$ produit de tous les nombres premiers augmenté de 1 :
+
+\[E = p_{1} \times p~_{2} \times \cdots\times p_{n} + 1.\] 
+
+Démontrer que $E$ est un entier supérieur ou égal â 2, et que $E$ est premier avec chacun des nombres $p_{1},\:  p_{2}, \ldots,\: p_{n}$. 
+\item En utilisant le fait que $E$ admet un diviseur premier conclure.
+\end{enumerate}
+
+\bigskip
+ 
+\textbf{Partie B}
+
+\medskip 
+
+Pour tout entier naturel $k \geqslant 2$, on pose $M_{k} = 2^k -1$.
+
+On dit que $M_{k}$ est le $k$-ième nombre de Mersenne.
+
+\medskip
+  
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Reproduire et compléter le tableau suivant, qui donne quelques valeurs de $M_{k}$ : 
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|*{10}{>{\centering \arraybackslash}X|}}\hline
+$k$&2&3&4&5&6&7&8&9&10\\ \hline 
+$M_{k}$&3&&&&&&&&\\ \hline
+\end{tabularx}
+\end{center}
+
+		\item D'après le tableau précédent, si $k$ est un nombre premier, peut-on conjecturer que le nombre $M_{k}$ est premier ?
+	\end{enumerate}		 
+\item Soient $p$ et $q$ deux entiers naturels non nuls. 
+	\begin{enumerate}
+		\item Justifier l'égalité : $1 + 2^p +  + \left(2^p\right)^2 + \left(2^p\right)^3 +  \cdots \left(2^p\right)^{q - 1}   = \dfrac{\left(2^p\right)^q - 1}{2^p - 1}$. 
+		\item En déduire que $2^{pq} - 1$ est divisible par $2^p - 1$. 
+		\item En déduire que si un entier $k$ supérieur ou égal à $2$ n'est pas premier, alors $M_{k}$ ne l'est pas non  plus.
+	\end{enumerate}  
+\item
+	\begin{enumerate}
+		\item Prouver que le nombre de Mersenne $M_{11}$ n'est pas premier.
+		\item Que peut-on en déduire concernant la conjecture de la question 1. b. ?		
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C}
+
+\medskip
+
+Le test de Lucas-Lehmer permet de déterminer si un nombre de Mersenne donné est premier. Ce test utilise  la suite numérique $\left(u_{n}\right)$ définie par $u_{0} = 4$ et pour tout entier naturel $n$ : 
+
+\[u_{n+1} = u_{n}^2 - 2.\]
+ 
+Si $n$ est  un entier naturel supérieur ou égal à 2, le test permet d'affirmer que le nombre $M_{n}$ est premier si et seulement si $u_{n-2} \equiv 0 \quad \text{modulo }\: M_{n}$.  Cette propriété est admise dans la suite. 
+
+\medskip
+
+\begin{enumerate}
+\item Utiliser le test de Lucas-Lehmer pour vérifier que le nombre de Mersenne $M_{ ~5}$ est premier 
+\item Soit $n$ un entier naturel supérieur ou égal à 3.
+ 
+L'algorithme suivant, qui est incomplet, doit permettre de vérifier si le nombre de Mersenne $M_{n}$
+est premier, en utilisant le test de Lucas-Lehmer.
+
+\begin{center}
+\begin{tabularx}{0.8\linewidth}{|l X|}\hline 
+\textbf{Variables :}& $u, M, n$ et $i$ sont  des entiers naturels \\
+\textbf{Initialisation :}& $u$ prend la valeur 4\\ 
+\textbf{Traitement :}& Demander un entier $n \geqslant  3$\\ 
+&	$M$ prend la valeur \ldots \ldots\\ 
+&	Pour $i$ allant de 1 à  \ldots 		faire \\
+&\hspace{0.4cm}	$u$ prend la valeur \ldots\\
+&Fin Pour\\ 
+&Si $M$ divise $u$ alors afficher \og $M$ \ldots \ldots \ldots \fg\\
+& sinon afficher \og $M$ \ldots \ldots \ldots \fg\\ \hline
+\end{tabularx}
+\end{center}
+
+Recopier et compléter cet algorithme de façon à ce qu'il remplisse la condition voulue. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+%%%%%%%%%%   fin Asie 19 juin 2014
+\newpage
+%%%%%%%%%%   Métropole La Réunion 19 juin 2014
+\hypertarget{Metropole}{}
+
+\lfoot{\small{Métropole}}
+\renewcommand \footrulewidth{.2pt}
+\pagestyle{fancy}
+\thispagestyle{empty}
+\begin{center} { \Large{ \textbf{\decofourleft~Baccalauréat S Métropole 19 juin 2014~\decofourright
+}}} 
+
+\end{center}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 1 \hfill 5 points}}
+
+\textbf{Commun à tous les candidats} 
+
+\medskip
+
+\textbf{Partie A} 
+
+\medskip
+
+Dans le plan muni d'un repère orthonormé, on désigne par  $\mathcal{C}_1$ la courbe représentative de la fonction $f_1$  définie sur $\R$ par : 
+
+\[f_1(x) = x +  \text{e}^{-x}.\]
+
+\index{fonction exponentielle}
+\begin{enumerate}
+\item  Justifier que $\mathcal{C}_1$ passe par le point A de coordonnées (0~;~1). 
+\item  Déterminer le tableau de variation de la fonction $f_1$. On précisera les limites de $f_1$ en $+ \infty$ et en $- \infty$. 
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+
+L’objet de cette partie est d'étudier la suite $\left(I_n\right)$ définie sur $\N$ par : 
+
+\[I_n = \int_0^1 \left(x + \text{e}^{- nx}\right)\:\text{d}x.\] 
+
+
+\begin{enumerate}
+\item  Dans le plan muni d'un repère orthonormé \Oij , pour tout entier naturel $n$, on note 
+$\mathcal{C}_n$ la courbe représentative de la fonction $f_n $ définie sur $\R$ par 
+
+\[f_n(x) = x + \text{e}^{- nx}. \]
+
+Sur le graphique ci-dessous on a tracé la courbe  $\mathcal{C}_n$ pour plusieurs valeurs de l'entier $n$ et la droite $\mathcal{D}$ d'équation $x = 1$. 
+
+\begin{center}
+\psset{unit=5cm}
+\begin{pspicture*}(-0.3,-0.4)(1.3,1.4)
+\psaxes[linewidth=1.5pt](0,0)(-0.3,-0.1)(1.4,1.4)
+\psaxes[linewidth=1.5pt]{->}(0,0)(1,1)
+\psline(1,0)(1,1.4)\uput[r](1,0.5){$\mathcal{D}$}
+\uput[dl](0,0){O}\uput[dl](0,1){A}
+%\multido{\n=1+1}{4}{\psplot[plotpoints=4000,linewidth=1.25pt]{-0.2}{1.3}{2.71828 x \n mul  neg exp x add}}
+\psplot[plotpoints=4000,linewidth=1.25pt]{-0.4}{1.4}{2.71828 x   neg exp x add}
+\psplot[plotpoints=4000,linewidth=1.25pt]{-0.4}{1.4}{2.71828 x 2 mul  neg exp x add}
+\psplot[plotpoints=4000,linewidth=1.25pt]{-0.4}{1.4}{2.71828 x 3 mul  neg exp x add}
+\psplot[plotpoints=4000,linewidth=1.25pt]{-0.4}{1.4}{2.71828 x 4 mul  neg exp x add}
+\psplot[plotpoints=4000,linewidth=1.25pt]{-0.4}{1.4}{2.71828 x 6 mul  neg exp x add}
+\psplot[plotpoints=4000,linewidth=1.25pt]{-0.4}{1.4}{2.71828 x 15 mul  neg exp x add}
+\psplot[plotpoints=4000,linewidth=1.25pt]{-0.4}{1.4}{2.71828 x 60 mul  neg exp x add}
+\uput[u](0.6,1.2){$\mathcal{C}_{1}$}\uput[u](0.6,0.9){$\mathcal{C}_{2}$}
+\uput[u](0.5,0.7){$\mathcal{C}_{3}$}\uput[u](0.4,0.6){$\mathcal{C}_{4}$}
+\uput[u](0.3,0.45){$\mathcal{C}_{6}$}\uput[u](0.2,0.25){$\mathcal{C}_{15}$}
+\uput[u](0.1,0.15){$\mathcal{C}_{60}$}
+\uput[d](0.5,0){$\vect{\imath}$}\uput[l](0,0.5){$\vect{\jmath}$}
+\end{pspicture*}
+\end{center}
+	\begin{enumerate}
+		\item Interpréter géométriquement l'intégrale $I_{n}$. 
+		\item En utilisant cette interprétation, formuler une conjecture sur le sens de   variation de la suite $\left(I_n\right)$ et sa limite éventuelle. On précisera les éléments sur lesquels on s’appuie   pour conjecturer. 
+	\end{enumerate}
+\item Démontrer que pour tout entier naturel $n$ supérieur ou égal à 1, 
+
+ 
+\[I_{n+1} - I_{n} = \int_{0}^1 \text{e}^{-(n + 1)x} \left(1 - \text{e}^{x}\right)\:\text{d}x.\] 
+ 
+
+En déduire le signe de $I_{n+1} - I_{n}$ puis démontrer que la suite $\left(I_n\right)$ est convergente. 
+\item Déterminer l'expression de $I_{n}$ en fonction de $n$ et déterminer la limite de la suite $\left(I_n\right)$. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 2 \hfill 5 points}}
+
+\textbf{Commun à tous les candidats} 
+
+\medskip 
+
+Les parties A et B peuvent être traitées indépendamment. 
+
+\medskip 
+
+\textbf{Partie A}
+
+\medskip \index{probabilités}
+
+Un laboratoire pharmaceutique propose des tests de dépistage de diverses maladies. Son service de communication met en avant les caractéristiques suivantes : 
+
+\setlength\parindent{9mm}
+\begin{itemize}
+\item la probabilité qu'une personne malade présente un test positif est $0,99$ ;
+\item la probabilité qu'une personne saine présente un test positif est $0,001$. 
+\end{itemize}
+\setlength\parindent{0mm}
+
+\medskip
+
+\begin{enumerate}
+\item Pour une maladie qui vient d'apparaître, le laboratoire élabore un nouveau test. Une étude statistique permet d'estimer que le pourcentage de personnes malades parmi la population d'une métropole est égal à 0,1\,\%. On choisit au hasard une personne dans cette population et on lui fait subir le test. 
+
+On note $M$ l'évènement \og la personne choisie est malade\fg{} et $T$ l'évènement \og le test est positif \fg. 
+	\begin{enumerate}
+		\item Traduire l'énoncé sous la forme d'un arbre pondéré.\index{arbre} 
+		\item Démontrer que la probabilité $p(T)$ de l'évènement $T$ est égale à $1,989 \times 10^{-3}$. 
+		\item L'affirmation suivante est-elle vraie ou fausse ? Justifier la réponse. 
+
+Affirmation : \og Si le test est positif, il y a moins d'une chance sur deux que la personne soit malade \fg.
+	\end{enumerate} 
+\item Le laboratoire décide de commercialiser un test dès lors que la probabilité qu'une personne testée positivement soit malade est supérieure ou égale à $0,95$. On désigne par $x$ la proportion de personnes atteintes d'une certaine maladie dans la population. 
+
+À partir de quelle valeur de $x$ le laboratoire commercialise-t-il le test correspondant ? 
+\end{enumerate} 
+
+\bigskip
+
+\textbf{Partie B}
+
+\medskip
+ 
+La chaine de production du laboratoire fabrique, en très grande quantité, le comprimé  
+d'un médicament.
+
+\medskip
+
+\begin{enumerate}
+\item Un comprimé est conforme si sa masse est comprise entre 890 et 920 mg. On admet que la masse en milligrammes d'un comprimé pris au hasard dans la production peut être modélisée par une variable aléatoire $X$ qui suit la loi normale $\mathcal{N}\left(\mu,~\sigma^2\right)$, de moyenne $\mu = 900$ et d'écart-type $\sigma = 7$. \index{loi normale}  
+	\begin{enumerate}
+		\item Calculer la probabilité qu'un comprimé prélevé au hasard soit conforme. On arrondira à $10^{-2}$. 
+		\item Déterminer l'entier positif $h$ tel que $P(900 - h \leqslant  X \leqslant  900 + h) \approx  0,99$ à $10^{-3}$ près. 
+	\end{enumerate}
+\item La chaine de production a été réglée dans le but d'obtenir au moins 97\,\% de comprimés conformes. Afin d'évaluer l'efficacité des réglages, on effectue un contrôle en prélevant un échantillon de \np{1000}~comprimés dans la production. La taille de la production est supposée suffisamment grande pour que ce prélèvement puisse être assimilé à \np{1000}~tirages successifs avec remise. 
+
+Le contrôle effectué a permis de dénombrer $53$~comprimés non conformes sur l'échantillon prélevé. 
+
+Ce contrôle remet-il en question les réglages faits par le laboratoire ? On pourra utiliser un intervalle de fluctuation asymptotique au seuil de 95\,\%. 
+\end{enumerate}\index{intervalle de fluctuation}
+
+\hyperlink{Index}{*}
+
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 3 \hfill 5 points}}
+
+\textbf{Commun à tous les candidats} 
+
+\medskip 
+
+On désigne par (E) l'équation 
+
+\[z^4 + 4z^2 + 16 = 0\]\index{equation complexe@équation complexe}
+
+ d'inconnue complexe $z$. 
+
+\begin{enumerate}
+\item Résoudre dans $\C$ l'équation $Z^2 +4Z + 16 = 0$. 
+
+Écrire les solutions de cette équation sous une forme exponentielle. 
+\item On désigne par $a$ le nombre complexe dont le module est égal à 2 et dont un argument est égal à $\dfrac{\pi}{3}$. 
+
+Calculer $a^2$ sous forme algébrique. 
+
+En déduire les solutions dans $\C$ de l'équation $z^2 = - 2 + 2\text{i}\sqrt{3}$. On écrira les solutions sous forme algébrique. 
+\item \textbf{Restitution organisée de connaissances} \index{R. O. C.}
+
+On suppose connu le fait que pour tout nombre complexe $z = x + \text{i}y$ où $x \in \R$ et $y \in R$, le conjugué de $z$ est le nombre complexe $z$ défini par $z = x - \text{i} y$. 
+
+Démontrer que : 
+
+\begin{itemize}
+\item Pour tous nombres complexes $z_{1}$ et $z_{2}$,\: $\overline{z_{1}z_{2}} = \overline{z_{1}}\:\cdot\:\overline{z_{2}}$. 
+\item Pour tout nombre complexe $z$ et tout entier naturel non nul $n,\: \overline{z^{n}} = \left(\overline{z}\right)^n$.
+\end{itemize} 
+\item Démontrer que si $z$ est une solution de l'équation (E) alors son conjugué $\overline{z}$ est également une solution de (E). 
+
+En déduire les solutions dans $\C$ de l'équation (E). On admettra que (E) admet au plus quatre solutions. 
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4 \hfill 5 points}}
+
+\textbf{Candidats n'ayant pas suivi l'enseignement de spécialité} 
+
+\medskip
+
+Dans l'espace, on considère un tétraèdre ABCD dont les faces ABC, ACD et ABD sont des 
+triangles rectangles et isocèles en A. On désigne par E, F et G les milieux respectifs des côtés [AB], [BC] et [CA].  
+
+\medskip\index{géométrie dans l'espace}
+
+On choisit AB pour unité de longueur et on se place dans le repère orthonormé $\left(\text{A}~;~\vect{\text{AB}}, \vect{\text{AC}}, \vect{\text{AD}}\right)$ de l'espace.
+
+\medskip 
+
+\begin{enumerate}
+\item On désigne par $\mathcal{P}$ le plan qui passe par A et qui est orthogonal à la droite (DF). 
+
+On note H le point d'intersection du plan $\mathcal{P}$ et de la droite (DF). 
+	\begin{enumerate}
+		\item Donner les coordonnées des points D et F. 
+		\item Donner une représentation paramétrique de la droite (DF).\index{equation paramétrique de droite@équation paramétrique de droite} 
+		\item Déterminer une équation cartésienne du plan $\mathcal{P}$. 
+		\item Calculer les coordonnées du point H. 
+		\item Démontrer que l'angle $\widehat{\text{EHG}}$ est un angle droit. 
+	\end{enumerate}
+\item On désigne par $M$ un point de la droite (DF) et par $t$ le réel tel que $\vect{\text{D}M} = t\vect{\text{DF}}$. On note $\alpha$ la mesure en radians de l'angle géométrique $\widehat{\text{E}M\text{G}}$. 
+
+Le but de cette question est de déterminer la position du point $M$ pour que $\alpha$ soit maximale. 
+	\begin{enumerate}
+		\item Démontrer que $M\text{E}^2 = \dfrac{3}{2}t^2 - \dfrac{5}{2}t + \dfrac{5}{4}$. 
+		\item Démontrer que le triangle $M$EG est isocèle en $M$.
+		
+		En déduire que $M\text{E}\sin \left(\dfrac{\alpha}{2} \right) = \dfrac{1}{2\sqrt{2}}$. 
+		\item Justifier que $\alpha$ est maximale si et seulement si $\sin \left(\dfrac{\alpha}{2} \right)$ est maximal. 
+
+En déduire que $\alpha$ est maximale si et seulement si $M\text{E}^2$ est minimal. 
+		\item Conclure. 
+	\end{enumerate}
+\end{enumerate}
+
+\hyperlink{Index}{*}
+\vspace{0,5cm}
+
+\textbf{\textsc{Exercice 4 \hfill 5 points}}
+
+\textbf{Candidats ayant suivi l'enseignement de spécialité} 
+
+\medskip
+
+Un pisciculteur dispose de deux bassins A et B pour l'élevage de ses poissons. Tous les ans à la même période : 
+
+\setlength\parindent{9mm}
+\begin{itemize}
+\item il vide le bassin B et vend tous les poissons qu'il contenait et transfère tous les poissons du bassin A dans le bassin B ; 
+\item la vente de chaque poisson permet l'achat de deux petits poissons destinés au bassin A.
+
+Par ailleurs, le pisciculteur achète en plus $200$~poissons pour le bassin A et $100$~poissons pour le bassin B.
+\end{itemize}
+\setlength\parindent{0mm} 
+
+Pour tout entier naturel supérieur ou égal à 1, on note respectivement $a_{n}$ et $b_{n}$ les effectifs de poissons des bassins A et B au bout de $n$ années. 
+
+En début de première année, le nombre de poissons du bassin A est $a_{0} = 200$ et celui du bassin B est $b_{0} = 100$. 
+
+\medskip
+
+\begin{enumerate}
+\item Justifier que $a_{1} = 400$ et $b_{1} = 300$ puis calculer $a_{2}$ et $b_{2}$. 
+\item On désigne par $A$ et $B$ les matrices telles que $A = \begin{pmatrix}0&2\\1&0\end{pmatrix}$ et $B = \begin{pmatrix}200\\100\end{pmatrix}$ et pour tout entier naturel $n$, on pose $X_{n} = \begin{pmatrix}a_{n}\\b_{n}\end{pmatrix}$.\index{matrices}
+	\begin{enumerate}
+		\item Expliquer pourquoi pour tout entier naturel $n$, $X_{n+1} = AX_{n} + B$.
+		\item Déterminer les réels $x$ et $y$ tels que $\begin{pmatrix}x\\y\end{pmatrix} = A\begin{pmatrix}x\\y\end{pmatrix} + B$. 
+		\item Pour tout entier naturel $n$, on pose $Y_{n} = \begin{pmatrix}a_{n} + 400\\ 
+b_{n} + 300\end{pmatrix}$. 
+
+Démontrer que pour tout entier naturel $n,\:\: Y_{n+1} = AY_{n}$. 
+	\end{enumerate}
+\item Pour tout entier naturel $n$, on pose $Z_{n} = Y_{2n}$. 
+	\begin{enumerate}
+		\item Démontrer que pour tout entier naturel $n,\:\: Z_{n+1} = A^2 Z_{n}$. En déduire que pour tout entier naturel $n, Z_{n+1} = 2Z_{n}$. 
+		\item On admet que cette relation de récurrence permet de conclure que pour tout entier naturel $n$, 
+
+\[Y_{2n} = 2^n Y_{0}.\] 
+
+En déduire que $Y_{2n + 1} = 2^nY_{1}$ puis démontrer que pour tout entier naturel $n$, 
+
+\[a_{2n} = 600 \times 2^n - 400\quad  \text{et}\quad  a_{2n+1} = 800 \times 2^n - 400.\]
+ 
+	\end{enumerate} 
+\item Le bassin A a une capacité limitée à \np{10000} poissons.
+	\begin{enumerate}
+		\item On donne l'algorithme suivant. \index{algorithme}
+
+\begin{center}
+\begin{tabularx}{0.9\linewidth}{|l X|}\hline
+Variables :		& $a, p$ et $n$ sont des entiers naturels.\\ 
+Initialisation :& Demander à l'utilisateur la valeur de $p$.\\ 
+Traitement :	& Si $p$ est pair \\
+				&\hspace{0.5cm}\begin{tabular}{|l}
+Affecter à $n$ la valeur $\dfrac{p}{2}$\\ 
+Affecter à $a$ la valeur $600 \times 2^n - 400$.\\
+\end{tabular}\\ 
+&Sinon \\
+				&\hspace{0.5cm}\begin{tabular}{|l}
+Affecter à $n$ la valeur $\dfrac{p - 1}{2}$\\
+Affecter à $a$ la valeur $800 \times 2^n - 400$.\\
+\end{tabular}\\ 
+				&Fin de Si.\\ 
+Sortie :		& Afficher $a$.\\ \hline
+\end{tabularx}
+\end{center} 
+
+Que fait cet algorithme ? Justifier la réponse. 
+		\item Écrire un algorithme qui affiche le nombre d'années pendant lesquelles le pisciculteur pourra utiliser le bassin A. 
+	\end{enumerate}
+\end{enumerate}
+\hyperlink{Index}{*}
+\hypertarget{Index}{}
+\printindex
+
+\end{document}

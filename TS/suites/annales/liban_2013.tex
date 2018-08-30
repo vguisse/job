@@ -1,0 +1,82 @@
+On considère la suite\index{suite} numérique $\left(v_{n}\right)$ définie pour tout entier naturel $n$ par 
+
+$\left\{\begin{array}{l c l}
+v_{0} &=& 1\\ 	 
+v_{n + 1}&=& \dfrac{9}{6 - v_{n}}
+\end{array}\right.$ 
+
+\bigskip
+
+\textbf{Partie A}
+
+\medskip
+ 
+\begin{enumerate}
+\item On souhaite écrire un algorithme \index{algorithme} affichant, pour un entier naturel $n$ donné, tous les termes de la suite, du rang $0$ au rang $n$.
+ 
+Parmi les trois algorithmes suivants, un seul convient. Préciser lequel en justifiant la réponse.
+
+\medskip
+
+\hspace{-1cm} 
+\begin{small}
+\begin{tabularx}{1.1\linewidth}{|X|c|X|c|X|}\cline{1-1}\cline{3-3}\cline{5-5}
+\multicolumn{1}{|c|}{\textbf{Algorithme \No 1}}&&\multicolumn{1}{|c|}{\textbf{Algorithme \No 2}}&&\multicolumn{1}{|c|}{\textbf{Algorithme \No 3}}\\ \cline{1-1}\cline{3-3}\cline{5-5}
+\textbf{Variables :}&&\textbf{Variables :}&&\textbf{Variables :}\\
+$v$ est un réel&&$v$ est un réel&&$v$ est un réel\\ 
+$i$ et $n$ sont des entiers naturels&&$i$ et $n$ sont des entiers naturels&&$i$ et $n$ sont des entiers naturels\\
+~&&&&\\ 
+\textbf{Début de l'algorithme :}&&\textbf{Début de l'algorithme :}&& \textbf{Début de l'algorithme :}\\ 
+Lire $n$&&Lire $n$&&Lire $n$\\ 
+$v$ prend la valeur $1$&&Pour $i$ variant de $1$ à $n$ faire&&$v$ prend la valeur $1$\\ 
+Pour $i$ variant de $1$ à $n$ faire&&$v$ prend la valeur $1$&& Pour $i$ variant de $1$ à $n$ faire\\ 
+\hspace{0.2cm}$v$ prend la valeur $\dfrac{9}{6 - v}$&&\hspace{0.2cm}Afficher $v$&& \hspace{0.2cm}Afficher $v$\\  
+Fin pour&&$v$ prend la valeur $\dfrac{9}{6 - v}$&&$v$ prend la valeur $\dfrac{9}{6 - v}$\\
+Afficher $v$&&Fin pour&&Fin pour\\
+&&&&Afficher $v$\\
+\textbf{Fin algorithme}&&\textbf{Fin algorithme}&&\textbf{Fin algorithme}\\  \cline{1-1}\cline{3-3}\cline{5-5}
+\end{tabularx}
+\end{small}
+
+\item Pour $n = 10$ on obtient l'affichage suivant :
+
+\medskip
+\begin{tabularx}{\linewidth}{|*{10}{>{\centering \arraybackslash}X|}}\hline
+1&1,800&2,143&2,333&2,455&2,538&2,600&2,647&2,684&2,714\\ \hline
+\end{tabularx}
+\medskip
+
+Pour $n = 100$, les derniers termes affichés sont :
+
+\medskip
+\begin{tabularx}{\linewidth}{|*{10}{>{\centering \arraybackslash}X|}}\hline
+2,967&2,968&2,968&2,968&2,969&2,969&2,969&2,970&2,970&2,970\\ \hline
+\end{tabularx}
+\medskip
+ 
+Quelles conjectures peut-on émettre concernant la suite $\left(v_{n}\right)$ ? 
+\item 
+	\begin{enumerate}
+		\item Démontrer par récurrence que, pour tout entier naturel $n,\: 0 < v_{n} < 3$.  
+		\item Démontrer que, pour tout entier naturel $n,\: v_{n+1} - v_{n} = \dfrac{\left(3 - v_{n} \right)^2}{6 - v_{n}}$. 
+ 
+La suite $\left(v_{n}\right)$ est-elle monotone ? 
+		\item Démontrer que la suite $\left(v_{n}\right)$ est convergente.
+	\end{enumerate}
+\end{enumerate}
+ 
+\bigskip
+
+\textbf{Partie B Recherche de la limite de la suite } \boldmath $\left(v_{n}\right)$ \unboldmath
+
+\medskip
+
+On considère la suite\index{suite} $\left(w_{n}\right)$ définie pour tout $n$ entier naturel par 
+
+\[w_{n} = \dfrac{1}{v_{n} - 3}.\]
+ 
+\begin{enumerate}
+\item Démontrer que $\left(w_{n}\right)$ est une suite arithmétique de raison $- \dfrac{1}{3}$ 
+\item En déduire l'expression de $\left(w_{n}\right)$, puis celle de $\left(v_{n}\right)$ en fonction de $n$. 
+\item Déterminer la limite de la suite $\left(v_{n}\right)$. 
+\end{enumerate}

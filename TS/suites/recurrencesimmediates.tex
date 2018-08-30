@@ -1,0 +1,99 @@
+\documentclass[a4paper,11pt,DIV14,BCOR0mm]{scrartcl}
+\input{../../../preambule}
+\rhead{\today}
+\chead{}
+\lhead{Approfondissement : récurrences inattendues}
+\lfoot{\tiny{vg}}
+\cfoot{}
+\rfoot{\tiny{Romain Rolland Argenteuil, TS2}}
+\begin{document}
+Les affirmations de ces exercices paraissent parfois (pas toujours) \og évidentes\fg. On peut alors trouver le formalisme 
+de la récurrence un peu lourd pour les démontrer, mais c'est essentiellement la seule manière rigoureuse. Exercez-vous :
+\begin{itemize}
+ \item qu'y a-t-il à prouver (par récurrence) ? ;
+ \item tentez celles marquées d'une (*) \og de tête\fg ;
+ \item écrivez pour les autres.
+\end{itemize}
+
+\begin{exercice}[*, invariant]
+ Aux échecs, le fou placé initialement en a6 (c'est une case blanche) sera toujours sur une case blanche quel que soit
+le moment de la partie (sauf s'il a été pris bien sûr).
+\end{exercice}
+
+\begin{exercice}[*, semi-invariant ou mono-variant]
+ Deux joueurs jouent une tablette de chocolat : chacun leur tour, ils cassent en deux un morceau (selon la ligne
+d'un prédécoupage).
+Celui qui ne peut plus jouer perd.
+Pendant la partie, si $n$ coups on été joués :
+\begin{itemize}
+ \item il y a $n+1$ morceaux. Par conséquent, le nombre de morceaux ne dépend pas de la façon de jouer ;
+ \item le nombre de morceaux est impair lorsque c'est à celui qui a commencé de jouer ;
+\end{itemize}
+
+\emph{D'o\`u l'on conclut que ce n'est pas un jeu honnête, et que pour gagner il faut commencer si et seulement si 
+le nombre total de carrés est pair. Attention : knowledge is power, mais science sans conscience n'est que ruine de l'\^ame.
+Troisièmement, manger bouger.}
+\end{exercice}
+
+
+
+\begin{exercice}[*]
+ Soit $(u_n)_{n\in\N}$ une suite croissante. alors elle est minorée par son premier terme. (Autrement dit, 
+pour tout $n\in\N$, $u_n\geq u_0$).
+\end{exercice}
+
+
+\begin{exercice}[*, plus de piquets que de ficelles]
+ Soit $p\leq n$ deux entiers relatifs. Il y a $n-p+1$ entiers relatifs compris (au sens large) entre $p$ et $n$.
+(Soit $p$ un entier relatif. Ici la récurrence porte sur $n$, et s'initialise à $n=p$.)
+\end{exercice}
+
+\begin{exercice}[*]
+ Soit $(u_n)$ la suite définie sur $\N$ par $u_0=5$ et $u_{n+1}=u_n-17$.
+
+
+\emph{Remarquez que des difficultés peuvent apparaître aussi pour l'existence d'une suite \og définie\fg{} par récurrence. Par exemple,
+que penser de la suite $(v_n)$, \og définie\fg{} sur $\N$ par $v_0=1$ et $v_{n+1}=\sqrt{v_n}-5$?}
+\end{exercice}
+
+\begin{exercice}[*]
+ Les termes de la suite $(u_n)$ de l'exercice précédent vérifient :\[\text{pour tout $n\in\N$, $u_n=5-17n$.}\]
+
+\emph{Le résultat donnant sous forme explicite le terme général d'une suite arithmétique (ou celui d'une suite géométrique)
+définie par récurrence ne se démontre rigoureusement que par récurrence.
+Plus généralement, pour démontrer quelque chose sur une suite définie par récurrence, le raisonnement par récurrence est à essayer.}
+\end{exercice}
+
+La suite concerne surtout les \og $\dots$\fg.
+
+\begin{exercice}
+ On définit pour tout entier $n\geq 1$, le nombre factorielle $n$, noté $n!$ par :
+\[n!=1\times2\times3\times\ldots\times(n-1)\times n\]
+\end{exercice}
+
+\begin{exercice}[*]
+ Régressons. Pour tout entier naturel, je sais ce que signifie $37^n$.
+\end{exercice}
+
+\begin{exercice}[*]
+ Régressons davantage. Pour tout entier naturel $n$, je sais ce que signifie $n\times 37$.
+\end{exercice}
+
+
+\begin{exercice}[*?]
+ Pour tout entier naturel non nul $n$, $n!\geq n$. (Celle là est peut être moins facile).
+\end{exercice}
+
+
+\begin{exercice}
+ Soit $q$ un réel. Alors, pour tout entier $n\geq1$, on a :
+\[
+ (1-q)(1+q+q^2+\dots+q^n)=1-q^{n+1}.
+\]
+ \emph{Pour être vraiment rigoureux, il faut commencer par se débarasser des $\dots$ en définissant $(S_n)$ par $S_0=1$ et $S_{n+1}=S_n+q^{n+1}$.
+Il s'agira alors de montrer que pour tout entier $n\geq1$, $(1-q)S_n=1-q^{n+1}$.}
+\end{exercice}
+
+
+
+\end{document}

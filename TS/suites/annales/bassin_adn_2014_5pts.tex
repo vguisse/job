@@ -1,0 +1,64 @@
+Un volume constant de \np{2200}~m$^3$ d'eau est réparti entre deux bassins A et B.
+ 
+Le bassin A refroidit une machine. Pour des raisons d'équilibre thermique on crée un courant d'eau entre les deux bassins à l'aide de pompes.
+ 
+On modélise les échanges entre les deux bassins de la façon suivante :
+ 
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] au départ, le bassin A contient 800~m$^3$ d'eau et le bassin B contient \np{1400}~m$^3$ d'eau ; 
+\item[$\bullet~~$] tous les jours, 15\,\% du volume d'eau présent dans le bassin B au début de la journée est transféré vers le bassin A ; 
+\item[$\bullet~~$] tous les jours, 10\,\% du volume d'eau présent dans le bassin A au début de la journée est transféré vers le bassin B.
+\end{itemize}
+\setlength\parindent{0mm}
+ 
+Pour tout entier naturel $n$, on note :\index{suite} 
+
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] $a_{n}$ le volume d'eau, exprimé en m$^3$, contenu dans le bassin A à la fin du $n$-ième jour de fonctionnement ; 
+\item[$\bullet~~$] $b_{n}$ le volume d'eau, exprimé en m$^3$, contenu dans le bassin B à la fin du $n$-ième jour de fonctionnement.
+\end{itemize}
+\setlength\parindent{0mm}
+
+\medskip
+ 
+On a donc $a_{0} = 800$ et $b_{0} = \np{1400}$.
+
+\medskip
+ 
+\begin{enumerate}
+\item Par quelle relation entre $a_{n}$ et $b_{n}$ traduit-on la conservation du volume total d'eau du circuit ? 
+\item Justifier que, pour tout entier naturel $n,\: a_{n+1} = \dfrac{3}{4} a_{n} + 330$. 
+\item L'algorithme ci-dessous permet de déterminer la plus petite valeur de $n$ à partir de laquelle $a_{n}$ est supérieur ou égal à \np{1100}.\index{algorithme} 
+
+Recopier cet algorithme en complétant les parties manquantes.
+
+\begin{center}
+
+\begin{tabular}{|l l l|}\hline 
+\textbf{Variables}&:& 	$n$ est un entier naturel\\ 
+&&$a$ est un réel\\ 
+\textbf{Initialisation}&:&Affecter à $n$ la valeur $0$\\
+&& Affecter à $a$ la valeur 800\\
+\textbf{Traitement}&:& Tant que $a < \np{1100}$, faire :\\ 
+&&\hspace{0.3cm}\begin{tabular}{|l}
+Affecter à $a$ la valeur \ldots\\ 
+Affecter à $n$ la valeur \ldots\\
+\end{tabular}\\
+&& Fin Tant que\\  
+\textbf{Sortie}&:&Afficher $n$\\ \hline
+\end{tabular}
+\end{center} 
+ 
+\item Pour tout entier naturel $n$, on note $u_{n} = a_{n} - \np{1320}$. 
+	\begin{enumerate}
+		\item Montrer que la suite $\left(u_{n}\right)$ est une suite géométrique dont on précisera le premier terme et la raison.\index{suite géométrique} 
+		\item Exprimer $u_{n}$ en fonction de $n$. 
+
+En déduire que, pour tout entier naturel $n,\: a_{n} = \np{1320} - 520 \times \left(\dfrac{3}{4}\right)^n$.
+	\end{enumerate} 
+\item On cherche à savoir si, un jour donné, les deux bassins peuvent avoir, au mètre cube près, le même volume d'eau.
+ 
+Proposer une méthode pour répondre à ce questionnement. 
+\end{enumerate}

@@ -1,0 +1,61 @@
+On considère la suite\index{suite} $\left(u_{n}\right)$ définie par $u_{0} = 1$ et, pour tout entier naturel $n$,
+
+\[ u_{n+1} = \sqrt{2u_{n}}.\]
+
+\begin{enumerate}
+\item On considère l'algorithme\index{algorithme} suivant :
+
+\begin{center}
+\begin{tabular}{|ll|}\hline
+Variables :&$n$ est un entier naturel\\ 
+&$u$ est un réel positif\\
+Initialisation :& Demander la valeur de $n$\\
+ 	&Affecter à $u$ la valeur 1\\
+Traitement :&Pour $i$ variant de 1 à $n$ :\\
+	&\hspace{0.3cm}| Affecter à $u$ la valeur $\sqrt{2u}$\\
+	&Fin de Pour\\ 
+Sortie :& Afficher $u$\\ \hline
+\end{tabular}
+\end{center} 
+ 
+	\begin{enumerate}
+		\item Donner une valeur approchée à $10^{-4}$ près du résultat qu'affiche cet algorithme lorsque l'on choisit $n = 3$.
+		\item Que permet de calculer cet algorithme ? 
+		\item Le tableau ci-dessous donne des valeurs approchées obtenues à l'aide de cet algorithme pour certaines valeurs de $n$.
+		
+\begin{center}
+\begin{tabularx}{0.8\linewidth}{|c|*{5}{>{\centering \arraybackslash}X|}}\hline
+$n$				& 1 		&5 			&10 		&15 		&20\\ \hline 
+Valeur affichée	&\np{1,4142} &\np{1,9571} &\np{1,9986} &\np{1,9999} &\np{1,9999}\\ \hline
+\end{tabularx}
+\end{center}
+
+Quelles conjectures peut-on émettre concernant la suite $\left(u_{n}\right)$ ?
+	\end{enumerate} 
+\item
+	\begin{enumerate}
+		\item Démontrer que, pour tout entier naturel $n,\: 0 < u_{n} \leqslant 2$. 
+		\item Déterminer le sens de variation de la suite $\left(u_{n}\right)$. 
+		\item Démontrer que la suite $\left(u_{n}\right)$ est convergente. On ne demande pas la valeur de sa limite.
+	\end{enumerate} 
+\item On considère la suite\index{suite} $\left(v_{n}\right)$ définie, pour tout entier naturel $n$, par $v_{n} = \ln u_{n} - \ln 2$. 
+	\begin{enumerate}
+		\item Démontrer que la suite $\left(v_{n}\right)$ est la suite géométrique de raison $\dfrac{1}{2}$ et de premier terme  
+$v_{0} = - \ln 2$. 
+		\item Déterminer, pour tout entier naturel $n$, l'expression de $v_{n}$ en fonction de $n$, puis de $u_{n}$ en fonction de $n$. 
+		\item Déterminer la limite de la suite $\left(u_{n}\right)$. 
+		\item Recopier l'algorithme\index{algorithme} ci-dessous et le compléter par les instructions du traitement et de la sortie, de façon à afficher en sortie la plus petite valeur de $n$ telle que $u_{n} > 1,999$.
+		
+\begin{center}
+\begin{tabular}{|l l|}\hline		 
+Variables :		&$n$ est un entier naturel\\
+				& $u$ est un réel\\
+Initialisation :&Affecter à $n$ la valeur $0$\\
+				&Affecter à $u$ la valeur 1\\ 
+Traitement :	&\\
+				&\\ 
+Sortie :		&\\ \hline
+\end{tabular}
+\end{center}
+	\end{enumerate} 
+\end{enumerate}
